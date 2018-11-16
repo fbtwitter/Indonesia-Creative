@@ -18,7 +18,9 @@ Route::get('login',function(){
   return view('login');
 });
 Route::post('login','CreativeController@login');
-Route::get('dashboard',function(){
-  return view('dashboard');
+Route::get('register', function()
+{
+  return view('register');
 });
 Route::get('logout', 'CreativeController@logout');
+Route::post('register', 'CreativeController@register');

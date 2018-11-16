@@ -19,7 +19,15 @@ class CreativeController extends Controller
     public function logout(Request $request){
       $request->session()->forget('key');
       echo "Session disimpan : ".\Session::get('key')."<br>";
-
     }
+    public function register(Request $request){
 
+      $email = $request->input('email');
+      $pwd = $request->input('pwd1');
+      $repwd = $request->input('pwd2');
+      if($pwd == $repwd)
+        echo "Register Succesfull !";
+      else
+        echo "Register Failed !";
+    }
 }

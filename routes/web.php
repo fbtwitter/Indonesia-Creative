@@ -21,3 +21,4 @@ Route::post('login','CreativeController@login');
 Route::get('dashboard',function(){
   return view('dashboard');
 });
+Route::get('logout', 'CreativeController@logout');

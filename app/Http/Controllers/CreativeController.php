@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class CreativeController extends Controller
 {
@@ -21,12 +22,24 @@ class CreativeController extends Controller
       echo "Session disimpan : ".\Session::get('key')."<br>";
     }
     public function register(Request $request){
+      $namad = $request->input('namad');
+      $namab = $request->input('namab');
 
       $email = $request->input('email');
       $pwd = $request->input('pwd1');
       $repwd = $request->input('pwd2');
-      if($pwd == $repwd)
+
+      if($pwd == $repwd){
+        DB::table('info_user')->insert(
+          [
+            'email' => $email,
+            'nama_depan' => $namad,
+            'nama_belakang' => $namab,
+          ]
+        );
         echo "Register Succesfull !";
+      }
+
       else
         echo "Register Failed !";
     }

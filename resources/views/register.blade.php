@@ -8,6 +8,16 @@
     {{Form::open()}}
       <table>
         <tr>
+          <td>Nama Depan</td>
+          <td>:</td>
+          <td>{{Form::text('namad')}}</td>
+        </tr>
+        <tr>
+          <td>Nama Belakang</td>
+          <td>:</td>
+          <td>{{Form::text('namab')}}</td>
+        </tr>
+        <tr>
           <td>Email</td>
           <td>:</td>
           <td>{{Form::email('email')}}</td>

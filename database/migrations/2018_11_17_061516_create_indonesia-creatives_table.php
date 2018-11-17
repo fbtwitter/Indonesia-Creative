@@ -16,9 +16,9 @@ class CreateIndonesiaCreativesTable extends Migration
         Schema::create('Info_user', function (Blueprint $table) {
             $table->increments('id_info_user',10);
             $table->string('nama_depan',100);
-            $table->string('nama_belakang',100);
-            $table->string('jenis_kelamin',10);
-            $table->string('domsili',100);
+            $table->string('nama_belakang',100)->nullable();
+            $table->string('jenis_kelamin',10)->nullable();
+            $table->string('domsili',100)->nullable();
             $table->string('email',100);
             $table->timestamps();
         });

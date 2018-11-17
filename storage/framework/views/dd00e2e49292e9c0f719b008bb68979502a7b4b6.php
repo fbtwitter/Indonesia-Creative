@@ -9,16 +9,6 @@
 
       <table>
         <tr>
-          <td>Nama Depan</td>
-          <td>:</td>
-          <td><?php echo e(Form::text('namad')); ?></td>
-        </tr>
-        <tr>
-          <td>Nama Belakang</td>
-          <td>:</td>
-          <td><?php echo e(Form::text('namab')); ?></td>
-        </tr>
-        <tr>
           <td>Email</td>
           <td>:</td>
           <td><?php echo e(Form::email('email')); ?></td>

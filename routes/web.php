@@ -24,3 +24,4 @@ Route::get('register', function()
 });
 Route::get('logout', 'CreativeController@logout');
 Route::post('register', 'CreativeController@register');
+Route::get('profile','CreativeController@profil')

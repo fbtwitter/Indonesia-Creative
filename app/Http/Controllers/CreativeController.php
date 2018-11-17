@@ -11,10 +11,9 @@ class CreativeController extends Controller
       //Fungsi untuk menangkap input login
       $email = $request->input('email');
       $request->session()->put('key', $email);
-      echo "Session disimpan : ".\Session::get('key')."<br>";
+      //echo "Session disimpan : ".\Session::get('key')."<br>";
       $pwd = $request->input('password');
-      echo "Email anda    : ".$email."<br>";
-      echo "Password anda : ".$pwd."<br>";
+      echo "<a href='Profile'>Profile</a>";
       echo "<a href='logout'>Logout</a>";
     }
     public function logout(Request $request){
@@ -22,25 +21,22 @@ class CreativeController extends Controller
       echo "Session disimpan : ".\Session::get('key')."<br>";
     }
     public function register(Request $request){
-      $namad = $request->input('namad');
-      $namab = $request->input('namab');
-
       $email = $request->input('email');
       $pwd = $request->input('pwd1');
       $repwd = $request->input('pwd2');
 
       if($pwd == $repwd){
-        DB::table('info_user')->insert(
+        DB::table('login')->insert(
           [
             'email' => $email,
-            'nama_depan' => $namad,
-            'nama_belakang' => $namab,
+            'password'=>$pwd,
           ]
         );
-        echo "Register Succesfull !";
+        echo "Register Succesfull !<br>";
+        echo "<a href='login'>Login</a>";
       }
-
       else
-        echo "Register Failed !";
+        echo "Register Failed !<br><a href='register'>Register</a>";
     }
+    public function profil()
 }

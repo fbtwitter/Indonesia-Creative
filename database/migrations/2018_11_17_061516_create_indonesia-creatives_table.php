@@ -13,27 +13,22 @@ class CreateIndonesiaCreativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Info_user', function (Blueprint $table) {
-            $table->increments('id_info_user',10);
-            $table->string('nama_depan',100);
-            $table->string('nama_belakang',100)->nullable();
-            $table->string('jenis_kelamin',10)->nullable();
-            $table->string('domsili',100)->nullable();
-            $table->string('email',100);
-            $table->timestamps();
-        });
-
-        Schema::create('Login', function (Blueprint $table) {
-            $table->string('password',10);
-            $table->string('usename',50);
-            $table->primary('password');
-        });
-
-        Schema::create('Hak_Akses', function (Blueprint $table) {
-            $table->increments('id_hak_akses',10);
-            $table->string('hak_akses,50');
-        });
-    }
+      //Fungsi untuk update database setiap kali migrate
+      Schema::create('Login', function (Blueprint $table) {
+          $table->integer('id_user')->nullable();
+          $table->string('password',20);
+          $table->string('email',50);
+          $table->integer('hak_akses')->default(3);
+          $table->primary('email');
+      });
+      Schema::create('Info_user', function (Blueprint $table) {
+          $table->integer('id_info_user')->nullable();
+          $table->string('nama_depan',100)->nullable();
+          $table->string('nama_belakang',100)->nullable();
+          $table->string('jenis_kelamin',10)->nullable();
+          $table->string('domsili',100)->nullable();
+      });
+  }
 
     /**
      * Reverse the migrations.
@@ -43,7 +38,6 @@ class CreateIndonesiaCreativesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('Login');
-        Schema::dropIfExists('Hak_Akses');
         Schema::dropIfExists('Info_User');
     }
 }

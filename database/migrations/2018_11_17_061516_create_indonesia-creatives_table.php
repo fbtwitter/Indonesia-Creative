@@ -13,26 +13,25 @@ class CreateIndonesiaCreativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Info_User', function (Blueprint $table) {
+        Schema::create('Info_user', function (Blueprint $table) {
             $table->increments('id_info_user',10);
             $table->string('nama_depan',100);
             $table->string('nama_belakang',100);
             $table->string('jenis_kelamin',10);
-            $table->string('email');
-            $table->string('alamat',100);
+            $table->string('domsili',100);
+            $table->string('email',100);
             $table->timestamps();
         });
 
-        Schema::create('Hak_akses', function (Blueprint $table) {
-            $table->increments('id_Hak_akses',10);
-            $table->string('hak_akses');
-            $table->primary('id_Hak_akses');
+        Schema::create('Login', function (Blueprint $table) {
+            $table->string('password',10);
+            $table->string('usename',50);
+            $table->primary('password');
         });
 
-        Schema::create('Login', function (Blueprint $table) {
-            $table->string('password');
-            $table->string('usename');
-            $table->primary('password');
+        Schema::create('Hak_Akses', function (Blueprint $table) {
+            $table->increments('id_hak_akses',10);
+            $table->string('hak_akses,50');
         });
     }
 
@@ -44,7 +43,7 @@ class CreateIndonesiaCreativesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('Login');
-        Schema::dropIfExists('Hak_akses');
+        Schema::dropIfExists('Hak_Akses');
         Schema::dropIfExists('Info_User');
     }
 }

@@ -22,11 +22,11 @@ class CreateIndonesiaCreativesTable extends Migration
           $table->primary('email');
       });
       Schema::create('Info_user', function (Blueprint $table) {
-          $table->integer('id_info_user')->nullable();
+          $table->increments('id_info_user');
           $table->string('nama_depan',100)->nullable();
           $table->string('nama_belakang',100)->nullable();
           $table->string('jenis_kelamin',10)->nullable();
-          $table->string('domsili',100)->nullable();
+          $table->string('domisili',100)->nullable();
       });
   }
 

@@ -1,4 +1,6 @@
-<?php $__env->startSection('content'); ?>
+@extends('frontend/layout')
+
+@section('content')
 
 <section id="about">
     <div class="container-fluid">
@@ -35,6 +37,4 @@
     </div>
 </section>
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('frontend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@stop

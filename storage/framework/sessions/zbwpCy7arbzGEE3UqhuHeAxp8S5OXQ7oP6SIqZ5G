@@ -1,1 +1,1 @@
-a:3:{s:6:"_token";s:40:"fN0rAKliIRLdVIpVxKMBtONF5qP2reI6P2EQwa15";s:9:"_previous";a:1:{s:3:"url";s:30:"http://localhost:8000/register";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
+a:5:{s:6:"_token";s:40:"fN0rAKliIRLdVIpVxKMBtONF5qP2reI6P2EQwa15";s:9:"_previous";a:1:{s:3:"url";s:29:"http://localhost:8000/profile";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}s:3:"key";s:19:"akuhagung@gmail.com";s:3:"url";a:1:{s:8:"intended";s:26:"http://localhost:8000/home";}}

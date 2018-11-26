@@ -28,14 +28,15 @@ class AccountController extends Controller
 
     public function register(Request $request){
       //Fungsi Registrasi user baru
+      $nama = $request->input('name');
       $email = $request->input('email');
-      $pwd = $request->input('pwd1');
-      $repwd = $request->input('pwd2');
+      $pwd = $request->input('password');
+      $repwd = $request->input('password_confirmation');
 
       if(($pwd == $repwd)&&(DB::table('login')->where('email',$email)->first()==null)){
         DB::table('info_user')->insert(
           [
-            'nama_depan' => null,
+            'nama_depan' => $nama,
           ]
         );
         $posts = DB::select('select id_info_user from Info_user order by id_info_user desc limit 1');

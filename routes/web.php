@@ -17,12 +17,14 @@ Route::get('/', function () {
 Route::get('login',function(){
   return view('login');
 });
-Route::post('login','CreativeController@login');
+Route::post('login','AccountController@login');
 Route::get('register', function()
 {
   return view('register');
 });
-Route::get('logout', 'CreativeController@logout');
-Route::post('register', 'CreativeController@register');
-Route::get('profile','CreativeController@profil');
-Route::post('profile','CreativeController@update');
+Route::get('logout', 'AccountController@logout');
+Route::post('register', 'AccountController@register');
+Route::get('profile','AccountController@profil');
+Route::post('profile','AccountController@update');
+Route::get('one','AccountController@loginadmin');
+Route::post('one','AccountController@adm');

@@ -1,6 +1,6 @@
 <!-- Core Scripts -->
-<script src="{{ asset('assets/js/jquery.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ asset('front/assets/js/jquery.js') }}"></script>
+<script src="{{ asset('front/assets/js/bootstrap/bootstrap.min.js') }}"></script>
 <!-- Plugin Scripts -->
 <script src="{{ asset('front/assets/js/plugins/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('front/assets/js/plugins/classie.js') }}"></script>
@@ -15,4 +15,4 @@
 <script src="{{ asset('front/assets/js/contact_me.js') }}"></script>
 <script src="{{ asset('front/assets/js/plugins/jqBootstrapValidation.js') }}"></script>
 <!-- Vitality Theme Scripts -->
-<script src="assets/js/vitality.js"></script>
+<script src="{{ asset('front/assets/js/vitality.js') }}"></script>

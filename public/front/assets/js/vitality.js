@@ -4,12 +4,12 @@
  * To use this theme you must have a license purchased at WrapBootstrap (https://wrapbootstrap.com)
  */
 
-(function($) {
+(function ($) {
     "use strict"; // Start of use strict
 
     // Smooth Scrolling: Smooth scrolls to an ID on the current page.
     // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
-    $('a.page-scroll').bind('click', function(event) {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -18,16 +18,16 @@
     });
 
     // Activates floating label headings for the contact form.
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+    $("body").on("input propertychange", ".floating-label-form-group", function (e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    }).on("focus", ".floating-label-form-group", function() {
+    }).on("focus", ".floating-label-form-group", function () {
         $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
+    }).on("blur", ".floating-label-form-group", function () {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-collapse ul li a').click(function () {
         $('.navbar-toggle:visible').click();
     });
 
@@ -99,7 +99,7 @@
 
     // Portfolio Filtering Scripts & Hover Effect
     var filterList = {
-        init: function() {
+        init: function () {
 
             // MixItUp plugin
             // http://mixitup.io
@@ -114,11 +114,11 @@
 
         },
 
-        hoverEffect: function() {
+        hoverEffect: function () {
 
             // Simple parallax effect
             $('#portfoliolist .portfolio').hover(
-                function() {
+                function () {
                     $(this).find('.caption').stop().animate({
                         bottom: 0
                     }, 200, 'easeOutQuad');
@@ -126,7 +126,7 @@
                         top: -20
                     }, 300, 'easeOutQuad');
                 },
-                function() {
+                function () {
                     $(this).find('.caption').stop().animate({
                         bottom: -75
                     }, 200, 'easeInQuad');
@@ -146,7 +146,7 @@
 
 // Load WOW.js on non-touch devices
 var isPhoneDevice = "ontouchstart" in document.documentElement;
-$(document).ready(function() {
+$(document).ready(function () {
     if (isPhoneDevice) {
         //mobile
     } else {
@@ -161,9 +161,9 @@ $(document).ready(function() {
 
 // Analytics Tracking - DEMO ONLY!
 
-(function(i, s, o, g, r, a, m) {
+(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
+    i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments)
     }, i[r].l = 1 * new Date();
     a = s.createElement(o),

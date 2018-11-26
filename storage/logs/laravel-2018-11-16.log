@@ -29,8 +29,33 @@
 #26 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #27 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #28 {main}
-"} 
-<<<<<<< HEAD
+"}
+[2018-11-16 13:27:16] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"}
+[2018-11-16 13:27:53] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"}
+[2018-11-16 13:27:55] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
 [2018-11-16 10:43:31] local.ERROR: Undefined variable: _SESSION {"exception":"[object] (ErrorException(code: 0): Undefined variable: _SESSION at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:13)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php(13): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\Larave...', 13, Array)
@@ -87,7 +112,7 @@
 #51 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #53 {main}
-"} 
+"}
 [2018-11-16 10:45:10] local.ERROR: syntax error, unexpected ':', expecting ',' or ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ':', expecting ',' or ';' at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:13)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\Larave...')
@@ -128,7 +153,7 @@
 #35 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #37 {main}
-"} 
+"}
 [2018-11-16 10:45:32] local.ERROR: Class 'App\Http\Controllers\Session' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\Http\\Controllers\\Session' not found at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:13)
 [stacktrace]
 #0 [internal function]: App\\Http\\Controllers\\CreativeController->login(Object(Illuminate\\Http\\Request))
@@ -184,7 +209,7 @@
 #50 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #51 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #52 {main}
-"} 
+"}
 [2018-11-16 10:53:45] local.ERROR: syntax error, unexpected '}', expecting ',' or ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ',' or ';' at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:18)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\Larave...')
@@ -225,7 +250,7 @@
 #35 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #37 {main}
-"} 
+"}
 [2018-11-16 10:54:40] local.ERROR: Undefined variable: request {"exception":"[object] (ErrorException(code: 0): Undefined variable: request at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:20)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\Larave...', 20, Array)
@@ -282,8 +307,10 @@
 #51 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #53 {main}
-"} 
-[2018-11-16 14:49:56] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
+"}
+[2018-11-16 14:49:56] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -342,8 +369,10 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
-[2018-11-16 14:50:38] local.ERROR: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
+"}
+[2018-11-16 14:50:38] local.ERROR: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -402,8 +431,10 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
-[2018-11-16 14:50:55] local.ERROR: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
+"}
+[2018-11-16 14:50:55] local.ERROR: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:18)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -462,8 +493,10 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
-[2018-11-16 14:51:37] local.ERROR: Illegal string offset 'name' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): Illegal string offset 'name' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290, ErrorException(code: 0): Illegal string offset 'name' at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290)
+"}
+[2018-11-16 14:51:37] local.ERROR: Illegal string offset 'name' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): Illegal string offset 'name' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290, ErrorException(code: 0): Illegal string offset 'name' at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -522,8 +555,10 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
-[2018-11-16 14:51:42] local.ERROR: Illegal string offset 'name' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): Illegal string offset 'name' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290, ErrorException(code: 0): Illegal string offset 'name' at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290)
+"}
+[2018-11-16 14:51:42] local.ERROR: Illegal string offset 'name' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): Illegal string offset 'name' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290, ErrorException(code: 0): Illegal string offset 'name' at C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravelcollective\\html\\src\\FormBuilder.php:290)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -582,7 +617,7 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
+"}
 [2018-11-16 15:00:50] local.ERROR: syntax error, unexpected '}', expecting ',' or ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ',' or ';' at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:22)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\Larave...')
@@ -623,8 +658,10 @@
 #35 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #37 {main}
-"} 
-[2018-11-16 15:10:46] local.ERROR: syntax error, unexpected ':', expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected ':', expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\esources\\views\egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:8, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ':', expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:8)
+"}
+[2018-11-16 15:10:46] local.ERROR: syntax error, unexpected ':', expecting ',' or ')' (View: C:\xampp\Laravel\Indonesia-Creative\resources\views\register.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected ':', expecting ',' or ')' (View: C:\\xampp\\Laravel\\Indonesia-Creative\
+esources\\views\
+egister.blade.php) at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:8, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ':', expecting ',' or ')' at C:\\xampp\\Laravel\\Indonesia-Creative\\storage\\framework\\views\\dd00e2e49292e9c0f719b008bb68979502a7b4b6.php:8)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\Laravel\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\Larave...', Array)
@@ -683,7 +720,7 @@
 #54 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #56 {main}
-"} 
+"}
 [2018-11-16 15:11:17] local.ERROR: Undefined variable: email {"exception":"[object] (ErrorException(code: 0): Undefined variable: email at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:26)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php(26): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\Larave...', 26, Array)
@@ -740,7 +777,7 @@
 #51 C:\\xampp\\Laravel\\Indonesia-Creative\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #52 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #53 {main}
-"} 
+"}
 [2018-11-16 17:40:37] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Info_User` add primary key `info_user_id_info_user_primary`(`id_info_user`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Info_User` add primary key `info_user_id_info_user_primary`(`id_info_user`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `In...', Array, Object(Closure))
@@ -771,7 +808,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:40:48] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -802,11 +839,11 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:43:00] local.ERROR: Cannot declare class CreateIndonesiaCreativesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateIndonesiaCreativesTable, because the name is already in use at C:\\xampp\\htdocs\\Indonesia-Creative\\database\\migrations\\2018_11_16_173827_create_indonesia__creatives_table.php:51)
 [stacktrace]
 #0 {main}
-"} 
+"}
 [2018-11-16 17:43:26] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -837,7 +874,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:43:38] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -868,7 +905,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:44:58] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Info_User` add primary key `info_user_id_info_user_primary`(`id_info_user`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Info_User` add primary key `info_user_id_info_user_primary`(`id_info_user`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `In...', Array, Object(Closure))
@@ -899,7 +936,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:46:51] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -930,7 +967,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:47:14] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `Info_User` add unique `info_user_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `Info_User` add unique `info_user_email_unique`(`email`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `In...', Array, Object(Closure))
@@ -961,7 +998,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:48:03] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -992,7 +1029,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:49:38] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'password' doesn't exist in table (SQL: alter table `Hak_akses` add primary key `hak_akses_password_primary`(`password`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'password' doesn't exist in table (SQL: alter table `Hak_akses` add primary key `hak_akses_password_primary`(`password`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'password' doesn't exist in table at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Ha...', Array, Object(Closure))
@@ -1023,7 +1060,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:51:58] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Hak_akses` add primary key `hak_akses_id_hak_akses_primary`(`id_Hak_akses`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `Hak_akses` add primary key `hak_akses_id_hak_akses_primary`(`id_Hak_akses`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Ha...', Array, Object(Closure))
@@ -1054,7 +1091,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:53:15] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `Login` add index `login_password_index`(`password`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `Login` add index `login_password_index`(`password`)) at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `Lo...', Array, Object(Closure))
@@ -1085,7 +1122,7 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-"} 
+"}
 [2018-11-16 17:55:26] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists (SQL: create table `Info_User` (`id_info_user` int unsigned not null auto_increment primary key, `nama_depan` varchar(100) not null, `nama_belakang` varchar(100) not null, `jenis_kelamin` varchar(10) not null, `email` varchar(255) not null, `alamat` varchar(100) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'info_user' already exists at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `I...', Array, Object(Closure))
@@ -1116,32 +1153,4 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
-=======
-[2018-11-16 13:27:16] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
-[stacktrace]
-#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
-#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
-#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
-#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
-#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#5 {main}
-"} 
-[2018-11-16 13:27:53] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
-[stacktrace]
-#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
-#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
-#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
-#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
-#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#5 {main}
-"} 
-[2018-11-16 13:27:55] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
-[stacktrace]
-#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
-#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
-#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
-#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
-#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#5 {main}
->>>>>>> ddf28f08eddefbec627d7cce3aa439667e3c79c3
-"} 
+"}

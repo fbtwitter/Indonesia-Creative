@@ -1,98 +1,40 @@
-<!doctype html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php $__env->startSection('content'); ?>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <?php if(Route::has('login')): ?>
-                <div class="top-right links">
-                    <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/home')); ?>">Home</a>
-                    <?php else: ?>
-                        <a href="<?php echo e(route('login')); ?>">Login</a>
-
-                        <?php if(Route::has('register')): ?>
-                            <a href="<?php echo e(route('register')); ?>">Register</a>
-                        <?php endif; ?>
-                    <?php endif; ?>
+<section id="about">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg-12 wow fadeIn">
+                <h1>What our Elearning would gives to you</h1>
+                <p>Vitality is the perfect theme for a freelance professional or an agency.</p>
+                <hr class="colored">
+            </div>
+        </div>
+        <div class="row text-center content-row">
+            <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay=".2s">
+                <div class="about-content">
+                    <i class="fa fa-chat"></i>
+                    <h3>Live Chat</h3>
+                    <p>This theme includes the retina.js plugin for easy retina image support so your images and graphics will look great on mobile devices!</p>
                 </div>
-            <?php endif; ?>
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay=".4s">
+                <div class="about-content">
+                    <i class="fa fa-reward"></i>
+                    <h3>Reward & Certificate</h3>
+                    <p>Vitality is built using Bootstrap 3, and is easy to edit and customize. LESS files are included as well for deeper customization.</p>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay=".6s">
+                <div class="about-content">
+                    <i class="fa fa-books"></i>
+                    <h3>Books & Software</h3>
+                    <p>When building this theme, we've paid close attention to how it looks on various screen sizes. Try it out on a phone or tablet!</p>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</section>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

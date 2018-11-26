@@ -30,6 +30,7 @@
 #27 C:\\xampp\\Laravel\\Indonesia-Creative\\server.php(21): require_once('C:\\\\xampp\\\\Larave...')
 #28 {main}
 "} 
+<<<<<<< HEAD
 [2018-11-16 10:43:31] local.ERROR: Undefined variable: _SESSION {"exception":"[object] (ErrorException(code: 0): Undefined variable: _SESSION at C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php:13)
 [stacktrace]
 #0 C:\\xampp\\Laravel\\Indonesia-Creative\\app\\Http\\Controllers\\CreativeController.php(13): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\xampp\\\\Larave...', 13, Array)
@@ -1115,4 +1116,32 @@
 #25 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
+=======
+[2018-11-16 13:27:16] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-11-16 13:27:53] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-11-16 13:27:55] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:707)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(687): Illuminate\\Foundation\\Application->registerDeferredProvider('Collective\\\\Html...', 'html')
+#1 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\Application->loadDeferredProvider('html')
+#2 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(300): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\xampp\\htdocs\\Indonesia-Creative\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\xampp\\htdocs\\Indonesia-Creative\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+>>>>>>> ddf28f08eddefbec627d7cce3aa439667e3c79c3
 "} 

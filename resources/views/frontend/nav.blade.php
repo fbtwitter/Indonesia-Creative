@@ -12,8 +12,10 @@
                 </button>
             <a class="navbar-brand page-scroll" href="#page-top">
                     <img src="{{ asset('front/assets/img/logo.png') }}" class="img-responsive" alt="">
-                </a>
-        </div>
+             
+             
+          </a>
+        </div>  
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">

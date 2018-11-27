@@ -25,12 +25,10 @@ Route::get('/dashboard',function(){
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
 
 Route::get('/test',function(){
     return view('test');
 });
-=======
 Route::post('login','AccountController@login');
 // Route::get('register', function()
 // {
@@ -42,4 +40,3 @@ Route::get('profile','AccountController@profil');
 Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
->>>>>>> a7b7b10e6715ef902d784ba743b9cfff1b533ef6

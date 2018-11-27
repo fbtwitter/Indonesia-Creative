@@ -96,47 +96,47 @@
                             <h2>IC Surabaya</h2>
                             <hr class="colored">
                             <div class="row">
-                                    <div class="col-md-6">
-                                            <div class="ibox-content">
-                                                    <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign In</h5>
-                                                <form class="m-t" role="form" action="index.html">
-                                                    
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-control" placeholder="Username" required="">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="password" class="form-control" placeholder="Password" required="">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary block full-width m-b m-t">Sign In</button>
-                            
-                                                    <a href="#">
+                                <div class="col-md-6">
+                                    <div class="ibox-content">
+                                        <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign In</h5>
+                                        <form class="m-t" role="form" action="index.html">
+
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Username" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Password" required="">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary block full-width m-b m-t">Sign In</button>
+
+                                            <a href="#">
                                                         <small>Forgot password?</small>
                                                     </a>
-                            
-                                                    <p class="text-muted text-center">
-                                                        <small>Do not have an account?</small>
-                                                    </p>
-                                                </form>
+
+                                            <p class="text-muted text-center">
+                                                <small>Do not have an account?</small>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="ibox-content">
+                                        <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
+                                        <form class="m-t" role="form" action="index.html">
+                                            <div class="form-group">
+                                                <input type="name" class="form-control" placeholder="Insert Name" required="">
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                                <div class="ibox-content">
-                                                        <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
-                                                    <form class="m-t" role="form" action="index.html">
-                                                        <div class="form-group">
-                                                            <input type="name" class="form-control" placeholder="Insert Name" required="">
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <input type="email" class="form-control" placeholder="Insert Email" required="">
-                                                            </div>
-                                                        <div class="form-group">
-                                                            <input type="password" class="form-control" placeholder="Insert PaPassword" required="">
-                                                        </div>
-                                                        <button type="submit" class="btn btn-danger block full-width m-b m-t">Sign Up</button>
-                                                        
-                                                    </form>
-                                                </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Insert Email" required="">
                                             </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Insert PaPassword" required="">
+                                            </div>
+                                            <button type="submit" class="btn btn-danger block full-width m-b m-t">Sign Up</button>
+
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

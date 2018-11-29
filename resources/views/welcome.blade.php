@@ -1,4 +1,7 @@
-@extends('frontend/layout') 
+@extends('ManagementFile/frontend/layout')
+@section('title-name') IC Surabaya
+@endsection
+
 @section('body-content')
 
 <section id="about">

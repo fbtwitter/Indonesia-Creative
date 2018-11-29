@@ -1,4 +1,6 @@
- 
+<?php $__env->startSection('title-name'); ?> IC Surabaya
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('body-content'); ?>
 
 <section id="about">
@@ -319,4 +321,5 @@
     </div>
 </section>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('frontend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php echo $__env->make('ManagementFile/frontend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

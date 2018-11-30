@@ -23,19 +23,6 @@
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
-                <div class="form-group">
-                    <ol class="breadcrumb" style="margin: 20px 0px 0px 70px;">
-                        <li>
-                            <a href="{{ url('Dashboard')}}">Home</a>
-                        </li>
-                        <li class="breadcrumb">
-                            <a>Course Category</a>
-                        </li>
-                        <li>
-                            <strong>Other Course</strong>
-                        </li>
-                    </ol>
-                </div>
             </div>
             <ul class="nav navbar-top-links navbar-right">
 
@@ -48,157 +35,256 @@
             </ul>
         </nav>
     </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Other Course</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{ url('Dashboard') }}">Home</a>
+                </li>
+                <li class="breadcrumb">
+                    <a>Course Category</a>
+                </li>
+                <li class="active">
+                    <strong>Other Course</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tabs-container">
 
-    <div class="row">
-        <div class="col-lg-12">
-            {{-- first page --}}
-            <div class="wrapper wrapper-content">
-                {{-- first row --}}
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>Your daily feed</h5>
-                                <div class="ibox-tools">
-                                    <span class="label label-warning-light pull-right">10 Messages</span>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-
-                                <div>
-                                    <div class="feed-activity-list">
-
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/profile.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">5m ago</small>
-                                                <strong>Monica Smith</strong> posted a new blog. <br>
-                                                <small class="text-muted">Today 5:60 pm - 12.06.2014</small>
-
+                    <div class="tabs-left">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">Advertising</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">Architecture</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-3">Crafts</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-4">Software</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-5">Music</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-6">Fashion</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-7">Interactive Games</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-8">Music</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-9">Performance Art</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-10">Publishing & Printing</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-11">R n D</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-12">Television & Radio</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-13">Vidio, Film, Photography</a></li>
+                        </ul>
+                        <div class="tab-content ">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <div class="col-lg-6">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-content">
+                                                <figure>
+                                                    <iframe width="300" height="400" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
+                                                </figure>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-content profile-content">
+                                                <h4><strong>Microsoft's Concept of How 2019 Will Look Like - Official Video</strong></h4>
+                                                <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
+                                                <h5>
+                                                    Science and Technology
+                                                </h5>
+                                                <p>
+                                                    What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
+                                                    seem to want to give consumer a glimpse of what they want the future
+                                                    to look like.
+                                                    <br/>
+                                                    <br/>
+                                                    <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
+                                                    <br/>
+                                                    <br/> Earlier this month "Microsoft Office Labs Vision 2019," was released
+                                                    and now we have "Productivity Future Vision (2011)". Both are inspiring
+                                                    and beautifully edited. </p>
+                                                <div class="row m-t-md">
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary">Join Class!</button>
+                                                    </div>
 
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a2.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
-                                                <strong>Mark Johnson</strong> posted message on <strong>Monica Smith</strong>                                                site. <br>
-                                                <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a3.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
-                                                <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>.
-                                                <br>
-                                                <small class="text-muted">2 days ago at 8:30am</small>
-                                            </div>
-                                        </div>
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a4.jpg">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right text-navy">5h ago</small>
-                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
-                                                <br>
-                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                                <div class="actions">
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Donec quam felis</strong>
+
+                                    <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among
+                                        the stalks, and grow familiar with the countless indescribable forms of the insects
+                                        and flies, then I feel the presence of the Almighty, who formed us in his own image,
+                                        and the breath </p>
+
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss
+                                        of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense
+                                        of mere tranquil existence, that I neglect my talents. I should be incapable of drawing
+                                        a single stroke at the present moment; and yet.</p>
+                                </div>
+                            </div>
+                            <div id="tab-3" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-4" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-5" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Donec quam felis</strong>
+
+                                    <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among
+                                        the stalks, and grow familiar with the countless indescribable forms of the insects
+                                        and flies, then I feel the presence of the Almighty, who formed us in his own image,
+                                        and the breath </p>
+
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss
+                                        of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense
+                                        of mere tranquil existence, that I neglect my talents. I should be incapable of drawing
+                                        a single stroke at the present moment; and yet.</p>
+                                </div>
+                            </div>
+                            <div id="tab-6" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-7" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-8" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-9" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-10" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-11" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-12" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
+                                </div>
+                            </div>
+                            <div id="tab-13" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
+                                        in this spot, which was created for the bliss of souls like mine.</p>
+
+                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
+                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-lg-8">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>Read below comments</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                            <i class="fa fa-chevron-up"></i>
-                                        </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">Config option 1</a>
-                                        </li>
-                                        <li><a href="#">Config option 2</a>
-                                        </li>
-                                    </ul>
-                                    <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content no-padding">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.</p>
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                            </div>
-                                            <div class="col-lg-9"><button class="btn btn-primary">Details</button></div>
-                                        </div>
 
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is
-                                            crazy!
-                                        </p>
-                                        <div class="text-center m">
-                                            <span id="sparkline8"></span>
-                                        </div>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
-                                            galley
-                                        </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                    </li>
-                                    <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
-                                            galley
-                                        </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                {{-- first row --}} {{-- first page --}}
             </div>
-        </div>
     @include('ManagementFile/backend/footer')
+        </div>
     </div>
 </div>
 
@@ -600,4 +686,13 @@
 
 <!-- ChartJS-->
 <script src="{{ asset('admin/js/plugins/chartJs/Chart.min.js') }}"></script>
+<script src="{{ asset('admin/js/plugins/pace/pace.min.js') }}"></script>
+<script src="{{ asset('admin/js/plugins/video/responsible-video.js') }}"></script>
+
+<script>
+    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function (e){
+        $('body').hasClass('fullscreen-video') ? $('body').removeClass('fullscreen-video') : $('body').addClass('fullscreen-video')
+    });
+
+</script>
 @endsection

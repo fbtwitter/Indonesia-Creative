@@ -1,31 +1,29 @@
-@extends('ManagementFile/backend/layout')
-@section('title-dashboard') IC Surabaya
-@endsection
+<?php $__env->startSection('title-dashboard'); ?> Advertising Class
+<?php $__env->stopSection(); ?>
 
-@section('scriptcss')
+<?php $__env->startSection('scriptcss'); ?>
+<!-- Toastr style -->
+<link href="<?php echo e(asset('css/plugins/toastr/toastr.min.css')); ?>" rel="stylesheet">
+
 <!-- Gritter -->
-<link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.css')); ?>" rel="stylesheet">
 
-<link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
-@endsection
+<link href="<?php echo e(asset('admin/css/plugins/iCheck/custom.css')); ?>" rel="stylesheet">
 
-@section('body-content')
+<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.css')); ?>" rel="stylesheet">
+<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.print.css')); ?>" rel='stylesheet' media='print'>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('body-content'); ?>
 
 
 
 <div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
-        {{-- Navbar --}}
+        
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
-                <div class="form-group">
-                    <ol class="breadcrumb" style="margin: 20px 0px 0px 70px;">
-                        <li>
-                            <a href="{{ url('Dashboard')}}">Home</a>
-                        </li>
-                    </ol>
-                </div>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
@@ -37,161 +35,90 @@
             </ul>
         </nav>
     </div>
-    {{-- Navbar --}}
+    
     <div class="row  border-bottom white-bg dashboard-header">
-
-        <div class="col-md-3">
-            <h2>Welcome Reza!</h2>
-            <small>Student Ranking Based On Point of Monthly Meeting.</small>
-            <ul class="list-group clear-list m-t">
-                <li class="list-group-item fist-item">
-                    <span class="pull-right">
-                            420
-                        </span>
-                    <span class="label label-success">1</span> Albert Einstein
+        <div class="col-lg-10">
+            <h2>Advertising Class</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<?php echo e(url('Dashboard')); ?>">Home</a>
                 </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            370
-                        </span>
-                    <span class="label label-info">2</span> Nelson Mandela
+                <li class="breadcrumb">
+                    <a>Course Category</a>
                 </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            330
-                        </span>
-                    <span class="label label-primary">3</span> Christoper Colombus
+                <li class="breadcrumb">
+                    <a>Selected Course</a>
                 </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            250
-                        </span>
-                    <span class="label label-default">4</span> Steve Jog
+                <li class="active">
+                    <strong>Advertising</strong>
                 </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            200
-                        </span>
-                    <span class="label label-primary">5</span> Bill Gets
-                </li>
-            </ul>
+            </ol>
         </div>
-        <div class="col-md-6">
-            <div class="flot-chart dashboard-chart">
-                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-            </div>
-            <div class="row text-left">
-                <div class="col-xs-4">
-                    <div class=" m-l-md">
-                        <span class="h4 font-bold m-t block">$ 406,100</span>
-                        <small class="text-muted m-b block">Sales marketing report</small>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <figure>
+                            <iframe width="450" height="350" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
+                        </figure>
                     </div>
                 </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 150,401</span>
-                    <small class="text-muted m-b block">Annual sales revenue</small>
-                </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 16,822</span>
-                    <small class="text-muted m-b block">Half-year revenue margin</small>
-                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content profile-content">
+                        <h4><strong>Microsoft's Concept of How 2019 Will Look Like - Official Video</strong></h4>
+                        <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
+                        <h5>
+                            Science and Technology
+                        </h5>
+                        <p>
+                            What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
+                            seem to want to give consumer a glimpse of what they want the future to look like.
+                            <br/>
+                            <br/>
+                            <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
+                            <br/>
+                            <br/> Earlier this month "Microsoft Office Labs Vision 2019," was released and now we have "Productivity
+                            Future Vision (2011)". Both are inspiring and beautifully edited. </p>
+                        <div class="row m-t-md">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary">Join Class!</button>
+                            </div>
 
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="statistic-box">
-                <h4>
-                    Project Beta progress
-                </h4>
-                <p>
-                    You have two project with not compleated task.
-                </p>
-                <div class="row text-center">
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
-                        <h5>Kolter</h5>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
-                        <h5>Maxtor</h5>
-                    </div>
-                </div>
-                <div class="m-t">
-                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
-            {{-- first page --}}
+            
             <div class="wrapper wrapper-content">
-                {{-- first row --}}
+                
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <h5>Review from master</h5>
-                                <div class="ibox-tools">
-                                    <span class="label label-warning-light pull-right">10 Messages</span>
-                                </div>
+                                <h5>Option</h5>
                             </div>
                             <div class="ibox-content">
-
                                 <div>
                                     <div class="feed-activity-list">
-
                                         <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">5m ago</small>
-                                                <strong>Monica Smith</strong> posted a new blog. <br>
-                                                <small class="text-muted">Today 5:60 pm - 12.06.2014</small>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a2.jpg') }}">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
-                                                <strong>Mark Johnson</strong> posted message on <strong>Monica Smith</strong>                                                site. <br>
-                                                <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
-                                            </div>
+                                            <h2 class="active">Overview</h2>
                                         </div>
                                         <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a3.jpg') }}">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
-                                                <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>.
-                                                <br>
-                                                <small class="text-muted">2 days ago at 8:30am</small>
-                                            </div>
+                                            <h2 class="">Course Content</h1>
                                         </div>
                                         <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a4.jpg') }}">
-                                            </a>
-                                            <div class="media-body ">
-                                                <small class="pull-right text-navy">5h ago</small>
-                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
-                                                <br>
-                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                                <div class="actions">
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
-                                                </div>
-                                            </div>
+                                            <h2 class="">Announcement</h2>
+                                        </div>
+                                        <div class="feed-element">
+                                            <h2 class="">Library</h2>
                                         </div>
                                     </div>
-
-                                    <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +149,7 @@
                             <div class="ibox-content no-padding">
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <div class="row">
                                             <div class="col-lg-3">
@@ -233,7 +160,7 @@
 
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is
+                                        <p><a class="text-info" href="#">@Stock  Man</a> Check this stock chart. This price is
                                             crazy!
                                         </p>
                                         <div class="text-center m">
@@ -242,22 +169,22 @@
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                                     </li>
                                     <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
+                                        <p><a class="text-info" href="#">@Jonathan  Febrick</a> The standard chunk of Lorem Ipsum</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
@@ -268,14 +195,13 @@
                     </div>
                 </div>
 
-                {{-- first row --}} {{-- first page --}}
+                 
             </div>
         </div>
-    @include('ManagementFile/backend/footer')
     </div>
 </div>
 
-{{-- Content Right SideBar --}}
+
 <div id="right-sidebar" class="animated">
     <div class="sidebar-container">
 
@@ -289,7 +215,7 @@
         </ul>
 
         <div class="tab-content">
-            {{-- Tab 1 --}}
+            
             <div id="tab-1" class="tab-pane active">
 
                 <div class="sidebar-title">
@@ -418,7 +344,7 @@
                 </div>
             </div>
 
-            {{-- Tab 2 --}}
+            
             <div id="tab-2" class="tab-pane">
 
                 <div class="sidebar-title">
@@ -648,29 +574,31 @@
 
 </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scriptjs')
+<?php $__env->startSection('scriptjs'); ?>
 <!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.pie.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.spline.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.resize.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.pie.js')); ?>"></script>
 
 <!-- Peity -->
-<script src="{{ asset('admin/js/plugins/peity/jquery.peity.min.js') }}"></script>
-<script src="{{ asset('admin/js/demo/peity-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/peity/jquery.peity.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/demo/peity-demo.js')); ?>"></script>
 
 <!-- GITTER -->
-<script src="{{ asset('admin/js/plugins/gritter/jquery.gritter.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.min.js')); ?>"></script>
 
 <!-- Sparkline -->
-<script src="{{ asset('admin/js/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/sparkline/jquery.sparkline.min.js')); ?>"></script>
 
 <!-- Sparkline demo data  -->
-<script src="{{ asset('admin/js/demo/sparkline-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/demo/sparkline-demo.js')); ?>"></script>
 
 <!-- ChartJS-->
-<script src="{{ asset('admin/js/plugins/chartJs/Chart.min.js') }}"></script>
-@endsection
+<script src="<?php echo e(asset('admin/js/plugins/chartJs/Chart.min.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('ManagementFile/backend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

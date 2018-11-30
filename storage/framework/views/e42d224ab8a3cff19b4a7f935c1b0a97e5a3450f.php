@@ -40,38 +40,38 @@
     <div class="row  border-bottom white-bg dashboard-header">
 
         <div class="col-md-3">
-            <h2>Welcome Amelia</h2>
-            <small>You have 42 messages and 6 notifications.</small>
+            <h2>Welcome Reza!</h2>
+            <small>Student Ranking Based On Point of Monthly Meeting.</small>
             <ul class="list-group clear-list m-t">
                 <li class="list-group-item fist-item">
                     <span class="pull-right">
-                            09:00 pm
+                            420
                         </span>
-                    <span class="label label-success">1</span> Please contact me
+                    <span class="label label-success">1</span> Albert Einstein
                 </li>
                 <li class="list-group-item">
                     <span class="pull-right">
-                            10:16 am
+                            370
                         </span>
-                    <span class="label label-info">2</span> Sign a contract
+                    <span class="label label-info">2</span> Nelson Mandela
                 </li>
                 <li class="list-group-item">
                     <span class="pull-right">
-                            08:22 pm
+                            330
                         </span>
-                    <span class="label label-primary">3</span> Open new shop
+                    <span class="label label-primary">3</span> Christoper Colombus
                 </li>
                 <li class="list-group-item">
                     <span class="pull-right">
-                            11:06 pm
+                            250
                         </span>
-                    <span class="label label-default">4</span> Call back to Sylvia
+                    <span class="label label-default">4</span> Steve Jog
                 </li>
                 <li class="list-group-item">
                     <span class="pull-right">
-                            12:00 am
+                            200
                         </span>
-                    <span class="label label-primary">5</span> Write a letter to Sandra
+                    <span class="label label-primary">5</span> Bill Gets
                 </li>
             </ul>
         </div>
@@ -130,7 +130,7 @@
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
-                                <h5>Your daily feed</h5>
+                                <h5>Review from master</h5>
                                 <div class="ibox-tools">
                                     <span class="label label-warning-light pull-right">10 Messages</span>
                                 </div>
@@ -142,7 +142,7 @@
 
                                         <div class="feed-element">
                                             <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/profile.jpg">
+                                                <img alt="image" class="img-circle" src="<?php echo e(asset('admin/img/a1.jpg')); ?>">
                                             </a>
                                             <div class="media-body ">
                                                 <small class="pull-right">5m ago</small>
@@ -154,7 +154,7 @@
 
                                         <div class="feed-element">
                                             <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a2.jpg">
+                                                <img alt="image" class="img-circle" src="<?php echo e(asset('admin/img/a2.jpg')); ?>">
                                             </a>
                                             <div class="media-body ">
                                                 <small class="pull-right">2h ago</small>
@@ -164,7 +164,7 @@
                                         </div>
                                         <div class="feed-element">
                                             <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a3.jpg">
+                                                <img alt="image" class="img-circle" src="<?php echo e(asset('admin/img/a3.jpg')); ?>">
                                             </a>
                                             <div class="media-body ">
                                                 <small class="pull-right">2h ago</small>
@@ -175,7 +175,7 @@
                                         </div>
                                         <div class="feed-element">
                                             <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="img/a4.jpg">
+                                                <img alt="image" class="img-circle" src="<?php echo e(asset('admin/img/a4.jpg')); ?>">
                                             </a>
                                             <div class="media-body ">
                                                 <small class="pull-right text-navy">5h ago</small>

@@ -16,14 +16,14 @@
             <li class="special_link @if(url('/Dashboard') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
-            <li class="@if(url('Others') == request()->url()) active @else '' @endif  treeview">
+            <li class="@if((url('Others') == request()->url()) || (url('CC_Advert') == request()->url())) active @else '' @endif  treeview">
                 <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="#" id="damian">Selected Course<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li class="@if(url('/CC_Advert') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Advert')}}" class="fa fa-american-sign-language-interpreting"> Advertising</a>
+                                <a href="{{ url('CC_Advert')}}"> Advertising</a>
                             </li>
                             <li class="@if(url('/CC_Architecture') == request()->url()) active @else '' @endif  treeview">
                                 <a href="{{ url('CC_Architecture')}}">Architecture</a>

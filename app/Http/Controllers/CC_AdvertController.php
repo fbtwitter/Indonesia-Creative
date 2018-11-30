@@ -14,6 +14,7 @@ class CC_AdvertController extends Controller
     public function index()
     {
         //
+        return view('CourseCategory.Selected.CC_Advert.index');
     }
 
     /**

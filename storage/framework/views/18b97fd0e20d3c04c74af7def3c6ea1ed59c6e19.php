@@ -16,14 +16,14 @@
             <li class="special_link <?php if(url('/Dashboard') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
                 <a href="<?php echo e(url('Dashboard')); ?>"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
-            <li class="<?php if(url('Others') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+            <li class="<?php if((url('Others') == request()->url()) || (url('CC_Advert') == request()->url())): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
                 <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="#" id="damian">Selected Course<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li class="<?php if(url('/CC_Advert') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
-                                <a href="<?php echo e(url('CC_Advert')); ?>" class="fa fa-american-sign-language-interpreting"> Advertising</a>
+                                <a href="<?php echo e(url('CC_Advert')); ?>"> Advertising</a>
                             </li>
                             <li class="<?php if(url('/CC_Architecture') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
                                 <a href="<?php echo e(url('CC_Architecture')); ?>">Architecture</a>

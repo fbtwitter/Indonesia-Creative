@@ -20,9 +20,6 @@ Route::get('login',function(){
   return view('login');
 });
 Route::post('login','CreativeController@login');
-Route::get('/dashboard',function(){
-  return view('dashboard');
-});
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -40,3 +37,12 @@ Route::get('profile','AccountController@profil');
 Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
+
+Route::resource('/Dashboard', 'DashboardController');
+Route::resource('/CC_Advert', 'CC_AdvertController');
+Route::resource('/CC_Architecture', 'CC_ArchitectureController');
+Route::resource('/CC_Crafts', 'CC_CraftsController');
+Route::resource('/Others', 'OthersController');
+
+
+Route::resource('/MDBukudanAlat','MDBukudanAlatController');

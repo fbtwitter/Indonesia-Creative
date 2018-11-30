@@ -13,44 +13,72 @@
                     ICS
                 </div>
             </li>
-            <li class="special_link">
-                <a href="index.html"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
+            <li class="special_link <?php if(url('/Dashboard') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('Dashboard')); ?>"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
-            <li class="active">
-                <a href="dashboard.html"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
+            <li class="<?php if(url('Others') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="#" id="damian">Selected Course<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
-                            <li><a href="" class="fa fa-american-sign-language-interpreting"> Advertising</a></li>
-                            <li><a href="dashboard_3.html">Architecture</a></li>
-                            <li><a href="dashboard_3.html">Crafts</a></li>
-                            <li><a href="dashboard_3.html">Software</a></li>
-                            <li><a href="dashboard_3.html">Design</a></li>
-                            <li><a href="dashboard_3.html">Fashion</a></li>
-                            <li><a href="dashboard_3.html">Interactive Games</a></li>
-                            <li><a href="dashboard_3.html">Music</a></li>
-                            <li><a href="dashboard_3.html">Performance Art</a></li>
-                            <li><a href="dashboard_3.html">Publishing & Printing</a></li>
-                            <li><a href="dashboard_3.html">R n D</a></li>
-                            <li><a href="dashboard_3.html">Television & Radio</a></li>
-                            <li><a href="dashboard_3.html">Video, Film, Photography</a></li>
+                            <li class="<?php if(url('/CC_Advert') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Advert')); ?>" class="fa fa-american-sign-language-interpreting"> Advertising</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Architecture') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Architecture')); ?>">Architecture</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Crafts') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Crafts')); ?>">Crafts</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Software') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Software')); ?>">Software</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Design') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Design')); ?>">Design</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Fashion') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Fashion')); ?>">Fashion</a>
+                            </li>
+                            <li class="<?php if(url('/CC_IGame') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_IGame')); ?>">Interactive Games</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Music') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Music')); ?>">Music</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Performance') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Performance')); ?>">Performance Art</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Publishing') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Publishing')); ?>">Publishing & Printing</a>
+                            </li>
+                            <li class="<?php if(url('/CC_RnD') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_RnD')); ?>">R n D</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Television') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Television')); ?>">Television & Radio</a>
+                            </li>
+                            <li class="<?php if(url('/CC_Video') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                                <a href="<?php echo e(url('CC_Video')); ?>">Video, Film, Photography</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="dashboard_2.html">Others</a></li>
+                    <li class="<?php if(url('/Others') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                        <a href="<?php echo e(url('Others')); ?>">Others</a>
+                    </li>
                 </ul>
             </li>
-            <li>
-                <a href="metrics.html"><i class="fa fa-comments-o fa-1x"></i> <span class="nav-label">Forum</span>  </a>
+            <li class="<?php if(url('/Forum') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('Forum')); ?>"><i class="fa fa-comments-o fa-1x"></i> <span class="nav-label">Forum</span>  </a>
             </li>
-            <li>
-                <a href="metrics.html"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
+            <li class="<?php if(url('/Setting') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('Setting')); ?>"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
             </li>
-            <li>
-                <a href="metrics.html"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Event</span>  </a>
+            <li class="<?php if(url('/Event') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('Others')); ?>"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Event</span>  </a>
             </li>
-            <li>
-                <a href="metrics.html"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">LogOut</span>  </a>
+            <li class="<?php if(url('/Logout') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('Logout')); ?>"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">LogOut</span>  </a>
             </li>
         </ul>
     </div>

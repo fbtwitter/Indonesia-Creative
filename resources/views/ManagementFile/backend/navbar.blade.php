@@ -16,7 +16,7 @@
             <li class="special_link @if(url('/Dashboard') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
-            <li class="@if((url('CC_Advert') || url('Others')) == request()->url()) active @else '' @endif  treeview">
+            <li class="@if(url('Others') == request()->url()) active @else '' @endif  treeview">
                 <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
@@ -38,7 +38,7 @@
                                 <a href="{{ url('CC_Design')}}">Design</a>
                             </li>
                             <li class="@if(url('/CC_Fashion') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Fashio')}}">Fashion</a>
+                                <a href="{{ url('CC_Fashion')}}">Fashion</a>
                             </li>
                             <li class="@if(url('/CC_IGame') == request()->url()) active @else '' @endif  treeview">
                                 <a href="{{ url('CC_IGame')}}">Interactive Games</a>

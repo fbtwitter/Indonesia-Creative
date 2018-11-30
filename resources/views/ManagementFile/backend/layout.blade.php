@@ -21,7 +21,6 @@
     @include('ManagementFile/backend/navbar') @yield('body-content')
 
 
-
         <!-- Mainly scripts -->
         <script src="{{ asset('admin/js/plugins/fullcalendar/moment.min.js') }}"></script>
         <script src="{{ asset('admin/js/jquery-3.1.1.min.js') }}"></script>

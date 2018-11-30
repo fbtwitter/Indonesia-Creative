@@ -21,7 +21,6 @@
     <?php echo $__env->make('ManagementFile/backend/navbar', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?> <?php echo $__env->yieldContent('body-content'); ?>
 
 
-
         <!-- Mainly scripts -->
         <script src="<?php echo e(asset('admin/js/plugins/fullcalendar/moment.min.js')); ?>"></script>
         <script src="<?php echo e(asset('admin/js/jquery-3.1.1.min.js')); ?>"></script>

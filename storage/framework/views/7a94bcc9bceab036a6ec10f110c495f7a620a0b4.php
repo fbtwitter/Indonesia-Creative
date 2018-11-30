@@ -1,32 +1,31 @@
-@extends('ManagementFile/backend/layout')
-@section('title-dashboard') Other Course
-@endsection
+<?php $__env->startSection('title-dashboard'); ?> Other Course
+<?php $__env->stopSection(); ?>
 
-@section('scriptcss')
+<?php $__env->startSection('scriptcss'); ?>
 
 <!-- Gritter -->
-<link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.css')); ?>" rel="stylesheet">
 
-<link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('admin/css/plugins/iCheck/custom.css')); ?>" rel="stylesheet">
 
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.print.css') }}" rel='stylesheet' media='print'>
-@endsection
+<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.css')); ?>" rel="stylesheet">
+<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.print.css')); ?>" rel='stylesheet' media='print'>
+<?php $__env->stopSection(); ?>
 
-@section('body-content')
+<?php $__env->startSection('body-content'); ?>
 
 
 
 <div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
-        {{-- Navbar --}}
+        
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                 <div class="form-group">
                     <ol class="breadcrumb" style="margin: 20px 0px 0px 70px;">
                         <li>
-                            <a href="{{ url('Dashboard')}}">Home</a>
+                            <a href="<?php echo e(url('Dashboard')); ?>">Home</a>
                         </li>
                         <li class="breadcrumb">
                             <a>Course Category</a>
@@ -51,9 +50,9 @@
 
     <div class="row">
         <div class="col-lg-12">
-            {{-- first page --}}
+            
             <div class="wrapper wrapper-content">
-                {{-- first row --}}
+                
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
@@ -174,7 +173,7 @@
                             <div class="ibox-content no-padding">
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <div class="row">
                                             <div class="col-lg-3">
@@ -185,7 +184,7 @@
 
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is
+                                        <p><a class="text-info" href="#">@Stock  Man</a> Check this stock chart. This price is
                                             crazy!
                                         </p>
                                         <div class="text-center m">
@@ -194,22 +193,22 @@
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                                     </li>
                                     <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
+                                        <p><a class="text-info" href="#">@Jonathan  Febrick</a> The standard chunk of Lorem Ipsum</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
@@ -220,13 +219,13 @@
                     </div>
                 </div>
 
-                {{-- first row --}} {{-- first page --}}
+                 
             </div>
         </div>
     </div>
 </div>
 
-{{-- Content Right SideBar --}}
+
 <div id="right-sidebar" class="animated">
     <div class="sidebar-container">
 
@@ -240,7 +239,7 @@
         </ul>
 
         <div class="tab-content">
-            {{-- Tab 1 --}}
+            
             <div id="tab-1" class="tab-pane active">
 
                 <div class="sidebar-title">
@@ -369,7 +368,7 @@
                 </div>
             </div>
 
-            {{-- Tab 2 --}}
+            
             <div id="tab-2" class="tab-pane">
 
                 <div class="sidebar-title">
@@ -599,29 +598,31 @@
 
 </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scriptjs')
+<?php $__env->startSection('scriptjs'); ?>
 <!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.pie.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.spline.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.resize.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.pie.js')); ?>"></script>
 
 <!-- Peity -->
-<script src="{{ asset('admin/js/plugins/peity/jquery.peity.min.js') }}"></script>
-<script src="{{ asset('admin/js/demo/peity-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/peity/jquery.peity.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/demo/peity-demo.js')); ?>"></script>
 
 <!-- GITTER -->
-<script src="{{ asset('admin/js/plugins/gritter/jquery.gritter.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.min.js')); ?>"></script>
 
 <!-- Sparkline -->
-<script src="{{ asset('admin/js/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/sparkline/jquery.sparkline.min.js')); ?>"></script>
 
 <!-- Sparkline demo data  -->
-<script src="{{ asset('admin/js/demo/sparkline-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/demo/sparkline-demo.js')); ?>"></script>
 
 <!-- ChartJS-->
-<script src="{{ asset('admin/js/plugins/chartJs/Chart.min.js') }}"></script>
-@endsection
+<script src="<?php echo e(asset('admin/js/plugins/chartJs/Chart.min.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('ManagementFile/backend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

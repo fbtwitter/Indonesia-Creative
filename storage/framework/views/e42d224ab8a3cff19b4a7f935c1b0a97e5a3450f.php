@@ -1,44 +1,32 @@
-@extends('ManagementFile/backend/layout')
-@section('title-dashboard') Other Course
-@endsection
+<?php $__env->startSection('title-dashboard'); ?> IC Surabaya
+<?php $__env->stopSection(); ?>
 
-@section('scriptcss')
-
+<?php $__env->startSection('scriptcss'); ?>
 <!-- Gritter -->
-<link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.css')); ?>" rel="stylesheet">
 
-<link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('admin/css/plugins/iCheck/custom.css')); ?>" rel="stylesheet">
+<?php $__env->stopSection(); ?>
 
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.print.css') }}" rel='stylesheet' media='print'>
-@endsection
-
-@section('body-content')
+<?php $__env->startSection('body-content'); ?>
 
 
 
 <div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
-        {{-- Navbar --}}
+        
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                 <div class="form-group">
                     <ol class="breadcrumb" style="margin: 20px 0px 0px 70px;">
                         <li>
-                            <a href="{{ url('Dashboard')}}">Home</a>
-                        </li>
-                        <li class="breadcrumb">
-                            <a>Course Category</a>
-                        </li>
-                        <li>
-                            <strong>Other Course</strong>
+                            <a href="<?php echo e(url('Dashboard')); ?>">Home</a>
                         </li>
                     </ol>
                 </div>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-
                 <li>
                     <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
                 </li>
@@ -48,39 +36,98 @@
             </ul>
         </nav>
     </div>
+    
+    <div class="row  border-bottom white-bg dashboard-header">
 
+        <div class="col-md-3">
+            <h2>Welcome Amelia</h2>
+            <small>You have 42 messages and 6 notifications.</small>
+            <ul class="list-group clear-list m-t">
+                <li class="list-group-item fist-item">
+                    <span class="pull-right">
+                            09:00 pm
+                        </span>
+                    <span class="label label-success">1</span> Please contact me
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                            10:16 am
+                        </span>
+                    <span class="label label-info">2</span> Sign a contract
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                            08:22 pm
+                        </span>
+                    <span class="label label-primary">3</span> Open new shop
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                            11:06 pm
+                        </span>
+                    <span class="label label-default">4</span> Call back to Sylvia
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                            12:00 am
+                        </span>
+                    <span class="label label-primary">5</span> Write a letter to Sandra
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="flot-chart dashboard-chart">
+                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+            </div>
+            <div class="row text-left">
+                <div class="col-xs-4">
+                    <div class=" m-l-md">
+                        <span class="h4 font-bold m-t block">$ 406,100</span>
+                        <small class="text-muted m-b block">Sales marketing report</small>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <span class="h4 font-bold m-t block">$ 150,401</span>
+                    <small class="text-muted m-b block">Annual sales revenue</small>
+                </div>
+                <div class="col-xs-4">
+                    <span class="h4 font-bold m-t block">$ 16,822</span>
+                    <small class="text-muted m-b block">Half-year revenue margin</small>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="statistic-box">
+                <h4>
+                    Project Beta progress
+                </h4>
+                <p>
+                    You have two project with not compleated task.
+                </p>
+                <div class="row text-center">
+                    <div class="col-lg-6">
+                        <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                        <h5>Kolter</h5>
+                    </div>
+                    <div class="col-lg-6">
+                        <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                        <h5>Maxtor</h5>
+                    </div>
+                </div>
+                <div class="m-t">
+                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
-            {{-- first page --}}
+            
             <div class="wrapper wrapper-content">
-                {{-- first row --}}
+                
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>Calendar</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                                <i class="fa fa-chevron-up"></i>
-                                            </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">Config option 1</a>
-                                        </li>
-                                        <li><a href="#">Config option 2</a>
-                                        </li>
-                                    </ul>
-                                    <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-                                <div id="calendar" class="fc fc-unthemed fc-ltr"></div>
-                            </div>
-                        </div>
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>Your daily feed</h5>
@@ -174,7 +221,7 @@
                             <div class="ibox-content no-padding">
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <div class="row">
                                             <div class="col-lg-3">
@@ -185,7 +232,7 @@
 
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is
+                                        <p><a class="text-info" href="#">@Stock  Man</a> Check this stock chart. This price is
                                             crazy!
                                         </p>
                                         <div class="text-center m">
@@ -194,22 +241,22 @@
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                                     </li>
                                     <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
+                                        <p><a class="text-info" href="#">@Jonathan  Febrick</a> The standard chunk of Lorem Ipsum</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
+                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
                                             galley
                                         </p>
                                         <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
@@ -220,13 +267,13 @@
                     </div>
                 </div>
 
-                {{-- first row --}} {{-- first page --}}
+                 
             </div>
         </div>
     </div>
 </div>
 
-{{-- Content Right SideBar --}}
+
 <div id="right-sidebar" class="animated">
     <div class="sidebar-container">
 
@@ -240,7 +287,7 @@
         </ul>
 
         <div class="tab-content">
-            {{-- Tab 1 --}}
+            
             <div id="tab-1" class="tab-pane active">
 
                 <div class="sidebar-title">
@@ -369,7 +416,7 @@
                 </div>
             </div>
 
-            {{-- Tab 2 --}}
+            
             <div id="tab-2" class="tab-pane">
 
                 <div class="sidebar-title">
@@ -599,29 +646,31 @@
 
 </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scriptjs')
+<?php $__env->startSection('scriptjs'); ?>
 <!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.pie.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.spline.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.resize.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.pie.js')); ?>"></script>
 
 <!-- Peity -->
-<script src="{{ asset('admin/js/plugins/peity/jquery.peity.min.js') }}"></script>
-<script src="{{ asset('admin/js/demo/peity-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/peity/jquery.peity.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/demo/peity-demo.js')); ?>"></script>
 
 <!-- GITTER -->
-<script src="{{ asset('admin/js/plugins/gritter/jquery.gritter.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.min.js')); ?>"></script>
 
 <!-- Sparkline -->
-<script src="{{ asset('admin/js/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/plugins/sparkline/jquery.sparkline.min.js')); ?>"></script>
 
 <!-- Sparkline demo data  -->
-<script src="{{ asset('admin/js/demo/sparkline-demo.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/demo/sparkline-demo.js')); ?>"></script>
 
 <!-- ChartJS-->
-<script src="{{ asset('admin/js/plugins/chartJs/Chart.min.js') }}"></script>
-@endsection
+<script src="<?php echo e(asset('admin/js/plugins/chartJs/Chart.min.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('ManagementFile/backend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

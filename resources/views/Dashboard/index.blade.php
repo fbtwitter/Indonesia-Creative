@@ -271,6 +271,7 @@
                 {{-- first row --}} {{-- first page --}}
             </div>
         </div>
+    @include('ManagementFile/backend/footer')
     </div>
 </div>
 

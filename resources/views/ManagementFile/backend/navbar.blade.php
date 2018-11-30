@@ -6,8 +6,8 @@
                     <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{ asset('admin/img/profile_big.jpg') }}" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                     </span> <span class="text-muted text-xs block">Art Director</span> </span> </a>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Reza Fauzi Augusdi</strong>
+                     </span> <span class="text-muted text-xs block">Web Developer</span> </span> </a>
                 </div>
                 <div class="logo-element">
                     ICS
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <li class="@if(url('/Others') == request()->url()) active @else '' @endif  treeview">
-                        <a href="{{ url('Others')}}">Others</a>
+                        <a href="{{ url('Others')}}"><span class="nav-label">Others</span><span class="label label-warning pull-right">14</span></a>
                     </li>
                 </ul>
             </li>
@@ -75,7 +75,7 @@
                 <a href="{{ url('Setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
             </li>
             <li class="@if(url('/Event') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('Others')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Event</span>  </a>
+                <a href="{{ url('Others')}}"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>
             </li>
             <li class="@if(url('/Logout') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Logout')}}"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">LogOut</span>  </a>

@@ -5,8 +5,9 @@
 @section('scriptcss')
 <!-- Gritter -->
 <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
-
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
+<link href="{{ asset('admin/css/plugins/slick/slick.css') }}" rel="stylesheet">
+<link href="{{ asset('admin/css/plugins/slick/slick-theme.css') }}" rel="stylesheet">
 @endsection
 
 @section('body-content')
@@ -77,190 +78,221 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <div class="flot-chart dashboard-chart">
-                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-            </div>
-            <div class="row text-left">
-                <div class="col-xs-4">
-                    <div class=" m-l-md">
-                        <span class="h4 font-bold m-t block">$ 406,100</span>
-                        <small class="text-muted m-b block">Sales marketing report</small>
+            <div class="ibox float-e-margins">
+                <div class="slick_demo_1">
+                    <div>
+                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
+                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-4.jpg') }}">
+                            <div class="carousel-caption">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
+                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-5.jpg') }}">
+                            <div class="carousel-caption">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
+                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
+                            <div class="carousel-caption">
+                                <p></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 150,401</span>
-                    <small class="text-muted m-b block">Annual sales revenue</small>
+            </div>
+            <div class="row text-left ">
+                <div class="col-xs-4 ">
+                    <div class=" m-l-md ">
+                        <span class="h4 font-bold m-t block ">14</span>
+                        <small class="text-muted m-b block ">Total Class</small>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 16,822</span>
-                    <small class="text-muted m-b block">Half-year revenue margin</small>
+                <div class="col-xs-4 ">
+                    <span class="h4 font-bold m-t block "> 15,234</span>
+                    <small class="text-muted m-b block ">Student Here</small>
+                </div>
+                <div class="col-xs-4 ">
+                    <span class="h4 font-bold m-t block ">1,653</span>
+                    <small class="text-muted m-b block ">Master Here</small>
                 </div>
 
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="statistic-box">
+        <div class="col-md-3 ">
+            <div class="statistic-box ">
                 <h4>
                     Project Beta progress
                 </h4>
                 <p>
                     You have two project with not compleated task.
                 </p>
-                <div class="row text-center">
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                <div class="row text-center ">
+                    <div class="col-lg-6 ">
+                        <canvas id="doughnutChart2 " width="80 " height="80 " style="margin: 18px auto 0 "></canvas>
                         <h5>Kolter</h5>
                     </div>
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
+                    <div class="col-lg-6 ">
+                        <canvas id="doughnutChart " width="80 " height="80 " style="margin: 18px auto 0 "></canvas>
                         <h5>Maxtor</h5>
                     </div>
                 </div>
-                <div class="m-t">
+                <div class="m-t ">
                     <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
+    <div class="row ">
+        <div class="col-lg-12 ">
             {{-- first page --}}
-            <div class="wrapper wrapper-content">
+            <div class="wrapper wrapper-content ">
                 {{-- first row --}}
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
+                <div class="row ">
+                    <div class="col-lg-4 ">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title ">
                                 <h5>Review from master</h5>
-                                <div class="ibox-tools">
-                                    <span class="label label-warning-light pull-right">10 Messages</span>
+                                <div class="ibox-tools ">
+                                    <span class="label label-warning-light pull-right ">10 Messages</span>
                                 </div>
                             </div>
-                            <div class="ibox-content">
+                            <div class="ibox-content ">
 
                                 <div>
-                                    <div class="feed-activity-list">
+                                    <div class="feed-activity-list ">
 
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a1.jpg')
+                                }} ">
                                             </a>
                                             <div class="media-body ">
-                                                <small class="pull-right">5m ago</small>
-                                                <strong>Monica Smith</strong> posted a new blog. <br>
-                                                <small class="text-muted">Today 5:60 pm - 12.06.2014</small>
+                                                <small class="pull-right ">5m ago</small>
+                                                <strong>Monica Smith</strong>
+                                                <p class="m-b-xs ">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has bee
+                                                </p>
+                                                <small class="text-muted ">Today 5:60 pm - 12.06.2014</small>
 
                                             </div>
                                         </div>
 
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a2.jpg') }}">
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a2.jpg')}} ">
                                             </a>
                                             <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
+                                                <small class="pull-right ">2h ago</small>
                                                 <strong>Mark Johnson</strong> posted message on <strong>Monica Smith</strong>                                                site. <br>
-                                                <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
+                                                <small class="text-muted ">Today 2:10 pm - 12.06.2014</small>
                                             </div>
                                         </div>
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a3.jpg') }}">
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a3.jpg')}} ">
                                             </a>
                                             <div class="media-body ">
-                                                <small class="pull-right">2h ago</small>
+                                                <small class="pull-right ">2h ago</small>
                                                 <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>.
                                                 <br>
-                                                <small class="text-muted">2 days ago at 8:30am</small>
+                                                <small class="text-muted ">2 days ago at 8:30am</small>
                                             </div>
                                         </div>
-                                        <div class="feed-element">
-                                            <a href="profile.html" class="pull-left">
-                                                <img alt="image" class="img-circle" src="{{ asset('admin/img/a4.jpg') }}">
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a4.jpg')}} ">
                                             </a>
                                             <div class="media-body ">
-                                                <small class="pull-right text-navy">5h ago</small>
+                                                <small class="pull-right text-navy ">5h ago</small>
                                                 <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
                                                 <br>
-                                                <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                                <div class="actions">
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                    <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
+                                                <small class="text-muted ">Yesterday 1:21 pm - 11.06.2014</small>
+                                                <div class="actions ">
+                                                    <a class="btn btn-xs btn-white "><i class="fa fa-thumbs-up "></i> Like </a>
+                                                    <a class="btn btn-xs btn-white "><i class="fa fa-heart "></i> Love</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
+                                    <button class="btn btn-primary btn-block m-t "><i class="fa fa-arrow-down "></i> Show More</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-lg-8">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
+                    <div class="col-lg-8 ">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title ">
                                 <h5>Read below comments</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                            <i class="fa fa-chevron-up"></i>
+                                <div class="ibox-tools ">
+                                    <a class="collapse-link ">
+                                            <i class="fa fa-chevron-up "></i>
                                         </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
+                                    <a class="dropdown-toggle " data-toggle="dropdown " href="# ">
+                                            <i class="fa fa-wrench "></i>
                                         </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">Config option 1</a>
+                                    <ul class="dropdown-menu dropdown-user ">
+                                        <li><a href="# ">Config option 1</a>
                                         </li>
-                                        <li><a href="#">Config option 2</a>
+                                        <li><a href="# ">Config option 2</a>
                                         </li>
                                     </ul>
-                                    <a class="close-link">
-                                            <i class="fa fa-times"></i>
+                                    <a class="close-link ">
+                                            <i class="fa fa-times "></i>
                                         </a>
                                 </div>
                             </div>
-                            <div class="ibox-content no-padding">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                            <div class="ibox-content no-padding ">
+                                <ul class="list-group ">
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Alan Marry</a> I belive that. Lorem Ipsum is simply
                                             dummy text of the printing and typesetting industry.</p>
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
+                                        <div class="row ">
+                                            <div class="col-lg-3 ">
+                                                <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 minuts ago</small>
                                             </div>
-                                            <div class="col-lg-9"><button class="btn btn-primary">Details</button></div>
+                                            <div class="col-lg-9 "><button class="btn btn-primary ">Details</button></div>
                                         </div>
 
                                     </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is
-                                            crazy!
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Stock Man</a> Check this stock chart. This price
+                                            is crazy!
                                         </p>
-                                        <div class="text-center m">
-                                            <span id="sparkline8"></span>
+                                        <div class="text-center m ">
+                                            <span id="sparkline8 "></span>
                                         </div>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
-                                            galley
-                                        </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 hours ago</small>
                                     </li>
                                     <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a
-                                            galley
+                                        <p><a class="text-info " href="# ">@Kevin Smith</a> Lorem ipsum unknown printer took
+                                            a galley
                                         </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 minuts ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Jonathan Febrick</a> The standard chunk of Lorem
+                                            Ipsum
+                                        </p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 hour ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.</p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 minuts ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Kevin Smith</a> Lorem ipsum unknown printer took
+                                            a galley
+                                        </p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 minuts ago</small>
                                     </li>
                                 </ul>
                             </div>
@@ -280,17 +312,17 @@
     <div class="sidebar-container">
 
         <ul class="nav nav-tabs navs-2">
-            <li class="active"><a data-toggle="tab" href="#tab-1">
-                Announcements
-                    </a></li>
-            <li class=""><a data-toggle="tab" href="#tab-2">
-                Joined Course
-            </a></li>
+            <li class="active"><a data-toggle="tab" href="#bar-1">
+                    Announcements
+                        </a></li>
+            <li class=""><a data-toggle="tab" href="#bar-2">
+                    Joined Course
+                </a></li>
         </ul>
 
         <div class="tab-content">
             {{-- Tab 1 --}}
-            <div id="tab-1" class="tab-pane active">
+            <div id="bar-1" class="tab-pane active">
 
                 <div class="sidebar-title">
                     <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
@@ -419,7 +451,7 @@
             </div>
 
             {{-- Tab 2 --}}
-            <div id="tab-2" class="tab-pane">
+            <div id="bar-2" class="tab-pane">
 
                 <div class="sidebar-title">
                     <h3> <i class="fa fa-cube"></i>Monthly Meeting</h3>
@@ -466,12 +498,12 @@
                     </li>
                     <li>
                         <a href="#">
-                            <span class="label label-primary pull-right">NEW</span>
-                            <h4>The generated</h4>
-                            There are many variations of passages of Lorem Ipsum available.
-                            <div class="small">Completion with: 22%</div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
+                                <span class="label label-primary pull-right">NEW</span>
+                                <h4>The generated</h4>
+                                There are many variations of passages of Lorem Ipsum available.
+                                <div class="small">Completion with: 22%</div>
+                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                            </a>
                     </li>
                     <li>
                         <a href="#">
@@ -512,133 +544,16 @@
                     </li>
                     <li>
                         <a href="#">
-                            <span class="label label-primary pull-right">NEW</span>
-                            <h4>The generated</h4>
-                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
-                            There are many variations of passages of Lorem Ipsum available.
-                            <div class="small">Completion with: 22%</div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
+                                <span class="label label-primary pull-right">NEW</span>
+                                <h4>The generated</h4>
+                                <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
+                                There are many variations of passages of Lorem Ipsum available.
+                                <div class="small">Completion with: 22%</div>
+                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                            </a>
                     </li>
 
                 </ul>
-
-            </div>
-
-            <div id="tab-3" class="tab-pane">
-
-                <div class="sidebar-title">
-                    <h3><i class="fa fa-gears"></i> Settings</h3>
-                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                </div>
-
-                <div class="setings-item">
-                    <span>
-                Show notifications
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-                            <label class="onoffswitch-label" for="example">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Disable Chat
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
-                            <label class="onoffswitch-label" for="example2">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Enable history
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-                            <label class="onoffswitch-label" for="example3">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Show charts
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-                            <label class="onoffswitch-label" for="example4">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Offline users
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-                            <label class="onoffswitch-label" for="example5">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Global search
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-                            <label class="onoffswitch-label" for="example6">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Update everyday
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
-                            <label class="onoffswitch-label" for="example7">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sidebar-content">
-                    <h4>Settings</h4>
-                    <div class="small">
-                        I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry. And typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes
-                        by accident, sometimes on purpose (injected humour and the like).
-                    </div>
-                </div>
 
             </div>
 
@@ -647,30 +562,90 @@
     </div>
 
 </div>
-</div>
 @endsection
 
 @section('scriptjs')
 <!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.pie.js') }}"></script>
+<script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>
+<script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.tooltip.min.js') }} "></script>
+<script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.spline.js') }} "></script>
+<script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.resize.js') }} "></script>
+<script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.pie.js') }} "></script>
 
 <!-- Peity -->
-<script src="{{ asset('admin/js/plugins/peity/jquery.peity.min.js') }}"></script>
-<script src="{{ asset('admin/js/demo/peity-demo.js') }}"></script>
+<script src="{{ asset( 'admin/js/plugins/peity/jquery.peity.min.js') }} "></script>
+<script src="{{ asset( 'admin/js/demo/peity-demo.js') }} "></script>
 
 <!-- GITTER -->
-<script src="{{ asset('admin/js/plugins/gritter/jquery.gritter.min.js') }}"></script>
+<script src="{{ asset( 'admin/js/plugins/gritter/jquery.gritter.min.js') }} "></script>
 
 <!-- Sparkline -->
-<script src="{{ asset('admin/js/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="{{ asset( 'admin/js/plugins/sparkline/jquery.sparkline.min.js') }} "></script>
 
 <!-- Sparkline demo data  -->
-<script src="{{ asset('admin/js/demo/sparkline-demo.js') }}"></script>
+<script src="{{ asset( 'admin/js/demo/sparkline-demo.js') }} "></script>
 
 <!-- ChartJS-->
-<script src="{{ asset('admin/js/plugins/chartJs/Chart.min.js') }}"></script>
+<script src="{{ asset( 'admin/js/plugins/chartJs/Chart.min.js') }} "></script>
+
+<!-- slick carousel-->
+<script src="{{ asset( 'admin/js/plugins/slick/slick.min.js') }} "></script>
+
+<!-- Additional style only for demo purpose -->
+<style>
+    .slick_demo_2 .ibox-content {
+        margin: 0 10px;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+
+
+            $('.slick_demo_1').slick({
+                dots: false
+            });
+
+            $('.slick_demo_2').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.slick_demo_3').slick({
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                adaptiveHeight: true
+            });
+        });
+
+</script>
 @endsection

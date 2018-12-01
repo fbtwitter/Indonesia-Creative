@@ -75,42 +75,40 @@
                         </ul>
                         <div class="tab-content ">
                             <div id="tab-1" class="tab-pane active">
-                                <div class="row panel-body">
-                                    <div class="col-md-12">
-                                        <div class="col-md-6" style="height:100%;">
-                                            <div class="ibox float-e-margins">
-                                                <div class="ibox-content">
-                                                    <figure>
-                                                        <iframe width="350" height="400" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
-                                                    </figure>
-                                                </div>
+                                <div class="panel-body" style="background-image:url('<?php echo e(asset('admin/img/course/bg-1.jpg')); ?>');">
+                                    <div class="col-lg-7">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-content" style="background-color:transparent;">
+                                                <figure>
+                                                    <iframe width="300" height="300" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
+                                                </figure>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="ibox float-e-margins">
-                                                <div class="ibox-content profile-content">
-                                                    <h4><strong>Microsoft's Concept of How 2019 Will Look Like - Official Video</strong></h4>
-                                                    <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
-                                                    <h5>
-                                                        Science and Technology
-                                                    </h5>
-                                                    <p>
-                                                        What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
-                                                        seem to want to give consumer a glimpse of what they want the future
-                                                        to look like.
-                                                        <br/>
-                                                        <br/>
-                                                        <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
-                                                        <br/>
-                                                        <br/> Earlier this month "Microsoft Office Labs Vision 2019," was
-                                                        released and now we have "Productivity Future Vision (2011)". Both
-                                                        are inspiring and beautifully edited. </p>
-                                                    <div class="row m-t-md">
-                                                        <div class="col-md-12">
-                                                            <button class="btn btn-primary">Join Class!</button>
-                                                        </div>
-
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-content profile-content" style="background-color:transparent; color: white">
+                                                <h2><strong>Advertising Class</strong></h2>
+                                                <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
+                                                <h5>
+                                                    Science and Technology
+                                                </h5>
+                                                <p>
+                                                    What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
+                                                    seem to want to give consumer a glimpse of what they want the future
+                                                    to look like.
+                                                    <br/>
+                                                    <br/>
+                                                    <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
+                                                    <br/>
+                                                    <br/> Earlier this month "Microsoft Office Labs Vision 2019," was released
+                                                    and now we have "Productivity Future Vision (2011)". Both are inspiring
+                                                    and beautifully edited. </p>
+                                                <div class="row m-t-md">
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary">Join Class!</button>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -278,14 +276,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-    <?php echo $__env->make('ManagementFile/backend/footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
     </div>
+    <?php echo $__env->make('ManagementFile/backend/footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </div>
 
 

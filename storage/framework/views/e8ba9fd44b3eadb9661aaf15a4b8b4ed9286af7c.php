@@ -24,6 +24,20 @@
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
+                <ol class="breadcrumb" style="background-color: transparent;margin: 20px 0px 0px 70px;">
+                    <li>
+                        <a href="<?php echo e(url('Dashboard')); ?>">Home</a>
+                    </li>
+                    <li class="breadcrumb" style="background-color: transparent;">
+                        <a>Course Category</a>
+                    </li>
+                    <li class="breadcrumb" style="background-color: transparent;">
+                        <a>Selected Course</a>
+                    </li>
+                    <li class="active">
+                        <strong>Advertising</strong>
+                    </li>
+                </ol>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
@@ -36,56 +50,53 @@
         </nav>
     </div>
     
-    <div class="row  border-bottom white-bg dashboard-header">
-        <div class="col-lg-10">
-            <h2>Advertising Class</h2>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="<?php echo e(url('Dashboard')); ?>">Home</a>
-                </li>
-                <li class="breadcrumb">
-                    <a>Course Category</a>
-                </li>
-                <li class="breadcrumb">
-                    <a>Selected Course</a>
-                </li>
-                <li class="active">
-                    <strong>Advertising</strong>
-                </li>
-            </ol>
-        </div>
+    <div class="row  border-bottom white-bg dashboard-header" style="background-image:url('<?php echo e(asset('admin/img/course/bg-1.jpg')); ?>');">
         <div class="row">
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-content">
+                    <div class="ibox-content" style="background-color:transparent; padding-bottom:0px; border-style:none">
                         <figure>
-                            <iframe width="450" height="350" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="100%" height="280" src="http://www.youtube.com/embed/bwj2s_5e12U" frameborder="0" allowfullscreen></iframe>
                         </figure>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-content profile-content">
-                        <h4><strong>Microsoft's Concept of How 2019 Will Look Like - Official Video</strong></h4>
+                    <div class="ibox-content profile-content" style="background-color:transparent; color: white;">
+                        <h1><strong>Advertising Class</strong></h1>
                         <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
-                        <h5>
-                            Science and Technology
-                        </h5>
                         <p>
-                            What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
-                            seem to want to give consumer a glimpse of what they want the future to look like.
-                            <br/>
-                            <br/>
-                            <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
-                            <br/>
-                            <br/> Earlier this month "Microsoft Office Labs Vision 2019," was released and now we have "Productivity
-                            Future Vision (2011)". Both are inspiring and beautifully edited. </p>
-                        <div class="row m-t-md">
-                            <div class="col-md-12">
-                                <button class="btn btn-primary">Join Class!</button>
+                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                            ipsum' will uncover many web sites still in their infancy. Packages and web page editors now
+                            use Lorem Ipsum as their default model text.
+                        </p>
+                        <div class="col-xs-3">
+                            <div class=" m-l-md text-center">
+                                <span class="h4 font-bold m-t block">20</span>
+                                <small class="text-muted m-b block" style="color:white">Sub Course</small>
                             </div>
-
+                        </div>
+                        <div class="col-xs-5">
+                            <div class=" m-l-md text-center">
+                                <span class="h4 font-bold m-t block">30</span>
+                                <small class="text-muted m-b block" style="color:white">Master</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class=" m-l-md text-center">
+                                <span class="h4 font-bold m-t block"><i class="fa fa-star-o fa-1x"></i>
+                                        <i class="fa fa-star-o fa-1x"></i>
+                                        <i class="fa fa-star-o fa-1x"></i>
+                                        <i class="fa fa-star-o fa-1x"></i>
+                                        <i class="fa fa-star-o fa-1x"></i></span>
+                                <small class="text-muted m-b block" style="color:white">Rating</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-block" style="margin-left:10px; margin-top:0px;margin-bottom:10px; padding: 5px 15px 10px 15px; text-align:center;"><strong>Rate this class!</strong></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,339 +116,745 @@
                             </div>
                             <div class="ibox-content">
                                 <div>
-                                    <div class="feed-activity-list">
-                                        <div class="feed-element">
-                                            <h2 class="active">Overview</h2>
-                                        </div>
-                                        <div class="feed-element">
-                                            <h2 class="">Course Content</h1>
-                                        </div>
-                                        <div class="feed-element">
-                                            <h2 class="">Announcement</h2>
-                                        </div>
-                                        <div class="feed-element">
-                                            <h2 class="">Library</h2>
-                                        </div>
-                                    </div>
+                                    <ul class="feed-activity-list">
+                                        <li class="feed-element">
+                                            <a data-toggle="tab" href="#overview">
+                                                Overview
+                                            </a>
+                                        </li>
+                                        <li class="feed-element">
+                                            <a data-toggle="tab" href="#content">
+                                                Course Content
+                                            </a>
+                                        </li>
+                                        <li class="feed-element">
+                                            <a data-toggle="tab" href="#announcement">
+                                                Announcement
+                                            </a>
+                                        </li>
+                                        <li class="feed-element">
+                                            <a data-toggle="tab" href="#library">
+                                                Library
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-8">
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>Read below comments</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                            <i class="fa fa-chevron-up"></i>
+                        <div class="tab-content">
+                            
+                            <div id="overview" class="tab-pane active">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title ">
+                                        <h5>Overview</h5>
+                                        <div class="ibox-tools ">
+                                            <a class="collapse-link ">
+                                            <i class="fa fa-chevron-up "></i>
                                         </a>
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
+                                            <a class="dropdown-toggle " data-toggle="dropdown " href="# ">
+                                            <i class="fa fa-wrench "></i>
                                         </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">Config option 1</a>
-                                        </li>
-                                        <li><a href="#">Config option 2</a>
-                                        </li>
-                                    </ul>
-                                    <a class="close-link">
-                                            <i class="fa fa-times"></i>
+                                            <ul class="dropdown-menu dropdown-user ">
+                                                <li><a href="# ">Config option 1</a>
+                                                </li>
+                                                <li><a href="# ">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link ">
+                                            <i class="fa fa-times "></i>
                                         </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content no-padding animated fadeIn ">
+                                        <div class="list-group active">
+                                            <div class="panel-body">
+                                                <h3>About this course</h3>
+
+                                                <p>New to programming? Want to create awesome apps? This is the perfect course
+                                                    for you.</p>
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <div class="panel-body">
+                                                <div class="col-md-3">
+                                                    <h4>Description</h4>
+                                                </div>
+                                                <div class="col-md-9 border-left">
+                                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                                    <p>A wonderful serenity has taken possession of my entire soul, like these
+                                                        sweet mornings of spring which I enjoy with my whole heart. I am
+                                                        alone, and feel the charm of existence in this spot, which was created
+                                                        for the bliss of souls like mine.</p>
+
+                                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of
+                                                        mere tranquil existence, that I neglect my talents. I should be incapable
+                                                        of drawing a single stroke at the present moment; and yet I feel
+                                                        that I never was a greater artist than now. When.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <div class="panel-body">
+                                                <div class="col-md-3">
+                                                    <h4>Master</h4>
+                                                </div>
+                                                <div class="col-md-9 border-left">
+
+                                                    <div class="profile-image">
+                                                        <img src="<?php echo e(asset('admin/img/a4.jpg')); ?>" class="img-circle circle-border m-b-md" alt="profile">
+                                                    </div>
+                                                    <div class="profile-info">
+                                                        <div class="">
+                                                            <div>
+                                                                <span class="pull-right text-right">
+                                                                <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                padding: 0px 15px;
+                                                                margin-bottom: 6px"><small>Detail</small></span>
+                                                                <br/>
+                                                                <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                </span>
+                                                                <h2 class="no-margins">
+                                                                    Alex Smith
+                                                                </h2>
+
+                                                                <h4>Founder of Groupeq</h4>
+                                                                <small>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form Ipsum available.</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="profile-image">
+                                                        <img src="<?php echo e(asset('admin/img/a2.jpg')); ?>" class="img-circle circle-border m-b-md" alt="profile">
+                                                    </div>
+                                                    <div class="profile-info">
+                                                        <div class="">
+                                                            <div>
+                                                                <span class="pull-right text-right">
+                                                                    <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                    padding: 0px 15px;
+                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                <br/>
+                                                                <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                </span>
+                                                                <h2 class="no-margins">
+                                                                    Thomas Scanlan
+                                                                </h2>
+
+                                                                <h4>CS Instructor and Software Developer</h4>
+                                                                <small>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form Ipsum available.</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="ibox-content no-padding">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.</p>
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                            </div>
-                                            <div class="col-lg-9"><button class="btn btn-primary">Details</button></div>
+                             
+                            <div id="content" class="tab-pane">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>Content</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-user ">
+                                                <li><a href="#">Config option 1</a>
+                                                </li>
+                                                <li><a href="#">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
                                         </div>
+                                    </div>
+                                    <div class="ibox-content no-padding animated fadeIn">
+                                        <div class="list-group active">
+                                            <div class="panel-body">
 
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Stock  Man</a> Check this stock chart. This price is
-                                            crazy!
-                                        </p>
-                                        <div class="text-center m">
-                                            <span id="sparkline8"></span>
+                                            </div>
                                         </div>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
-                                            galley
-                                        </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                    </li>
-                                    <li class="list-group-item ">
-                                        <p><a class="text-info" href="#">@Jonathan  Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Alan  Marry</a> I belive that. Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.</p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <p><a class="text-info" href="#">@Kevin  Smith</a> Lorem ipsum unknown printer took a
-                                            galley
-                                        </p>
-                                        <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                                    </li>
-                                </ul>
+                                        <div class="list-group">
+                                            <div class="panel-body">
+                                                <ul>
+
+                                                </ul>
+                                                <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet
+                                                    mornings of spring which I enjoy with my whole heart. I am alone, and
+                                                    feel the charm of existence in this spot, which was created for the bliss
+                                                    of souls like mine.</p>
+
+                                                <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere
+                                                    tranquil existence, that I neglect my talents. I should be incapable
+                                                    of drawing a single stroke at the present moment; and yet I feel that
+                                                    I never was a greater artist than now. When.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <div class="panel-body">
+                                                <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+
+                                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet
+                                                    mornings of spring which I enjoy with my whole heart. I am alone, and
+                                                    feel the charm of existence in this spot, which was created for the bliss
+                                                    of souls like mine.</p>
+
+                                                <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere
+                                                    tranquil existence, that I neglect my talents. I should be incapable
+                                                    of drawing a single stroke at the present moment; and yet I feel that
+                                                    I never was a greater artist than now. When.</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <div class="panel-body">
+                                                <strong>Donec quam felis</strong>
+
+                                                <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little
+                                                    world among the stalks, and grow familiar with the countless indescribable
+                                                    forms of the insects and flies, then I feel the presence of the Almighty,
+                                                    who formed us in his own image, and the breath </p>
+
+                                                <p>I am alone, and feel the charm of existence in this spot, which was created
+                                                    for the bliss of souls like mine. I am so happy, my dear friend, so absorbed
+                                                    in the exquisite sense of mere tranquil existence, that I neglect my
+                                                    talents. I should be incapable of drawing a single stroke at the present
+                                                    moment; and yet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                             
+                            <div id="announcement" class="tab-pane">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>Announcement</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                    <i class="fa fa-wrench"></i>
+                                                </a>
+                                            <ul class="dropdown-menu dropdown-user ">
+                                                <li><a href="#">Config option 1</a>
+                                                </li>
+                                                <li><a href="#">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content no-padding animated fadeIn">
+                                        <div class="list-group active">
+                                            <div class="panel-body">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                                    <img alt="image" src="<?php echo e(asset('admin/img/a1.jpg')); ?>">
+                                                                </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                                        Andrew Williams
+                                                                    </a>
+                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                        ipsum' will uncover many web sites still in their infancy. Packages
+                                                        and web page editors now use Lorem Ipsum as their default model text.
+                                                    </p>
+                                                </div>
+                                                <hr>
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                                            <img alt="image" src="<?php echo e(asset('admin/img/a4.jpg')); ?>">
+                                                                        </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                                                Steve Gets
+                                                                            </a>
+                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                        ipsum' will uncover many web sites still in their infancy. Packages
+                                                        and web page editors now use Lorem Ipsum as their default model text.
+                                                    </p>
+                                                </div>
+                                                <hr>
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                                            <img alt="image" src="<?php echo e(asset('admin/img/a3.jpg')); ?>">
+                                                                        </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                                                Rosalia Steve
+                                                                            </a>
+                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                        ipsum' will uncover many web sites still in their infancy. Packages
+                                                        and web page editors now use Lorem Ipsum as their default model text.
+                                                    </p>
+                                                </div>
+                                                <hr>
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                                            <img alt="image" src="<?php echo e(asset('admin/img/a2.jpg')); ?>">
+                                                                        </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                                                Phil
+                                                                            </a>
+                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                        ipsum' will uncover many web sites still in their infancy. Packages
+                                                        and web page editors now use Lorem Ipsum as their default model text.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                            <div id="library" class="tab-pane">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>Library</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                            <ul class="dropdown-menu dropdown-user ">
+                                                <li><a href="#">Config option 1</a>
+                                                </li>
+                                                <li><a href="#">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content no-padding animated fadeIn">
+                                        <div class="list-group active">
+                                            <div class="panel-body">
+                                                <div class="col-md-3">
+                                                    <a data-toggle="tab" href="#software">
+                                                        <h4>Software</h4>
+                                                    </a>
+                                                    <a data-toggle="tab" href="#book">
+                                                        <h4>Book</h4>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-md-9 border-left">
+                                                    <div class="tab-content">
+                                                        
+                                                        <div id="software" class="tab-pane active">
+                                                            <div class="ibox float-e-margins animated fadeIn">
+                                                                <div class="social-avatar">
+                                                                    <a href="" class="pull-left">
+                                                                                        <img alt="image" src="<?php echo e(asset('admin/img/a1.jpg')); ?>">
+                                                                                    </a>
+                                                                    <div class="media-body">
+                                                                        <span class="pull-right text-right">
+                                                                                    <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                                    padding: 0px 15px;
+                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                        <br/>
+                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        </span>
+                                                                        <a href="#">
+                                                                                            Andrew Williams
+                                                                                        </a>
+                                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="social-body">
+                                                                    <p>
+                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                                        ipsum' will uncover many web sites still in their
+                                                                        infancy. Packages and web page editors now use Lorem
+                                                                        Ipsum as their default model text.
+                                                                    </p>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="social-avatar">
+                                                                    <a href="" class="pull-left">
+                                                                                            <img alt="image" src="<?php echo e(asset('admin/img/a4.jpg')); ?>">
+                                                                                        </a>
+                                                                    <div class="media-body">
+                                                                        <span class="pull-right text-right">
+                                                                                    <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                                    padding: 0px 15px;
+                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                        <br/>
+                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        </span>
+                                                                        <a href="#">
+                                                                                                Andrew Williams
+                                                                                            </a>
+                                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="social-body">
+                                                                    <p>
+                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                                        ipsum' will uncover many web sites still in their
+                                                                        infancy. Packages and web page editors now use Lorem
+                                                                        Ipsum as their default model text.
+                                                                    </p>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+                                                        </div>
+                                                         
+                                                        <div id="book" class="tab-pane">
+                                                            <div class="ibox float-e-margins animated fadeIn">
+                                                                <div class="social-avatar">
+                                                                    <a href="" class="pull-left">
+                                                                                        <img alt="image" src="<?php echo e(asset('admin/img/a2.jpg')); ?>">
+                                                                                    </a>
+                                                                    <div class="media-body">
+                                                                        <span class="pull-right text-right">
+                                                                                    <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                                    padding: 0px 15px;
+                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                        <br/>
+                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        </span>
+                                                                        <a href="#">
+                                                                                            Alexander Witch
+                                                                                        </a>
+                                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="social-body">
+                                                                    <p>
+                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                                        ipsum' will uncover many web sites still in their
+                                                                        infancy. Packages and web page editors now use Lorem
+                                                                        Ipsum as their default model text.
+                                                                    </p>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="social-avatar">
+                                                                    <a href="" class="pull-left">
+                                                                                            <img alt="image" src="<?php echo e(asset('admin/img/a3.jpg')); ?>">
+                                                                                        </a>
+                                                                    <div class="media-body">
+                                                                        <span class="pull-right text-right">
+                                                                                    <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
+                                                                                    padding: 0px 15px;
+                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                        <br/>
+                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        </span>
+                                                                        <a href="#">
+                                                                                                Andrew Williams
+                                                                                            </a>
+                                                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="social-body">
+                                                                    <p>
+                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                                                        ipsum' will uncover many web sites still in their
+                                                                        infancy. Packages and web page editors now use Lorem
+                                                                        Ipsum as their default model text.
+                                                                    </p>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+    <?php echo $__env->make('ManagementFile/backend/footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div>
+
+    
+    <div id="right-sidebar" class="animated">
+        <div class="sidebar-container">
+
+            <ul class="nav nav-tabs navs-2">
+                <li class="active"><a data-toggle="tab" href="#bar-1">
+                Announcements
+                    </a></li>
+                <li class=""><a data-toggle="tab" href="#bar-2">
+                Joined Course
+            </a></li>
+            </ul>
+
+            <div class="tab-content">
+                
+                <div id="bar-1" class="tab-pane active">
+
+                    <div class="sidebar-title">
+                        <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
+                        <small><i class="fa fa-tim"></i> You have 10 new message.</small>
+                    </div>
+
+                    <div>
+
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+
+                                    <div class="m-t-xs">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+
+                                    There are many variations of passages of Lorem Ipsum available.
+                                    <br>
+                                    <small class="text-muted">Today 4:21 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                </div>
+                                <div class="media-body">
+                                    The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                    <br>
+                                    <small class="text-muted">Yesterday 2:45 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                    <div class="m-t-xs">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    <br>
+                                    <small class="text-muted">Yesterday 1:10 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                </div>
+
+                                <div class="media-body">
+                                    Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                    <br>
+                                    <small class="text-muted">Monday 8:37 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                </div>
+                                <div class="media-body">
+
+                                    All the Lorem Ipsum generators on the Internet tend to repeat.
+                                    <br>
+                                    <small class="text-muted">Today 4:21 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                </div>
+                                <div class="media-body">
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                    <br>
+                                    <small class="text-muted">Yesterday 2:45 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                    <div class="m-t-xs">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
+                                    <br>
+                                    <small class="text-muted">Yesterday 1:10 pm</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sidebar-message">
+                            <a href="#">
+                                <div class="pull-left text-center">
+                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                </div>
+                                <div class="media-body">
+                                    Uncover many web sites still in their infancy. Various versions have.
+                                    <br>
+                                    <small class="text-muted">Monday 8:37 pm</small>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                 
-            </div>
-        </div>
-    </div>
-</div>
+                
+                <div id="bar-2" class="tab-pane">
 
+                    <div class="sidebar-title">
+                        <h3> <i class="fa fa-cube"></i>Monthly Meeting</h3>
+                        <small><i class="fa fa-tim"></i> You have 14 joined meeting. 10 not completed.</small>
+                    </div>
 
-<div id="right-sidebar" class="animated">
-    <div class="sidebar-container">
+                    <ul class="sidebar-list">
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Business valuation</h4>
+                                It is a long established fact that a reader will be distracted.
 
-        <ul class="nav nav-tabs navs-2">
-            <li class="active"><a data-toggle="tab" href="#tab-1">
-                Announcements
-                    </a></li>
-            <li class=""><a data-toggle="tab" href="#tab-2">
-                Joined Course
-            </a></li>
-        </ul>
-
-        <div class="tab-content">
-            
-            <div id="tab-1" class="tab-pane active">
-
-                <div class="sidebar-title">
-                    <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
-                    <small><i class="fa fa-tim"></i> You have 10 new message.</small>
-                </div>
-
-                <div>
-
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
+                                <div class="small">Completion with: 22%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
                                 </div>
-                            </div>
-                            <div class="media-body">
+                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Contract with Company </h4>
+                                Many desktop publishing packages and web page editors.
 
-                                There are many variations of passages of Lorem Ipsum available.
-                                <br>
-                                <small class="text-muted">Today 4:21 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
-                            </div>
-                            <div class="media-body">
-                                The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                <br>
-                                <small class="text-muted">Yesterday 2:45 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
+                                <div class="small">Completion with: 48%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
                                 </div>
-                            </div>
-                            <div class="media-body">
-                                Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                <br>
-                                <small class="text-muted">Yesterday 1:10 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Meeting</h4>
+                                By the readable content of a page when looking at its layout.
 
-                            <div class="media-body">
-                                Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                <br>
-                                <small class="text-muted">Monday 8:37 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
-                            </div>
-                            <div class="media-body">
-
-                                All the Lorem Ipsum generators on the Internet tend to repeat.
-                                <br>
-                                <small class="text-muted">Today 4:21 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
-                            </div>
-                            <div class="media-body">
-                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                <br>
-                                <small class="text-muted">Yesterday 2:45 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
+                                <div class="small">Completion with: 14%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
                                 </div>
-                            </div>
-                            <div class="media-body">
-                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
-                                <br>
-                                <small class="text-muted">Yesterday 1:10 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                            </div>
-                            <div class="media-body">
-                                Uncover many web sites still in their infancy. Various versions have.
-                                <br>
-                                <small class="text-muted">Monday 8:37 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div id="tab-2" class="tab-pane">
-
-                <div class="sidebar-title">
-                    <h3> <i class="fa fa-cube"></i>Monthly Meeting</h3>
-                    <small><i class="fa fa-tim"></i> You have 14 joined meeting. 10 not completed.</small>
-                </div>
-
-                <ul class="sidebar-list">
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Business valuation</h4>
-                            It is a long established fact that a reader will be distracted.
-
-                            <div class="small">Completion with: 22%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                            </div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Contract with Company </h4>
-                            Many desktop publishing packages and web page editors.
-
-                            <div class="small">Completion with: 48%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 48%;" class="progress-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Meeting</h4>
-                            By the readable content of a page when looking at its layout.
-
-                            <div class="small">Completion with: 14%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
                             <span class="label label-primary pull-right">NEW</span>
                             <h4>The generated</h4>
                             There are many variations of passages of Lorem Ipsum available.
                             <div class="small">Completion with: 22%</div>
                             <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Business valuation</h4>
-                            It is a long established fact that a reader will be distracted.
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Business valuation</h4>
+                                It is a long established fact that a reader will be distracted.
 
-                            <div class="small">Completion with: 22%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                            </div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Contract with Company </h4>
-                            Many desktop publishing packages and web page editors.
+                                <div class="small">Completion with: 22%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                </div>
+                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Contract with Company </h4>
+                                Many desktop publishing packages and web page editors.
 
-                            <div class="small">Completion with: 48%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 48%;" class="progress-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Meeting</h4>
-                            By the readable content of a page when looking at its layout.
+                                <div class="small">Completion with: 48%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="small pull-right m-t-xs">9 hours ago</div>
+                                <h4>Meeting</h4>
+                                By the readable content of a page when looking at its layout.
 
-                            <div class="small">Completion with: 14%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
+                                <div class="small">Completion with: 14%</div>
+                                <div class="progress progress-mini">
+                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
                             <span class="label label-primary pull-right">NEW</span>
                             <h4>The generated</h4>
                             <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
@@ -445,125 +862,10 @@
                             <div class="small">Completion with: 22%</div>
                             <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
                         </a>
-                    </li>
+                        </li>
 
-                </ul>
+                    </ul>
 
-            </div>
-
-            <div id="tab-3" class="tab-pane">
-
-                <div class="sidebar-title">
-                    <h3><i class="fa fa-gears"></i> Settings</h3>
-                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                </div>
-
-                <div class="setings-item">
-                    <span>
-                Show notifications
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-                            <label class="onoffswitch-label" for="example">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Disable Chat
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
-                            <label class="onoffswitch-label" for="example2">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Enable history
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-                            <label class="onoffswitch-label" for="example3">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Show charts
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-                            <label class="onoffswitch-label" for="example4">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Offline users
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-                            <label class="onoffswitch-label" for="example5">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Global search
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-                            <label class="onoffswitch-label" for="example6">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="setings-item">
-                    <span>
-                Update everyday
-            </span>
-                    <div class="switch">
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
-                            <label class="onoffswitch-label" for="example7">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sidebar-content">
-                    <h4>Settings</h4>
-                    <div class="small">
-                        I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry. And typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes
-                        by accident, sometimes on purpose (injected humour and the like).
-                    </div>
                 </div>
 
             </div>
@@ -571,34 +873,31 @@
         </div>
 
     </div>
-
-</div>
-</div>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('scriptjs'); ?>
-<!-- Flot -->
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?>"></script>
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.spline.js')); ?>"></script>
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.resize.js')); ?>"></script>
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.pie.js')); ?>"></script>
+    <!-- Flot -->
+    <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.spline.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.resize.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.pie.js')); ?> "></script>
 
-<!-- Peity -->
-<script src="<?php echo e(asset('admin/js/plugins/peity/jquery.peity.min.js')); ?>"></script>
-<script src="<?php echo e(asset('admin/js/demo/peity-demo.js')); ?>"></script>
+    <!-- Peity -->
+    <script src="<?php echo e(asset( 'admin/js/plugins/peity/jquery.peity.min.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'admin/js/demo/peity-demo.js')); ?> "></script>
 
-<!-- GITTER -->
-<script src="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.min.js')); ?>"></script>
+    <!-- GITTER -->
+    <script src="<?php echo e(asset( 'admin/js/plugins/gritter/jquery.gritter.min.js')); ?> "></script>
 
-<!-- Sparkline -->
-<script src="<?php echo e(asset('admin/js/plugins/sparkline/jquery.sparkline.min.js')); ?>"></script>
+    <!-- Sparkline -->
+    <script src="<?php echo e(asset( 'admin/js/plugins/sparkline/jquery.sparkline.min.js')); ?> "></script>
 
-<!-- Sparkline demo data  -->
-<script src="<?php echo e(asset('admin/js/demo/sparkline-demo.js')); ?>"></script>
+    <!-- Sparkline demo data  -->
+    <script src="<?php echo e(asset( 'admin/js/demo/sparkline-demo.js')); ?> "></script>
 
-<!-- ChartJS-->
-<script src="<?php echo e(asset('admin/js/plugins/chartJs/Chart.min.js')); ?>"></script>
+    <!-- ChartJS-->
+    <script src="<?php echo e(asset( 'admin/js/plugins/chartJs/Chart.min.js')); ?> "></script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('ManagementFile/backend/layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

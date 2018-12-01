@@ -67,6 +67,9 @@ $(document).ready(function () {
         $('#right-sidebar').toggleClass('sidebar-open');
     });
 
+    // open close option course
+
+
     // Initialize slimscroll for right sidebar
     $('.sidebar-container').slimScroll({
         height: '100%',
@@ -284,8 +287,7 @@ function WinMove() {
     var element = "[class*=col]";
     var handle = ".ibox-title";
     var connect = "[class*=col]";
-    $(element).sortable(
-        {
+    $(element).sortable({
             handle: handle,
             connectWith: connect,
             tolerance: 'pointer',
@@ -294,5 +296,3 @@ function WinMove() {
         })
         .disableSelection();
 }
-
-

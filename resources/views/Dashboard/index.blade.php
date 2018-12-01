@@ -303,8 +303,8 @@
                 {{-- first row --}} {{-- first page --}}
             </div>
         </div>
-    @include('ManagementFile/backend/footer')
     </div>
+    @include('ManagementFile/backend/footer')
 </div>
 
 {{-- Content Right SideBar --}}

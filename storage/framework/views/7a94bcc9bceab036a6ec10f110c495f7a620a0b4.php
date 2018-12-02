@@ -106,7 +106,7 @@
                                                     and beautifully edited. </p>
                                                 <div class="row m-t-md">
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary">Join Class!</button>
+                                                        <button class="btn btn-primary btn-outline btn-block">Join Class!</button>
                                                     </div>
 
                                                 </div>

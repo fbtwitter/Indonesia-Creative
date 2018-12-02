@@ -94,11 +94,9 @@
                                 <small class="text-muted m-b block" style="color:white">Rating</small>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button class="btn btn-primary btn-block" style="margin-left:10px; margin-top:0px;margin-bottom:10px; padding: 5px 15px 10px 15px; text-align:center;"><strong>Rate this class!</strong></button>
-                            </div>
-                        </div>
+
+
+                        <button class="btn btn-primary btn-block" style="margin-top:0px;margin-bottom:10px; padding: 5px 15px 10px 15px; text-align:center;"><strong>Rate this class!</strong></button>
                     </div>
                 </div>
             </div>
@@ -112,8 +110,8 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>Option</h5>
+                            <div class="ibox-title" style="padding-bottom: 40px;">
+                                <h5 style="font-size: 20px;"><strong>Option</strong></h5>
                             </div>
                             <div class="ibox-content">
                                 <div>
@@ -147,10 +145,10 @@
                     <div class="col-lg-8">
                         <div class="tab-content">
                             {{-- Bagian Overview --}}
-                            <div id="overview" class="tab-pane active">
+                            <div id="overview" class="tab-pane">
                                 <div class="ibox float-e-margins">
-                                    <div class="ibox-title ">
-                                        <h5>Overview</h5>
+                                    <div class="ibox-title " style="padding-bottom: 20px;">
+                                        <h5 style="font-size: 20px;"><strong>Overview</strong></h5>
                                         <div class="ibox-tools ">
                                             <a class="collapse-link ">
                                             <i class="fa fa-chevron-up "></i>
@@ -259,10 +257,10 @@
                                 </div>
                             </div>
                             {{-- Akhirnya --}} {{-- Bagian Course Content --}}
-                            <div id="content" class="tab-pane">
+                            <div id="content" class="tab-pane active">
                                 <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <h5>Content</h5>
+                                    <div class="ibox-title" style="padding-bottom: 20px;">
+                                        <h5 style="font-size: 20px;"><strong>Course Content</strong></h5>
                                         <div class="ibox-tools">
                                             <a class="collapse-link">
                                                 <i class="fa fa-chevron-up"></i>
@@ -281,60 +279,199 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ibox-content no-padding animated fadeIn">
-                                        <div class="list-group active">
-                                            <div class="panel-body">
-
-                                            </div>
-                                        </div>
+                                    <div class="ibox-content no-padding animated fadeIn" style="margin-bottom:200px;">
                                         <div class="list-group">
                                             <div class="panel-body">
-                                                <ul>
-
-                                                </ul>
-                                                <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet
-                                                    mornings of spring which I enjoy with my whole heart. I am alone, and
-                                                    feel the charm of existence in this spot, which was created for the bliss
-                                                    of souls like mine.</p>
-
-                                                <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere
-                                                    tranquil existence, that I neglect my talents. I should be incapable
-                                                    of drawing a single stroke at the present moment; and yet I feel that
-                                                    I never was a greater artist than now. When.</p>
+                                                <div class="ibox" style="margin-bottom: 0px;">
+                                                    <button class="btn btn-primary btn-outline btn-block collapse-link">
+                                                                    <span class="pull-right text-right">
+                                                                    <small><strong>0/5</strong></small>
+                                                                    </span>
+                                                                    <div class="text-left">
+                                                                        <h4 class="no-margins" style=" font-weight:200">
+                                                                            Master : Alex Smith
+                                                                        </h4>
+                                                                        <h2 style="margin-top: 10px; font-weight:600">Understand Exposure</h2>
+                                                                    </div>
+                                                                    </button>
+                                                    <div class="ibox-content no-padding gray-bg">
+                                                        <div class="list-group">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                            <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                margin-right: 15px;
+                                                                                padding: 3px 10px 3px 10px;
+                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/1/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                    margin-right: 15px;
+                                                                                    padding: 3px 10px 3px 10px;
+                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/2/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 3</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                        margin-right: 15px;
+                                                                                        padding: 3px 10px 3px 10px;
+                                                                                        font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/12/2018
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="list-group">
                                             <div class="panel-body">
-                                                <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet
-                                                    mornings of spring which I enjoy with my whole heart. I am alone, and
-                                                    feel the charm of existence in this spot, which was created for the bliss
-                                                    of souls like mine.</p>
-
-                                                <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere
-                                                    tranquil existence, that I neglect my talents. I should be incapable
-                                                    of drawing a single stroke at the present moment; and yet I feel that
-                                                    I never was a greater artist than now. When.</p>
+                                                <div class="ibox" style="margin-bottom: 0px;">
+                                                    <button class="btn btn-primary btn-outline btn-block collapse-link">
+                                                                    <span class="pull-right text-right">
+                                                                    <small><strong>0/5</strong></small>
+                                                                    </span>
+                                                                    <div class="text-left">
+                                                                        <h4 class="no-margins" style=" font-weight:200">
+                                                                            Master : Saridono Bob
+                                                                        </h4>
+                                                                        <h2 style="margin-top: 10px; font-weight:600">Photo Editing in Lightroom</h2>
+                                                                    </div>
+                                                                    </button>
+                                                    <div class="ibox-content no-padding gray-bg">
+                                                        <div class="list-group">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                            <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                margin-right: 15px;
+                                                                                padding: 3px 10px 3px 10px;
+                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/1/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                    margin-right: 15px;
+                                                                                    padding: 3px 10px 3px 10px;
+                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/2/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 3</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                        margin-right: 15px;
+                                                                                        padding: 3px 10px 3px 10px;
+                                                                                        font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/12/2018
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="list-group">
                                             <div class="panel-body">
-                                                <strong>Donec quam felis</strong>
-
-                                                <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little
-                                                    world among the stalks, and grow familiar with the countless indescribable
-                                                    forms of the insects and flies, then I feel the presence of the Almighty,
-                                                    who formed us in his own image, and the breath </p>
-
-                                                <p>I am alone, and feel the charm of existence in this spot, which was created
-                                                    for the bliss of souls like mine. I am so happy, my dear friend, so absorbed
-                                                    in the exquisite sense of mere tranquil existence, that I neglect my
-                                                    talents. I should be incapable of drawing a single stroke at the present
-                                                    moment; and yet.
-                                                </p>
+                                                <div class="ibox" style="margin-bottom: 0px;">
+                                                    <button class="btn btn-primary btn-outline btn-block collapse-link">
+                                                                    <span class="pull-right text-right">
+                                                                    <small><strong>0/5</strong></small>
+                                                                    </span>
+                                                                    <div class="text-left">
+                                                                        <h4 class="no-margins" style=" font-weight:200">
+                                                                            Master : Petter Jackson
+                                                                        </h4>
+                                                                        <h2 style="margin-top: 10px; font-weight:600">Make Money With Photography</h2>
+                                                                    </div>
+                                                                    </button>
+                                                    <div class="ibox-content no-padding gray-bg">
+                                                        <div class="list-group">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                            <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                margin-right: 15px;
+                                                                                padding: 3px 10px 3px 10px;
+                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/1/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                    margin-right: 15px;
+                                                                                    padding: 3px 10px 3px 10px;
+                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/2/2019
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 3</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                                                <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                                        margin-right: 15px;
+                                                                                        padding: 3px 10px 3px 10px;
+                                                                                        font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                </span>
+                                                                <div class="text-left">
+                                                                    <h6 class="no-margins" style=" font-weight:200">
+                                                                        Saturday, 20/12/2018
+                                                                    </h6>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="hr-line-solid no-margins no-padding">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -343,8 +480,8 @@
                             {{-- Akhirnya --}} {{-- Bagian Announcement --}}
                             <div id="announcement" class="tab-pane">
                                 <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <h5>Announcement</h5>
+                                    <div class="ibox-title" style="padding-bottom: 20px;">
+                                        <h5 style="font-size: 20px;"><strong>Announcement</strong></h5>
                                         <div class="ibox-tools">
                                             <a class="collapse-link">
                                                     <i class="fa fa-chevron-up"></i>
@@ -449,8 +586,8 @@
                             {{-- Akhirnya --}} {{-- Bagian Library --}}
                             <div id="library" class="tab-pane">
                                 <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <h5>Library</h5>
+                                    <div class="ibox-title" style="padding-bottom: 20px;">
+                                        <h5 style="font-size: 20px;"><strong>Library</strong></h5>
                                         <div class="ibox-tools">
                                             <a class="collapse-link">
                                                         <i class="fa fa-chevron-up"></i>
@@ -496,7 +633,7 @@
                                                                                     padding: 0px 15px;
                                                                                     margin-bottom: 6px"><small>Detail</small></span>
                                                                         <br/>
-                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        <small style="margin-right:10px;"><strong>273</strong> Times</small>
                                                                         </span>
                                                                         <a href="#">
                                                                                             Andrew Williams
@@ -523,7 +660,7 @@
                                                                                     padding: 0px 15px;
                                                                                     margin-bottom: 6px"><small>Detail</small></span>
                                                                         <br/>
-                                                                        <small style="margin-right:10px;"><strong>15</strong> Events</small>
+                                                                        <small style="margin-right:10px;"><strong>259</strong> Times</small>
                                                                         </span>
                                                                         <a href="#">
                                                                                                 Andrew Williams

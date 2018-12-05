@@ -99,13 +99,13 @@
                                 <div class="col-md-6">
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign In</h5>
-                                        <form class="m-t" role="form" action="index.html">
-
+                                        <form class="m-t" role="form" action="login" method="post">
+                                          <?php echo csrf_field(); ?>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Username" required="true">
+                                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Password" required="true">
+                                                <input type="password" name="password" class="form-control" placeholder="Password" required="">
                                             </div>
                                             <button type="submit" class="btn btn-primary block full-width m-b m-t">Sign In</button>
 

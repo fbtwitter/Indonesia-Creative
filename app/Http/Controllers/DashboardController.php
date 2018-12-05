@@ -11,11 +11,15 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-
-        return view('Dashboard.index');
+        if(isset($request)){
+          if($request->session()->get('key')!=null)
+            return view('Dashboard.index');
+          else
+            echo "<script>window.location.href='/'</script>";
+        }else
+          echo "<script>window.location.href='/'</script>";
     }
 
     /**

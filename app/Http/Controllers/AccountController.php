@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Routes\web;
 use Redirect;
 use DB;
 use App\database;
@@ -12,17 +13,24 @@ class AccountController extends Controller
     public function login(Request $request){
       //Fungsi untuk menangkap input login
       $email = $request->input('email');
-      $request->session()->put('key', $email);
       $pwd = $request->input('password');
-      echo "<a href='profile'>Profile</a><br>";
-      echo "<a href='logout'>Logout</a>";
+      $affect = DB::table('logins')
+      ->where('email',$email)
+      ->where('password', $pwd)
+      ->get()->count();
+      if($affect==1){
+        $request->session()->put('key', $email);
+        echo "<script>window.location.href='Dashboard'</script>";
+      }else
+       echo "<script>window.location.href='/'</script>";
+
     }
 
 
     public function logout(Request $request){
       //Fungsi Log Out
       $request->session()->forget('key');
-      return Redirect::to('/login');
+      echo "<script>window.location.href='/'</script>";
     }
 
 

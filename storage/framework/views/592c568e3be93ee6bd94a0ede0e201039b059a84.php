@@ -77,8 +77,8 @@
             <li class="<?php if(url('/Event') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
                 <a href="<?php echo e(url('Others')); ?>"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>
             </li>
-            <li class="<?php if(url('/Logout') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
-                <a href="<?php echo e(url('Logout')); ?>"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">LogOut</span>  </a>
+            <li class="<?php if(url('/logout') == request()->url()): ?> active <?php else: ?> '' <?php endif; ?>  treeview">
+                <a href="<?php echo e(url('logout')); ?>"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">Logout</span>  </a>
             </li>
         </ul>
     </div>

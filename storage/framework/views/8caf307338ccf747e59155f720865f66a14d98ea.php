@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> @yield('title-name') </title>
+    <title> <?php echo $__env->yieldContent('title-name'); ?> </title>
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('front/assets/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/bootstrap/bootstrap.min.css')); ?>" rel="stylesheet" type="text/css">
     <!-- Retina.js - Load first for faster HQ mobile images. -->
-    <script src="{{ asset('front/assets/js/plugins/retina/retina.min.js') }}"></script>
+    <script src="<?php echo e(asset('front/assets/js/plugins/retina/retina.min.js')); ?>"></script>
     <!-- Font Awesome -->
-    <link href="{{ asset('front/assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/font-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet" type="text/css">
     <!-- Default Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
     <!-- Plugin CSS -->
-    <link href="{{ asset('front/assets/css/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front/assets/css/plugins/owl-carousel/owl.theme.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front/assets/css/plugins/owl-carousel/owl.transitions.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front/assets/css/plugins/magnific-popup.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front/assets/css/plugins/background.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front/assets/css/plugins/animate.css') }}" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/owl-carousel/owl.carousel.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/owl-carousel/owl.theme.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/owl-carousel/owl.transitions.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/magnific-popup.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/background.css')); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo e(asset('front/assets/css/plugins/animate.css')); ?>" rel="stylesheet" type="text/css">
     <!-- Edited CSS -->
-    <link id="changeable-colors" href="{{ asset('front/assets/css/ic-projects.css') }}" rel="stylesheet" type="text/css">
+    <link id="changeable-colors" href="<?php echo e(asset('front/assets/css/ic-projects.css')); ?>" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -44,7 +44,7 @@
                         <span class="icon-bar"></span>
                     </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                        <img src="{{ asset('front/assets/img/logo.png') }}" class="img-responsive" alt="">
+                        <img src="<?php echo e(asset('front/assets/img/logo.png')); ?>" class="img-responsive" alt="">
                     </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,7 +78,7 @@
         <!-- /.container -->
     </nav>
 
-    {{-- Target Modal --}}
+    
 
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/creative/portfolio/bg-1.jpg')">
         <div class="modal-content">
@@ -123,7 +123,7 @@
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
                                         <form class="m-t" role="form" action="register" method="POST">
-                                          @csrf
+                                          <?php echo csrf_field(); ?>
                                             <div class="form-group">
                                                 <input type="name" name="name" class="form-control" placeholder="Insert Name" required="">
                                             </div>
@@ -149,13 +149,13 @@
         </div>
     </div>
 
-    {{-- --}}
+    
 
 
 
-    <header style="background-image: url( '{{ asset('front/assets/img/bg-header.jpg ') }}'); ">
+    <header style="background-image: url( '<?php echo e(asset('front/assets/img/bg-header.jpg ')); ?>'); ">
         <div class="intro-content ">
-            <img src="{{ asset( 'front/assets/img/profile.png') }} " class="img-responsive img-centered " alt=" ">
+            <img src="<?php echo e(asset( 'front/assets/img/profile.png')); ?> " class="img-responsive img-centered " alt=" ">
             <div class="brand-name ">IC SURABAYA</div>
             <hr class="colored ">
             <div class="brand-name-subtext ">Industry Creative</div>
@@ -166,9 +166,9 @@
         </div>
     </header>
 
-    @yield('body-content')
+    <?php echo $__env->yieldContent('body-content'); ?>
 
-    <footer id="contact" class="footer" style="background-image: url('{{ asset('front/assets/img/bg-footer.jpg') }}')">
+    <footer id="contact" class="footer" style="background-image: url('<?php echo e(asset('front/assets/img/bg-footer.jpg')); ?>')">
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-4 contact-details">
@@ -207,23 +207,23 @@
     </footer>
 
     <!-- Core Scripts -->
-    <script src="{{ asset( 'front/assets/js/jquery.js') }}"></script>
-    <script src="{{ asset( 'front/assets/js/bootstrap/bootstrap.min.js') }} "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/jquery.js')); ?>"></script>
+    <script src="<?php echo e(asset( 'front/assets/js/bootstrap/bootstrap.min.js')); ?> "></script>
     <!-- Plugin Scripts -->
-    <script src="{{ asset( 'front/assets/js/plugins/jquery.easing.min.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/classie.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/cbpAnimatedHeader.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/owl-carousel/owl.carousel.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/background/core.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/background/transition.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/background/background.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/jquery.mixitup.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/wow/wow.min.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/contact_me.js') }} "></script>
-    <script src="{{ asset( 'front/assets/js/plugins/jqBootstrapValidation.js') }} "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/jquery.easing.min.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/classie.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/cbpAnimatedHeader.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/owl-carousel/owl.carousel.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/background/core.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/background/transition.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/background/background.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/jquery.mixitup.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/wow/wow.min.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/contact_me.js')); ?> "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/plugins/jqBootstrapValidation.js')); ?> "></script>
     <!-- Edited Java-Scripts -->
-    <script src="{{ asset( 'front/assets/js/ic-projects.js') }} "></script>
+    <script src="<?php echo e(asset( 'front/assets/js/ic-projects.js')); ?> "></script>
 
 </body>
 

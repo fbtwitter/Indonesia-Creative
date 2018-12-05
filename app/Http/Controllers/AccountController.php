@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Redirect;
 use DB;
+use App\database;
 
 class AccountController extends Controller
 {
@@ -31,30 +32,36 @@ class AccountController extends Controller
       $nama = $request->input('name');
       $email = $request->input('email');
       $pwd = $request->input('password');
-      $repwd = $request->input('password_confirmation');
+      $repwd = $request->input('repassword');
 
-      if(($pwd == $repwd)&&(DB::table('login')->where('email',$email)->first()==null)){
-        DB::table('info_user')->insert(
+      if($pwd == $repwd){
+        DB::table('info_users')->insert(
           [
             'nama_depan' => $nama,
           ]
         );
-        $posts = DB::select('select id_info_user from Info_user order by id_info_user desc limit 1');
+        $posts = DB::select('select id_info_user from Info_users order by id_info_user desc limit 1');
         foreach ($posts as $post) {
             $id = $post->id_info_user;
           }
-        DB::table('login')->insert(
+        DB::table('logins')->insert(
           [
-            'id_user' => $id,
+            'id_info_user' => $id,
             'email' => $email,
             'password'=>$pwd,
           ]
         );
-        echo "Register Succesfull !<br>";
-        echo "<a href='login'>Login</a>";
+        echo "<script>
+              alert('Register Succesfull!!');
+              window.location.href='/';
+              </script>";
+      }else{
+        echo "<script>
+              alert('Register Failed!!');
+              window.location.href='/';
+              </script>";
       }
-      else
-        echo "Register Failed !<br><a href='register'>Register</a>";
+
     }
 
 

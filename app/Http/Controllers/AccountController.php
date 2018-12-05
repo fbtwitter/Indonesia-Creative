@@ -21,8 +21,11 @@ class AccountController extends Controller
       if($affect==1){
         $request->session()->put('key', $email);
         echo "<script>window.location.href='Dashboard'</script>";
-      }else
-       echo "<script>window.location.href='/'</script>";
+      }else{
+        echo "<script>
+              window.location.href='/';
+              </script>";
+      }
 
     }
 
@@ -41,33 +44,43 @@ class AccountController extends Controller
       $email = $request->input('email');
       $pwd = $request->input('password');
       $repwd = $request->input('repassword');
+      $affect = DB::table('logins')->where('email', $email)->get()->count();
 
-      if($pwd == $repwd){
-        DB::table('info_users')->insert(
-          [
-            'nama_depan' => $nama,
-          ]
-        );
-        $posts = DB::select('select id_info_user from Info_users order by id_info_user desc limit 1');
-        foreach ($posts as $post) {
-            $id = $post->id_info_user;
-          }
-        DB::table('logins')->insert(
-          [
-            'id_info_user' => $id,
-            'email' => $email,
-            'password'=>$pwd,
-          ]
-        );
+      if($affect!=0){
         echo "<script>
-              alert('Register Succesfull!!');
+              alert('Email has registered!');
               window.location.href='/';
               </script>";
-      }else{
-        echo "<script>
-              alert('Register Failed!!');
-              window.location.href='/';
-              </script>";
+      }else {
+
+        if($pwd == $repwd){
+          DB::table('info_users')->insert(
+            [
+              'nama_depan' => $nama,
+            ]
+          );
+          $posts = DB::select('select id_info_user from Info_users order by id_info_user desc limit 1');
+          foreach ($posts as $post) {
+              $id = $post->id_info_user;
+            }
+          DB::table('logins')->insert(
+            [
+              'id_info_user' => $id,
+              'email' => $email,
+              'password'=>$pwd,
+              'hak_akses'=>3
+            ]
+          );
+          echo "<script>
+                alert('Register Succesfull!!');
+                window.location.href='/';
+                </script>";
+        }else{
+          echo "<script>
+                alert('Register Failed!!');
+                window.location.href='/';
+                </script>";
+        }
       }
 
     }

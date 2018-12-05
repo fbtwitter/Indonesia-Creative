@@ -122,7 +122,7 @@
                                 <div class="col-md-6">
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
-                                        <form class="m-t" role="form" action="register" method="POST">
+                                        <form class="m-t" role="form" action="register" method="post">
                                           <?php echo csrf_field(); ?>
                                             <div class="form-group">
                                                 <input type="name" name="name" class="form-control" placeholder="Insert Name" required="">

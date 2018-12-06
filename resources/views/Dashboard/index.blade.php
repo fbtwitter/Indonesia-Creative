@@ -1,3 +1,4 @@
+@foreach ($data as $d)
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') IC Surabaya
 @endsection
@@ -30,7 +31,7 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
+                    <span class="m-r-sm text-muted welcome-message">Welcome {{$d->NAMA_DEPAN}}</span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
@@ -42,7 +43,7 @@
     <div class="row  border-bottom white-bg dashboard-header">
 
         <div class="col-md-3">
-            <h2>Welcome Reza!</h2>
+            <h2>Welcome {{$d->NAMA_DEPAN}}!</h2>
             <small>Student Ranking Based On Point of Monthly Meeting.</small>
             <ul class="list-group clear-list m-t">
                 <li class="list-group-item fist-item">
@@ -563,7 +564,7 @@
 
 </div>
 @endsection
-
+@endforeach
 @section('scriptjs')
 <!-- Flot -->
 <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>

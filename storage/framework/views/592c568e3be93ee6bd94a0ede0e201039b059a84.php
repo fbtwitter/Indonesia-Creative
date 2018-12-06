@@ -3,11 +3,11 @@
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
-                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="<?php echo e(asset('admin/img/profile_big.jpg')); ?>" />
+                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="<?php echo e($d->NAMA_DEPAN); ?>"onerror="this.src='admin/img/default.jpg'" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Reza Fauzi Augusdi</strong>
-                     </span> <span class="text-muted text-xs block">Web Developer</span> </span> </a>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo e($d->NAMA_DEPAN); ?><?php echo e($d->NAMA_BELAKANG); ?></strong>
+                    </span> <span class="text-muted text-xs block"><?php echo e($status); ?></span> </span> </a>
                 </div>
                 <div class="logo-element">
                     ICS

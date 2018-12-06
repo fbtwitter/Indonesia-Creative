@@ -1,3 +1,5 @@
+<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 <?php $__env->startSection('title-dashboard'); ?> IC Surabaya
 <?php $__env->stopSection(); ?>
 
@@ -29,7 +31,7 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
+                    <span class="m-r-sm text-muted welcome-message">Welcome <?php echo e($d->NAMA_DEPAN); ?></span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
@@ -41,7 +43,7 @@
     <div class="row  border-bottom white-bg dashboard-header">
 
         <div class="col-md-3">
-            <h2>Welcome Reza!</h2>
+            <h2>Welcome <?php echo e($d->NAMA_DEPAN); ?>!</h2>
             <small>Student Ranking Based On Point of Monthly Meeting.</small>
             <ul class="list-group clear-list m-t">
                 <li class="list-group-item fist-item">
@@ -561,7 +563,7 @@
 
 </div>
 <?php $__env->stopSection(); ?>
-
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->startSection('scriptjs'); ?>
 <!-- Flot -->
 <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.js')); ?> "></script>

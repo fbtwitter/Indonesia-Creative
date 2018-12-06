@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -14,8 +15,27 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         if(isset($request)){
-          if($request->session()->get('key')!=null)
-            return view('Dashboard.index');
+          $id=$request->session()->get('key');
+          if($id!=null){
+            $data = DB::table('info_users')->where('id_info_user',$id)->get();
+            $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
+            foreach ($hak as $h) {
+                $hk = $h->hak_akses;
+              }
+            switch ($hk) {
+              case 3:
+                $hak = "Student";
+                break;
+              case 2:
+                $hak = "Master";
+                break;
+              default:
+                $hak = "Undefined";
+                break;
+            }
+            return view('Dashboard.index', compact('data'))->with('status',$hak);
+          }
+
           else
             echo "<script>window.location.href='/'</script>";
         }else

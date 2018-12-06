@@ -3,11 +3,11 @@
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
-                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{ asset('admin/img/profile_big.jpg') }}" />
+                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{$d->NAMA_DEPAN}}"onerror="this.src='admin/img/default.jpg'" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Reza Fauzi Augusdi</strong>
-                     </span> <span class="text-muted text-xs block">Web Developer</span> </span> </a>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$d->NAMA_DEPAN}}{{$d->NAMA_BELAKANG}}</strong>
+                    </span> <span class="text-muted text-xs block">{{$status}}</span> </span> </a>
                 </div>
                 <div class="logo-element">
                     ICS

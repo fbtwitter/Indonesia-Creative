@@ -19,7 +19,11 @@ class AccountController extends Controller
       ->where('password', $pwd)
       ->get()->count();
       if($affect==1){
-        $request->session()->put('key', $email);
+        $d = DB::table('logins')->select('id_info_user')->where('email',$email)->get();
+        foreach ($d as $post) {
+            $id = $post->id_info_user;
+          }
+        $request->session()->put('key', $id);
         echo "<script>window.location.href='Dashboard'</script>";
       }else{
         echo "<script>
@@ -84,10 +88,6 @@ class AccountController extends Controller
       }
 
     }
-
-
-
-
 
     public function profil(){
       //Fungsi menampilkan Form untuk edit profil

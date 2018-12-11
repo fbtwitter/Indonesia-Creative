@@ -11,10 +11,11 @@ class CC_AdvertController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        return view('CourseCategory.Selected.CC_Advert.index');
+        $data = $request->session()->get('data');
+        $status = $request->session()->get('status');
+        return view('CourseCategory.Selected.CC_Advert.index', compact('data'))->with('status',$status);
     }
 
     /**

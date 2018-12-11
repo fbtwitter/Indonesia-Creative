@@ -1,3 +1,5 @@
+<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 <?php $__env->startSection('title-dashboard'); ?> Advertising Class
 <?php $__env->stopSection(); ?>
 
@@ -41,7 +43,7 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
+                    <span class="m-r-sm text-muted welcome-message">Welcome <?php echo e($d->NAMA_DEPAN); ?> <?php echo e($d->NAMA_BELAKANG); ?></span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
@@ -1011,7 +1013,7 @@
 
     </div>
 <?php $__env->stopSection(); ?>
-
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->startSection('scriptjs'); ?>
     <!-- Flot -->
     <script src="<?php echo e(asset( 'admin/js/plugins/flot/jquery.flot.js')); ?> "></script>

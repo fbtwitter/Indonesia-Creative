@@ -20,7 +20,8 @@
 
 <body>
     <div id="wrapper">
-    @include('ManagementFile/backend/navbar') @yield('body-content')
+    @include('ManagementFile/backend/navbar')
+    @yield('body-content')
     </div>
 
 

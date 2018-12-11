@@ -18,6 +18,7 @@ class DashboardController extends Controller
           $id=$request->session()->get('key');
           if($id!=null){
             $data = DB::table('info_users')->where('id_info_user',$id)->get();
+            $request->session()->put('data',$data);
             $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
             foreach ($hak as $h) {
                 $hk = $h->hak_akses;
@@ -33,6 +34,8 @@ class DashboardController extends Controller
                 $hak = "Undefined";
                 break;
             }
+
+            $request->session()->put('status',$hak);
             return view('Dashboard.index', compact('data'))->with('status',$hak);
           }
 

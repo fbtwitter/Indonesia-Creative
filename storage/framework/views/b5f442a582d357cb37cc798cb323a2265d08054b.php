@@ -1,3 +1,5 @@
+<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 <?php $__env->startSection('title-dashboard'); ?> Other Course
 <?php $__env->stopSection(); ?>
 
@@ -540,7 +542,7 @@
 
 </div>
 <?php $__env->stopSection(); ?>
-
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->startSection('scriptjs'); ?>
 <!-- Flot -->
 <script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>

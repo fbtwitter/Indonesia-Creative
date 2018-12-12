@@ -1,3 +1,4 @@
+@foreach ($data as $d)
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') Other Course
 @endsection
@@ -541,7 +542,7 @@
 
 </div>
 @endsection
-
+@endforeach
 @section('scriptjs')
 <!-- Flot -->
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>

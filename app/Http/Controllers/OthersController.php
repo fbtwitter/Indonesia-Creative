@@ -11,10 +11,11 @@ class OthersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        return view('CourseCategory.Others.index');
+        $data = $request->session()->get('data');
+        $status = $request->session()->get('status');
+        return view('CourseCategory.Others.index', compact('data'))->with('status',$status);
     }
 
     /**

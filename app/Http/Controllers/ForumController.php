@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+use App\forum;
+=======
+>>>>>>> cd5e747980cdc2b1bf09388b99aae35eef53e547
 
 class ForumController extends Controller
 {
@@ -13,7 +17,12 @@ class ForumController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
+        $forums = forum::all()->toArray();
+        return view('forum', compact('forums'));
+=======
         //
+>>>>>>> cd5e747980cdc2b1bf09388b99aae35eef53e547
     }
 
     /**
@@ -81,4 +90,12 @@ class ForumController extends Controller
     {
         //
     }
+<<<<<<< HEAD
+    
+    public function delete($id_forum){
+        forum::find($id_forum)->delete();
+        return redirect(url('forum'));
+    }
+=======
+>>>>>>> cd5e747980cdc2b1bf09388b99aae35eef53e547
 }

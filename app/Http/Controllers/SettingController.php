@@ -91,16 +91,19 @@ class SettingController extends Controller
         //     'new1' => 'required',
         //     'new2' => 'required'
         // ]);
-        $datalogin = login::where('id_info_user', $id);
-        //if($request['new1'] == $request['new2']){/
-          // if($datalogin['password'] == $request['old']){
-          //   login::findOrFail($id)->update('PASSWORD', $request['new1']);
-          // }
-        //}
+        $datalogin = login::where('id_info_user', $id)->get();
+        foreach ($datalogin as $key) {
+          $pass = $key->PASSWORD;
+        }
+        if($request['new1'] == $request['new2']){
+          if($pass == $request['old']){
+            login::where('id_info_user', $id)->update(['PASSWORD' => $request['new1']]);
+          }
+        }
 
        }
-      // Alert::success('Data berhasil diperbaharui','OK');
-      // return redirect()->route('Setting.index');
+      Alert::success('Data berhasil diperbaharui','OK');
+      return redirect()->route('Setting.index');
     }
 
     /**

@@ -173,16 +173,16 @@
             <div class="row">
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-phone"></i> Call</h4>
-                    <p>555-213-4567</p>
+                    <p>0857-4221-4354</p>
                 </div>
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-map-marker"></i> Visit</h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
+                    <p>Electronic Engineering Polytechnic
+                        <br>Institute of Surabaya</p>
                 </div>
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-envelope"></i> Email</h4>
-                    <p><a href="mailto:mail@example.com">mail@example.com</a>
+                    <p><a href="mailto:mail@example.com">admin@ics.com</a>
                     </p>
                 </div>
             </div>
@@ -200,7 +200,7 @@
             </div>
             <div class="row copyright">
                 <div class="col-lg-12">
-                    <p class="small">&copy; 2015 Start Bootstrap Themes</p>
+                    <p class="small">&copy; IC Surabaya 2018</p>
                 </div>
             </div>
         </div>

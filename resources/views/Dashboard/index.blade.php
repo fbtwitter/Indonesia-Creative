@@ -151,10 +151,10 @@
     </div> --}} {{-- Side right--}}
     <div class="sidebar-panel">
         <div>
-            <h4>Messages <span class="badge badge-info pull-right">16</span></h4>
+            <h4>Announcement <span class="badge badge-info pull-right">16</span></h4>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="img/a1.jpg">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
                     There are many variations of passages of Lorem Ipsum available.
@@ -164,7 +164,7 @@
             </div>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="img/a2.jpg">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a2.jpg') }}">
                 </a>
                 <div class="media-body">
                     TIt is a long established fact that.
@@ -174,7 +174,7 @@
             </div>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="img/a3.jpg">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a3.jpg') }}">
                 </a>
                 <div class="media-body">
                     Many desktop publishing packages.
@@ -184,7 +184,7 @@
             </div>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a4.jpg') }}">
                 </a>
                 <div class="media-body">
                     The generated Lorem Ipsum is therefore always free.
@@ -194,20 +194,39 @@
             </div>
         </div>
         <div class="m-t-md">
-            <h4>Statistics</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-            </p>
-            <div class="row m-t-sm">
-                <div class="col-md-6">
-                    <span class="bar">5,3,9,6,5,9,7,3,5,2</span>
-                    <h5><strong>169</strong> Posts</h5>
-                </div>
-                <div class="col-md-6">
-                    <span class="line">5,3,9,6,5,9,7,3,5,2</span>
-                    <h5><strong>28</strong> Orders</h5>
-                </div>
-            </div>
+            <h4>Best Student</h4>
+            <ul class="list-group clear-list m-t">
+                <li class="list-group-item fist-item">
+                    <span class="pull-right">
+                                420
+                            </span>
+                    <span class="label label-success">1</span> Albert Einstein
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                                370
+                            </span>
+                    <span class="label label-info">2</span> Nelson Mandela
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                                330
+                            </span>
+                    <span class="label label-primary">3</span> Christoper Colombus
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                                250
+                            </span>
+                    <span class="label label-default">4</span> Steve Jog
+                </li>
+                <li class="list-group-item">
+                    <span class="pull-right">
+                                200
+                            </span>
+                    <span class="label label-primary">5</span> Bill Gets
+                </li>
+            </ul>
         </div>
         <div class="m-t-md">
             <h4>Discussion</h4>
@@ -234,28 +253,28 @@
                         <div class="carousel slide" id="carousel2">
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-6.jpg') }}">                                    {{--
-                                    <div class="carousel-caption">
-                                        <p>This is simple caption 1</p>
-                                    </div> --}}
+                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
+                                    <div class="carousel-caption" style="top:75%">
+                                        <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
+                                    </div>
                                 </div>
                                 <div class="item ">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-7.jpg') }}">                                    {{--
-                                    <div class="carousel-caption">
-                                        <p>This is simple caption 2</p>
-                                    </div> --}}
+                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-7.jpg') }}">
+                                    <div class="carousel-caption" style="top:75%">
+                                        <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
+                                    </div>
                                 </div>
                                 <div class="item">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-8.jpg') }}">                                    {{--
-                                    <div class="carousel-caption caption-control">
-                                        <p>This is simple caption 3</p>
-                                    </div> --}}
+                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-8.jpg') }}">
+                                    <div class="carousel-caption" style="top:75%">
+                                        <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
+                                    </div>
                                 </div>
                                 <div class="item">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-9.jpg') }}">                                    {{--
-                                    <div class="carousel-caption caption-control">
-                                        <p>This is simple caption 3</p>
-                                    </div> --}}
+                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-9.jpg') }}">
+                                    <div class="carousel-caption" style="top:75%">
+                                        <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
+                                    </div>
                                 </div>
                             </div>
                             <a data-slide="prev" href="#carousel2" class="left carousel-control">
@@ -306,12 +325,12 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <span class="label label-primary pull-right">Today</span>
-                        <h5>visits</h5>
+                        <h5>Your Best Score</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">22 285,400</h1>
-                        <div class="stat-percent font-bold text-navy">20% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
+                        <h1 class="no-margins">85.0</h1>
+                        <div class="stat-percent font-bold text-navy">12/12/2018</div>
+                        <small>Last Update : </small>
                     </div>
                 </div>
             </div>
@@ -319,12 +338,12 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <span class="label label-info pull-right">Monthly</span>
-                        <h5>Orders</h5>
+                        <h5>Yor Accumulation Score</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">60 420,600</h1>
-                        <div class="stat-percent font-bold text-info">40% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
+                        <h1 class="no-margins">420.6</h1>
+                        <div class="stat-percent font-bold text-navy">12/12/2018</div>
+                        <small>Last Update : </small>
                     </div>
                 </div>
             </div>
@@ -332,12 +351,12 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <span class="label label-warning pull-right">Annual</span>
-                        <h5>Income</h5>
+                        <h5>Joined Monthly Meeting</h5>
                     </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">$ 120 430,800</h1>
-                        <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
+                        <h1 class="no-margins">12</h1>
+                        <div class="stat-percent font-bold text-navy">12/12/2018</div>
+                        <small>Last Update : </small>
                     </div>
                 </div>
             </div>
@@ -347,44 +366,33 @@
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>New data for the report</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                        </div>
+                        <h5>Sending Message to Master</h5>
                     </div>
                     <div class="ibox-content ibox-heading">
-                        <h3>Stock price up
-                            <div class="stat-percent text-navy">34% <i class="fa fa-level-up"></i></div>
-                        </h3>
-                        <small><i class="fa fa-stack-exchange"></i> New economic data from the previous quarter.</small>
+                        <form class="form-horizontal" method="get">
+                            <div class="form-group no-margins no-padding"><label class="col-sm-2 control-label">To:</label>
+
+                                <div class="col-sm-10"><select class="form-control m-b" name="account">
+                                        <option>Master Reza</option>
+                                        <option>Master Agung</option>
+                                    </select></div>
+                            </div>
+                            <div class="form-group no-margins no-padding"><label class="col-sm-2 control-label">Subject:</label>
+
+                                <div class="col-sm-10"><input type="text" class="form-control" value=""></div>
+                            </div>
+                        </form>
                     </div>
                     <div class="ibox-content">
                         <div>
-
-                            <div class="pull-right text-right">
-
-                                <span class="bar_dashboard">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span>
-                                <br/>
-                                <small class="font-bold">$ 20 054.43</small>
+                            <div class="row no-margins no-padding">
+                                <div class="col-lg-8">
+                                    <textarea type="text" placeholder="Send your message here" class="form-control"></textarea>
+                                </div>
+                                <div class="col-lg-4 pull-right">
+                                    <button class="btn btn-success btn-outline btn-block" style="padding-top:25%; padding-bottom:25%"><strong>Send!</strong></button>
+                                </div>
                             </div>
-                            <h4>NYS report new data!
-                                <br/>
-                                <small class="m-r"><a href="graph_flot.html"> Check the stock price! </a> </small>
-                            </h4>
                         </div>
                     </div>
                 </div>
@@ -426,10 +434,6 @@
                                 </p>
                                 <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                             </li>
-                            <li class="list-group-item ">
-                                <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -438,38 +442,22 @@
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Timeline</h5>
-                        <span class="label label-primary">Meeting today</span>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                        </div>
+                        <h5>Monthly Meeting Timeline </h5>
+                        <span class="label label-primary pull-right">Meeting today</span>
                     </div>
 
                     <div class="ibox-content inspinia-timeline">
 
                         <div class="timeline-item">
                             <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-briefcase"></i> 6:00 am
+                                <div class="col-xs-4 date">
+                                    <i class="fa fa-briefcase"></i> 20-Nov-2018
                                     <br/>
-                                    <small class="text-navy">2 hour ago</small>
+                                    <small class="text-navy">2 more days</small>
                                 </div>
-                                <div class="col-xs-7 content no-top-border">
-                                    <p class="m-b-xs"><strong>Meeting</strong></p>
+                                <div class="col-xs-8 content no-top-border">
+                                    <span class="label label-default pull-right">Session 1</span>
+                                    <p class="m-b-xs"><strong>Nama Sub Course</strong></p>
 
                                     <p>Conference on the sales results for the previous year. Monica please examine sales trends
                                         in marketing and products.</p>
@@ -479,45 +467,52 @@
                         </div>
                         <div class="timeline-item">
                             <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-file-text"></i> 7:00 am
+                                <div class="col-xs-4 date">
+                                    <i class="fa fa-camera-retro"></i> 23-Nov-2018
                                     <br/>
-                                    <small class="text-navy">3 hour ago</small>
+                                    <small class="text-navy">2 more days</small>
                                 </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industry's standard dummy text ever since.</p>
+                                <div class="col-xs-8 content no-top-border">
+                                    <span class="label label-default pull-right">Session 1</span>
+                                    <p class="m-b-xs"><strong>Nama Sub Course 2</strong></p>
+
+                                    <p>Conference on the sales results for the previous year. Monica please examine sales trends
+                                        in marketing and products.</p>
+
                                 </div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-coffee"></i> 8:00 am
+                                <div class="col-xs-4 date">
+                                    <i class="fa fa-gamepad"></i> 25-Nov-2018
                                     <br/>
+                                    <small class="text-navy">2 more days</small>
                                 </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Coffee Break</strong></p>
-                                    <p>
-                                        Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industry's.
-                                    </p>
+                                <div class="col-xs-8 content no-top-border">
+                                    <span class="label label-default pull-right">Session 1</span>
+                                    <p class="m-b-xs"><strong>Nama Sub Course 3</strong></p>
+
+                                    <p>Conference on the sales results for the previous year. Monica please examine sales trends
+                                        in marketing and products.</p>
+
                                 </div>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-phone"></i> 11:00 am
+                                <div class="col-xs-4 date">
+                                    <i class="fa fa-code"></i> 27-Nov-2018
                                     <br/>
-                                    <small class="text-navy">21 hour ago</small>
+                                    <small class="text-navy">2 more days</small>
                                 </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
-                                    <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since.
-                                    </p>
+                                <div class="col-xs-8 content no-top-border">
+                                    <span class="label label-default pull-right">Session 1</span>
+                                    <p class="m-b-xs"><strong>Nama Sub Course 4</strong></p>
+
+                                    <p>Conference on the sales results for the previous year. Monica please examine sales trends
+                                        in marketing and products.</p>
+
                                 </div>
                             </div>
                         </div>

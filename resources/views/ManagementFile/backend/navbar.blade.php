@@ -6,7 +6,7 @@
                     <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{$data->FOTO_PROFIL}}"onerror="this.src='admin/img/default.jpg'" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$data->NAMA_DEPAN}} {{$data->NAMA_BELAKANG}}</strong>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$data->NAMA_DEPAN}}</strong>
                     </span> <span class="text-muted text-xs block">{{$status}}</span> </span> </a>
                 </div>
                 <div class="logo-element">

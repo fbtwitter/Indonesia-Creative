@@ -112,16 +112,20 @@
                                                             class="form-control"></div>
                                                     <div class="form-group no-margins no-padding">
                                                         <label>Jenis Kelamin</label>
-                                                        <select class="form-control m-b" name="account">
-                                                                    <option>Laki-Laki</option>
-                                                                    <option>Perempuan</option>
+                                                        <select class="form-control m-b" name="gender">
+                                                                    <option value="L" @if ($data->GENDER=='L')
+                                                                      checked="checked"
+                                                                    @endif>Laki-Laki</option>
+                                                                    <option value="P" @if ($data->GENDER=='P')
+                                                                      checked="checked"
+                                                                    @endif>Perempuan</option>
                                                                 </select>
                                                     </div>
                                                     <div class="form-group"><label>Domisili</label> <input type="text" name="DOMISILI" placeholder="Enter your address" value={{$data->DOMISILI}}
                                                             class="form-control"></div>
-                                                    <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number" value="{{$data->NOMOR_TELP}}"
+                                                    <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number" name="NOMOR_TELP" value="{{$data->NOMOR_TELP}}"
                                                             class="form-control"></div>
-                                                    <div class="form-group"><label>Introduction</label> <textarea type="text" placeholder="Tell us about you" value="{{$data->INTRODUCTION}}"
+                                                    <div class="form-group"><label>Introduction</label> <textarea type="text" placeholder="Tell us about you" name="INTRODUCTION" value="{{$data->INTRODUCTION}}"
                                                             class="form-control"></textarea></div>
 
                                                     <div>

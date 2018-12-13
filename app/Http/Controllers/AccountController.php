@@ -24,7 +24,7 @@ class AccountController extends Controller
             $id = $post->id_info_user;
           }
         $request->session()->put('key', $id);
-        echo "<script>window.location.href='Dashboard'</script>";
+        echo "<script>window.location.href='dashboard'</script>";
       }else{
         echo "<script>
               window.location.href='/';

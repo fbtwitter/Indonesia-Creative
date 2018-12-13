@@ -32,7 +32,7 @@ class DashboardController extends Controller
             }
 
             $request->session()->put('status',$hak);
-            return view('Dashboard.index', compact('data'))->with('status',$hak);
+            return view('dashboard.index', compact('data'))->with('status',$hak);
           }
 
           else

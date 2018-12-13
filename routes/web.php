@@ -42,6 +42,8 @@ Route::get('/deletereward/{id_reward}', 'RewardController@delete');
 Route::get('/', function () {
     return view('welcome');
 });
+/*BAGIAN SETTING*/
+Route::resource('/setting','SettingController');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -57,7 +59,6 @@ Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
-Route::resource('/Dashboard', 'DashboardController');
 Route::resource('/CC_Advert', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');

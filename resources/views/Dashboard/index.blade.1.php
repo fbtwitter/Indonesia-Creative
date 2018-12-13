@@ -15,10 +15,10 @@
 
 
 
-<div id="page-wrapper" class="gray-bg sidebar-content">
+<div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
         {{-- Navbar --}}
-        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                 <div class="form-group">
@@ -226,307 +226,199 @@
             </div>
         </div>
     </div>
+    {{-- right --}}
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-content ">
-                        <div class="carousel slide" id="carousel2">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-6.jpg') }}">                                    {{--
-                                    <div class="carousel-caption">
-                                        <p>This is simple caption 1</p>
-                                    </div> --}}
-                                </div>
-                                <div class="item ">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-7.jpg') }}">                                    {{--
-                                    <div class="carousel-caption">
-                                        <p>This is simple caption 2</p>
-                                    </div> --}}
-                                </div>
-                                <div class="item">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-8.jpg') }}">                                    {{--
-                                    <div class="carousel-caption caption-control">
-                                        <p>This is simple caption 3</p>
-                                    </div> --}}
-                                </div>
-                                <div class="item">
-                                    <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-9.jpg') }}">                                    {{--
-                                    <div class="carousel-caption caption-control">
-                                        <p>This is simple caption 3</p>
-                                    </div> --}}
-                                </div>
-                            </div>
-                            <a data-slide="prev" href="#carousel2" class="left carousel-control">
-                                <span class="fa fa-chevron-left" style="position: absolute;top: 50%;margin-left: -25px;"></span>
-                            </a>
-                            <a data-slide="next" href="#carousel2" class="right carousel-control">
-                                <span class="fa fa-chevron-right" style="position: absolute;top: 50%;margin-right: -25px;"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {{--
-                <div class="ibox float-e-margins">
-                    <div class="slick_demo_1">
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-4.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-5.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-
-
-        <div class="row">
-
-            <div class="col-lg-4">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <span class="label label-primary pull-right">Today</span>
-                        <h5>visits</h5>
-                    </div>
                     <div class="ibox-content">
-                        <h1 class="no-margins">22 285,400</h1>
-                        <div class="stat-percent font-bold text-navy">20% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <span class="label label-info pull-right">Monthly</span>
-                        <h5>Orders</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <h1 class="no-margins">60 420,600</h1>
-                        <div class="stat-percent font-bold text-info">40% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <span class="label label-warning pull-right">Annual</span>
-                        <h5>Income</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <h1 class="no-margins">$ 120 430,800</h1>
-                        <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i></div>
-                        <small>New orders</small>
+                        <div>
+                            <span class="pull-right text-right">
+                                        <small>Average value of sales in the past month in: <strong>United states</strong></small>
+                                            <br/>
+                                            All sales: 162,862
+                                        </span>
+                            <h1 class="m-b-xs">$ 50,992</h1>
+                            <h3 class="font-bold no-margins">
+                                Half-year revenue margin
+                            </h3>
+                            <small>Sales marketing.</small>
+                        </div>
+
+                        <div>
+                            <canvas id="lineChart" height="70"></canvas>
+                        </div>
+
+                        <div class="m-t-md">
+                            <small class="pull-right">
+                                        <i class="fa fa-clock-o"> </i>
+                                        Update on 16.07.2015
+                                    </small>
+                            <small>
+                                       <strong>Analysis of sales:</strong> The value has been changed over time, and last month reached a level over $50,000.
+                                   </small>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>New data for the report</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content ibox-heading">
-                        <h3>Stock price up
-                            <div class="stat-percent text-navy">34% <i class="fa fa-level-up"></i></div>
-                        </h3>
-                        <small><i class="fa fa-stack-exchange"></i> New economic data from the previous quarter.</small>
-                    </div>
-                    <div class="ibox-content">
-                        <div>
-
-                            <div class="pull-right text-right">
-
-                                <span class="bar_dashboard">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span>
-                                <br/>
-                                <small class="font-bold">$ 20 054.43</small>
+    </div>
+    <div class="row ">
+        <div class="col-lg-12 ">
+            {{-- first page --}}
+            <div class="wrapper wrapper-content ">
+                {{-- first row --}}
+                <div class="row ">
+                    <div class="col-lg-4 ">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title ">
+                                <h5>Review from master</h5>
+                                <div class="ibox-tools ">
+                                    <span class="label label-warning-light pull-right ">10 Messages</span>
+                                </div>
                             </div>
-                            <h4>NYS report new data!
-                                <br/>
-                                <small class="m-r"><a href="graph_flot.html"> Check the stock price! </a> </small>
-                            </h4>
+                            <div class="ibox-content ">
+
+                                <div>
+                                    <div class="feed-activity-list ">
+
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a1.jpg')
+                                }} ">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right ">5m ago</small>
+                                                <strong>Monica Smith</strong>
+                                                <p class="m-b-xs ">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has bee
+                                                </p>
+                                                <small class="text-muted ">Today 5:60 pm - 12.06.2014</small>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a2.jpg')}} ">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right ">2h ago</small>
+                                                <strong>Mark Johnson</strong> posted message on <strong>Monica Smith</strong>                                                site. <br>
+                                                <small class="text-muted ">Today 2:10 pm - 12.06.2014</small>
+                                            </div>
+                                        </div>
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a3.jpg')}} ">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right ">2h ago</small>
+                                                <strong>Janet Rosowski</strong> add 1 photo on <strong>Monica Smith</strong>.
+                                                <br>
+                                                <small class="text-muted ">2 days ago at 8:30am</small>
+                                            </div>
+                                        </div>
+                                        <div class="feed-element ">
+                                            <a href="profile.html " class="pull-left ">
+                                                <img alt="image " class="img-circle " src="{{ asset( 'admin/img/a4.jpg')}} ">
+                                            </a>
+                                            <div class="media-body ">
+                                                <small class="pull-right text-navy ">5h ago</small>
+                                                <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>.
+                                                <br>
+                                                <small class="text-muted ">Yesterday 1:21 pm - 11.06.2014</small>
+                                                <div class="actions ">
+                                                    <a class="btn btn-xs btn-white "><i class="fa fa-thumbs-up "></i> Like </a>
+                                                    <a class="btn btn-xs btn-white "><i class="fa fa-heart "></i> Love</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary btn-block m-t "><i class="fa fa-arrow-down "></i> Show More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8 ">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title ">
+                                <h5>Read below comments</h5>
+                                <div class="ibox-tools ">
+                                    <a class="collapse-link ">
+                                            <i class="fa fa-chevron-up "></i>
+                                        </a>
+                                    <a class="dropdown-toggle " data-toggle="dropdown " href="# ">
+                                            <i class="fa fa-wrench "></i>
+                                        </a>
+                                    <ul class="dropdown-menu dropdown-user ">
+                                        <li><a href="# ">Config option 1</a>
+                                        </li>
+                                        <li><a href="# ">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link ">
+                                            <i class="fa fa-times "></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content no-padding ">
+                                <ul class="list-group ">
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.</p>
+                                        <div class="row ">
+                                            <div class="col-lg-3 ">
+                                                <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 minuts ago</small>
+                                            </div>
+                                            <div class="col-lg-9 "><button class="btn btn-primary ">Details</button></div>
+                                        </div>
+
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Stock Man</a> Check this stock chart. This price
+                                            is crazy!
+                                        </p>
+                                        <div class="text-center m ">
+                                            <span id="sparkline8 "></span>
+                                        </div>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 hours ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Kevin Smith</a> Lorem ipsum unknown printer took
+                                            a galley
+                                        </p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 minuts ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Jonathan Febrick</a> The standard chunk of Lorem
+                                            Ipsum
+                                        </p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 hour ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Alan Marry</a> I belive that. Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.</p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 1 minuts ago</small>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <p><a class="text-info " href="# ">@Kevin Smith</a> Lorem ipsum unknown printer took
+                                            a galley
+                                        </p>
+                                        <small class="block text-muted "><i class="fa fa-clock-o "></i> 2 minuts ago</small>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Read below comments and tweets</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content no-padding">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p><a class="text-info" href="#">@Alan Marry</a> I belive that. Lorem Ipsum is simply dummy
-                                    text of the printing and typesetting industry.</p>
-                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 minuts ago</small>
-                            </li>
-                            <li class="list-group-item">
-                                <p><a class="text-info" href="#">@Stock Man</a> Check this stock chart. This price is crazy!
-                                </p>
-                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
-                            </li>
-                            <li class="list-group-item">
-                                <p><a class="text-info" href="#">@Kevin Smith</a> Lorem ipsum unknown printer took a galley
-                                </p>
-                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
-                            </li>
-                            <li class="list-group-item ">
-                                <p><a class="text-info" href="#">@Jonathan Febrick</a> The standard chunk of Lorem Ipsum</p>
-                                <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+                {{-- first row --}} {{-- first page --}}
             </div>
-
-            <div class="col-lg-6">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Timeline</h5>
-                        <span class="label label-primary">Meeting today</span>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                        </div>
-                    </div>
-
-                    <div class="ibox-content inspinia-timeline">
-
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-briefcase"></i> 6:00 am
-                                    <br/>
-                                    <small class="text-navy">2 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content no-top-border">
-                                    <p class="m-b-xs"><strong>Meeting</strong></p>
-
-                                    <p>Conference on the sales results for the previous year. Monica please examine sales trends
-                                        in marketing and products.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-file-text"></i> 7:00 am
-                                    <br/>
-                                    <small class="text-navy">3 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industry's standard dummy text ever since.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-coffee"></i> 8:00 am
-                                    <br/>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Coffee Break</strong></p>
-                                    <p>
-                                        Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                        has been the industry's.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-phone"></i> 11:00 am
-                                    <br/>
-                                    <small class="text-navy">21 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
-                                    <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
     </div>
     @include('ManagementFile/backend/footer')
 </div>

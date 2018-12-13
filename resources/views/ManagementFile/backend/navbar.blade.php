@@ -3,18 +3,18 @@
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
-                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{$d->NAMA_DEPAN}}"onerror="this.src='admin/img/default.jpg'" />
+                    <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{$data->FOTO_PROFIL}}"onerror="this.src='admin/img/default.jpg'" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$d->NAMA_DEPAN}}{{$d->NAMA_BELAKANG}}</strong>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$data->NAMA_DEPAN}} {{$data->NAMA_BELAKANG}}</strong>
                     </span> <span class="text-muted text-xs block">{{$status}}</span> </span> </a>
                 </div>
                 <div class="logo-element">
                     ICS
                 </div>
             </li>
-            <li class="special_link @if(url('/dashboard') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
+            <li class="special_link @if(url('/Dashboard') == request()->url()) active @else '' @endif  treeview">
+                <a href="{{ url('Dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
             <li class="@if((url('Others') == request()->url()) || (url('CC_Advert') == request()->url())) active @else '' @endif  treeview">
                 <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
@@ -71,8 +71,8 @@
             <li class="@if(url('/Forum') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Forum')}}"><i class="fa fa-comments-o fa-1x"></i> <span class="nav-label">Forum</span>  </a>
             </li>
-            <li class="@if(url('/setting') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
+            <li class="@if(url('/Setting') == request()->url()) active @else '' @endif  treeview">
+                <a href="{{ url('Setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
             </li>
             <li class="@if(url('/Event') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Event')}}"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>

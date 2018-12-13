@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\info_user;
 use DB;
 
 class DashboardController extends Controller
@@ -13,7 +14,7 @@ class DashboardController extends Controller
         if(isset($request)){
           $id=$request->session()->get('key');
           if($id!=null){
-            $data = DB::table('info_users')->where('id_info_user',$id)->get();
+            $data = info_user::find($id);
             $request->session()->put('data',$data);
             $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
             foreach ($hak as $h) {

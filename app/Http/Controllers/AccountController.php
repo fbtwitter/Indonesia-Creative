@@ -7,9 +7,17 @@ use Routes\web;
 use Redirect;
 use DB;
 use App\database;
+use Alert;
 
 class AccountController extends Controller
 {
+    public function index(Request $req){
+      if($req->session()->get('key')!=null)
+        return redirect('/Dashboard');
+        else {
+          return view('welcome');
+        }
+    }
     public function login(Request $request){
       //Fungsi untuk menangkap input login
       $email = $request->input('email');
@@ -26,9 +34,8 @@ class AccountController extends Controller
         $request->session()->put('key', $id);
         echo "<script>window.location.href='Dashboard'</script>";
       }else{
-        echo "<script>
-              window.location.href='/';
-              </script>";
+        Alert::success('Login Gagal', 'Fail');
+          return redirect()->route('Dashboard.index');
       }
 
     }

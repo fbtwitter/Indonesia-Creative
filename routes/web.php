@@ -30,7 +30,8 @@ Route::resource('/member', 'MemberController');
 Route::resource('/library', 'LibraryController');
 Route::get('/deletelib/{id_library}', 'LibraryController@delete');
 /*BAGIAN DASHBOARD*/
-Route::resource('/dashboard', 'DashboardController');
+Route::resource('/Dashboard', 'DashboardController');
+Route::resource('Setting', 'SettingController');
 /*BAGIAN ANNOUNCEMENT*/
 Route::resource('/announce', 'AnnouncementController');
 /*BAGIAN FORUM*/
@@ -39,11 +40,7 @@ Route::get('/deleteforum/{id_forum}', 'ForumController@delete');
 /*BAGIAN REWARD*/
 Route::resource('/reward', 'RewardController');
 Route::get('/deletereward/{id_reward}', 'RewardController@delete');
-Route::get('/', function () {
-    return view('welcome');
-});
-/*BAGIAN SETTING*/
-Route::resource('/setting','SettingController');
+Route::get('/','AccountController@index');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -59,6 +56,7 @@ Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
+Route::resource('/Dashboard', 'DashboardController');
 Route::resource('/CC_Advert', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');
@@ -66,3 +64,10 @@ Route::resource('/Others', 'OthersController');
 
 
 Route::resource('/MDBukudanAlat','MDBukudanAlatController');
+Route::get('route', function(){
+
+  $app = app();
+  $routes = $app->routes->getRoutes();
+  return view ('routing',compact('routes'));
+
+});

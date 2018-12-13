@@ -1,4 +1,3 @@
-@foreach ($data as $d)
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') Advertising Class
 @endsection
@@ -37,7 +36,7 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome {{$d->NAMA_DEPAN}} {{$d->NAMA_BELAKANG}}</span>
+                    <span class="m-r-sm text-muted welcome-message">Welcome {{$data->NAMA_DEPAN}} {{$data->NAMA_BELAKANG}}</span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
@@ -1007,7 +1006,6 @@
 
     </div>
 @endsection
- @endforeach
 @section('scriptjs')
     <!-- Flot -->
     <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>

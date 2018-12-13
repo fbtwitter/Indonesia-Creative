@@ -1,4 +1,4 @@
-@foreach ($data as $d)
+
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') Setting
 @endsection
@@ -7,9 +7,11 @@
 <!-- Gritter -->
 <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
+
 @endsection
 
 @section('body-content')
+
 
 
 
@@ -31,8 +33,7 @@
             <ul class="nav navbar-top-links navbar-right">
 
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
-                </li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome {{$data->NAMA_DEPAN}}</li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
                 </li>
@@ -102,10 +103,12 @@
                                         <hr>
                                         <div class="row">
                                             <div class="col-sm-8">
-                                                <form role="form">
-                                                    <div class="form-group"><label>Nama Depan</label> <input type="text" placeholder="Enter your first name"
+                                                <form role="form" action="{{route('Setting.update', 1)}}" method="post">
+                                                  {{csrf_field()}}
+                                                  {{ method_field('PUT') }}
+                                                    <div class="form-group"><label>Nama Depan</label> <input type="text" name="NAMA_DEPAN" placeholder="Enter your first name" value="{{$data->NAMA_DEPAN}}"
                                                             class="form-control"></div>
-                                                    <div class="form-group"><label>Nama Belakang</label> <input type="text" placeholder="Enter your last name"
+                                                    <div class="form-group"><label>Nama Belakang</label> <input type="text" name="NAMA_BELAKANG" placeholder="Enter your last name" value="{{$data->NAMA_BELAKANG}}"
                                                             class="form-control"></div>
                                                     <div class="form-group no-margins no-padding">
                                                         <label>Jenis Kelamin</label>
@@ -114,14 +117,15 @@
                                                                     <option>Perempuan</option>
                                                                 </select>
                                                     </div>
-                                                    <div class="form-group"><label>Domisili</label> <input type="text" placeholder="Enter your address"
+                                                    <div class="form-group"><label>Domisili</label> <input type="text" name="DOMISILI" placeholder="Enter your address" value={{$data->DOMISILI}}
                                                             class="form-control"></div>
-                                                    <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number"
+                                                    <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number" value="{{$data->NOMOR_TELP}}"
                                                             class="form-control"></div>
-                                                    <div class="form-group"><label>Introduction</label> <textarea type="text" placeholder="Tell us about you"
+                                                    <div class="form-group"><label>Introduction</label> <textarea type="text" placeholder="Tell us about you" value="{{$data->INTRODUCTION}}"
                                                             class="form-control"></textarea></div>
 
                                                     <div>
+                                                      <button type="button"><strong>Button</strong></button>
                                                         <button class="btn btn-sm btn-primary pull-left m-t-n-xs
                                                             " type="submit "><strong>UPDATE PROFILE</strong></button>
                                                     </div>
@@ -130,7 +134,7 @@
                                             <div class="col-sm-4 ">
                                                 <h4>Profile Picure</h4>
                                                 <div class="ibox-content no-padding border-left-right">
-                                                    <img alt="image" class="img-responsive  b-r" src="{{ asset('admin/img/profile_big.jpg') }}">
+                                                    <img alt="image" class="img-responsive  b-r" src="{{$data->FOTO_PROFIL}}" onerror="this.src='admin/img/default.jpg'">
                                                 </div>
                                                 <div class="ibox-content no-padding border-left-right">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top:10px;">
@@ -156,10 +160,12 @@
                                         <hr>
                                         <div class="row">
                                             <div class="col-sm-8">
-                                                <form role="form">
-                                                    <div class="form-group"><label>Old password</label> <input type="password" class="form-control"></div>
-                                                    <div class="form-group"><label>New password</label> <input type="password" class="form-control"></div>
-                                                    <div class="form-group"><label>Confirm new password</label> <input type="password" class="form-control"></div>
+                                                <form role="form" action="{{route('Setting.update', 2)}}" method="post">
+                                                  {{csrf_field()}}
+                                                  {{ method_field('PUT') }}
+                                                    <div class="form-group"><label>Old password</label> <input name="old" type="password" class="form-control"></div>
+                                                    <div class="form-group"><label>New password</label> <input name="new1" type="password" class="form-control"></div>
+                                                    <div class="form-group"><label>Confirm new password</label> <input name="new2" type="password" class="form-control"></div>
                                                     <button class="btn btn-sm btn-primary pull-left m-t-n-xs
                                                             " type="submit "><strong>UPDATE PASSWORD</strong></button>
                                                 </form>
@@ -518,7 +524,6 @@
 
 </div>
 @endsection
- @endforeach
 @section('scriptjs')
 <!-- Flot -->
 <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>

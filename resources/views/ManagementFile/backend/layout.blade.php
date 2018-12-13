@@ -15,6 +15,8 @@
     <link href="{{ asset('admin/font-awesome/css/font-awesome.css') }}" rel="stylesheet"> {{-- yield --}} @yield('scriptcss') {{-- yield --}}
     <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
 </head>
 
@@ -39,7 +41,7 @@
     <script src="{{ asset('admin/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 
     @yield('scriptjs')
-
+    @include('sweet::alert')
 </body>
 
 </html>

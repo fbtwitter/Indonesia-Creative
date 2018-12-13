@@ -3,17 +3,11 @@
 @section('title-dashboard') Advertising Class
 @endsection
 
-@section('scriptcss')
-<!-- Toastr style -->
-<link href="{{ asset('css/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
 
+@section('scriptcss')
 <!-- Gritter -->
 <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
-
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
-
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.print.css') }}" rel='stylesheet' media='print'>
 @endsection
 
 @section('body-content')
@@ -1013,7 +1007,7 @@
 
     </div>
 @endsection
-@endforeach
+ @endforeach
 @section('scriptjs')
     <!-- Flot -->
     <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>

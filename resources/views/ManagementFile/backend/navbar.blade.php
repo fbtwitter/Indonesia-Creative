@@ -13,8 +13,8 @@
                     ICS
                 </div>
             </li>
-            <li class="special_link @if(url('/Dashboard') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('Dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
+            <li class="special_link @if(url('/dashboard') == request()->url()) active @else '' @endif  treeview">
+                <a href="{{ url('dashboard')}}"><i class="fa fa-database fa-1x"></i> <span class="nav-label">Dashboard</span></a>
             </li>
             <li class="@if((url('Others') == request()->url()) || (url('CC_Advert') == request()->url())) active @else '' @endif  treeview">
                 <a href="#"><i class="fa fa-slack fa-1x"></i> <span class="nav-label">Course Category</span> <span class="fa arrow"></span></a>
@@ -71,11 +71,11 @@
             <li class="@if(url('/Forum') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Forum')}}"><i class="fa fa-comments-o fa-1x"></i> <span class="nav-label">Forum</span>  </a>
             </li>
-            <li class="@if(url('/Setting') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('Setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
+            <li class="@if(url('/setting') == request()->url()) active @else '' @endif  treeview">
+                <a href="{{ url('setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
             </li>
             <li class="@if(url('/Event') == request()->url()) active @else '' @endif  treeview">
-                <a href="{{ url('Others')}}"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>
+                <a href="{{ url('Event')}}"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>
             </li>
             <li class="@if(url('/logout') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('logout')}}"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">Logout</span>  </a>

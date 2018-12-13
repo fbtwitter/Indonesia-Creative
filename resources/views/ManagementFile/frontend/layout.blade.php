@@ -100,7 +100,7 @@
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign In</h5>
                                         <form class="m-t" role="form" action="login" method="post">
-                                          @csrf
+                                            @csrf
                                             <div class="form-group">
                                                 <input type="email" name="email" class="form-control" placeholder="Email" required="">
                                             </div>
@@ -123,7 +123,7 @@
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
                                         <form class="m-t" role="form" action="register" method="post">
-                                          @csrf
+                                            @csrf
                                             <div class="form-group">
                                                 <input type="name" name="name" class="form-control" placeholder="Insert Name" required="">
                                             </div>
@@ -156,10 +156,10 @@
     <header style="background-image: url( '{{ asset('front/assets/img/bg-header.jpg ') }}'); ">
         <div class="intro-content ">
             <img src="{{ asset( 'front/assets/img/profile.png') }} " class="img-responsive img-centered " alt=" ">
-            <div class="brand-name ">IC SURABAYA</div>
+            <div class="brand-name " style="color: #49dda3">SURABAYA</div>
             <hr class="colored ">
-            <div class="brand-name-subtext ">Industry Creative</div>
-            <div class="brand-name-subtext ">Surabaya</div>
+            <div class="brand-name-subtext ">Serve, Share, Service, and Stay Humble </div>
+            <div class="brand-name-subtext ">Learning is posibility</div>
         </div>
         <div class="scroll-down ">
             <a class="btn page-scroll " href="#about "><i class="fa fa-angle-down fa-fw "></i></a>

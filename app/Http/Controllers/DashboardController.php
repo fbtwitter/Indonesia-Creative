@@ -3,23 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-=======
 use DB;
->>>>>>> cd5e747980cdc2b1bf09388b99aae35eef53e547
 
 class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-<<<<<<< HEAD
-    public function index()
-    {
-        return view('dashboard');
-=======
+
     public function index(Request $request)
     {
         if(isset($request)){
@@ -51,7 +39,6 @@ class DashboardController extends Controller
             echo "<script>window.location.href='/'</script>";
         }else
           echo "<script>window.location.href='/'</script>";
->>>>>>> cd5e747980cdc2b1bf09388b99aae35eef53e547
     }
 
     /**

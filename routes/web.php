@@ -57,7 +57,7 @@ Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
 Route::resource('/Dashboard', 'DashboardController');
-Route::resource('/CC_Advert', 'CC_AdvertController');
+Route::resource('/CC_Advertising', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');
 Route::resource('/Others', 'OthersController');

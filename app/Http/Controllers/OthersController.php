@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\peserta_course;
+use App\course;
+use Alert;
+use Session;
 
 class OthersController extends Controller
 {
@@ -13,9 +17,11 @@ class OthersController extends Controller
      */
     public function index(Request $request)
     {
-        $data = $request->session()->get('data');
-        $status = $request->session()->get('status');
-        return view('CourseCategory.Others.index', compact('data'))->with('status',$status);
+        $data = Session::get('data');
+        $join=Session::get('join');
+        $status = Session::get('status');
+        $daftar = Session::get('daftar');
+        return view('CourseCategory.Others.index', compact('data', 'daftar', 'join'))->with('status',$status);
     }
 
     /**
@@ -36,7 +42,12 @@ class OthersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      peserta_course::insert([
+        'ID_COURSE' => $request->idcourse,
+        'ID_INFO_USER' => Session::get('key')
+      ]);
+      Alert::success('Sudah join dengan kelas');
+      return redirect()->route('Others.index');
     }
 
     /**
@@ -70,7 +81,7 @@ class OthersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

@@ -20,9 +20,11 @@ class SettingController extends Controller
     public function index(Request $request)
     {
 
-        $data = $request->session()->get('data');
-        $status = $request->session()->get('status');
-        return view('Setting.index', compact('data'))->with('status',$status);
+      $data = Session::get('data');
+      $join=Session::get('join');
+      $status = Session::get('status');
+      $daftar = Session::get('daftar');
+        return view('Setting.index', compact('data', 'daftar'))->with('status',$status);
     }
 
     /**
@@ -86,11 +88,11 @@ class SettingController extends Controller
 
       }
       if($tab==2){
-        // $this->validate($request, [
-        //     'old' => 'required',
-        //     'new1' => 'required',
-        //     'new2' => 'required'
-        // ]);
+        $this->validate($request, [
+            'old' => 'required',
+            'new1' => 'required',
+            'new2' => 'required'
+        ]);
         $datalogin = login::where('id_info_user', $id)->get();
         foreach ($datalogin as $key) {
           $pass = $key->PASSWORD;

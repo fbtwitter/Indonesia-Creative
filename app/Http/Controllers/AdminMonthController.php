@@ -3,47 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\peserta_monthlymeeting;
 
-class DashboardController extends Controller
+class AdminMonthController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        if(isset($request)){
-          $id=$request->session()->get('key');
-          if($id!=null){
-            $data = DB::table('info_users')->where('id_info_user',$id)->get();
-            $request->session()->put('data',$data);
-            $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
-            foreach ($hak as $h) {
-                $hk = $h->hak_akses;
-              }
-            switch ($hk) {
-              case 3:
-                $hak = "Student";
-                break;
-              case 2:
-                $hak = "Master";
-                break;
-              default:
-                $hak = "Undefined";
-                break;
-            }
+      $months = peserta_monthlymeeting::all()->toArray();
+      return view('admin.monthly', compact('months'));
+    }
 
-            $request->session()->put('status',$hak);
-            return view('Dashboard.index', compact('data'))->with('status',$hak);
-          }
-
-          else
-            echo "<script>window.location.href='/'</script>";
-        }else
-          echo "<script>window.location.href='/'</script>";
-      }
     /**
      * Show the form for creating a new resource.
      *
@@ -107,6 +81,7 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        //
+      peserta_monthlymeeting::find($id)->delete();
+      return redirect(url('monthlymeet'));
     }
 }

@@ -46,6 +46,13 @@ class OthersController extends Controller
         'ID_COURSE' => $request->idcourse,
         'ID_INFO_USER' => Session::get('key')
       ]);
+      $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
+      $i=0;
+      foreach ($terdaftar as $t) {
+        $join[$i]= $t->ID_COURSE;
+        $i++;
+      }
+      $request->session()->put('join', $join);
       Alert::success('Sudah join dengan kelas');
       return redirect()->route('Others.index');
     }

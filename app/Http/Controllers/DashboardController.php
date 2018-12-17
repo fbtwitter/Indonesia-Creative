@@ -41,7 +41,12 @@ class DashboardController extends Controller
               $join[$i]= $t->ID_COURSE;
               $i++;
             }
-            $request->session()->put('join', $join);
+            if (isset($join)) {
+              $request->session()->put('join', $join);
+            }
+            else {
+              $request->Session()->forget('join');
+            }
             $request->session()->put('status',$hak);
             $daftar = course::all();
             $request->session()->put('daftar',$daftar);

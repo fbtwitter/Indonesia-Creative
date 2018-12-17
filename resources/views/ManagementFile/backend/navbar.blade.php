@@ -22,10 +22,20 @@
                     <li>
                         <a href="#" id="damian">Selected Course<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
+                          @php
+                            $i=1;
+                          @endphp
                           @foreach ($daftar as $d)
+                            @if(isset($join))
+                              @if(in_array($i, $join))
                             <li class="@if(url('/CC_$d->NAMA_COURSE') == request()->url()) active @else '' @endif  treeview">
                                 <a href="{{ url('CC_'.$d->NAMA_COURSE)}}">{{$d->NAMA_COURSE}}</a>
                             </li>
+                              @endif
+                            @endif
+                            @php
+                              $i++
+                            @endphp
                           @endforeach
 
                         </ul>

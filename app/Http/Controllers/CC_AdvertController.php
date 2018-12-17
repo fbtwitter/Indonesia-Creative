@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class CC_AdvertController extends Controller
 {
@@ -13,9 +14,11 @@ class CC_AdvertController extends Controller
      */
     public function index(Request $request)
     {
-        $data = $request->session()->get('data');
-        $status = $request->session()->get('status');
-        return view('CourseCategory.Selected.CC_Advert.index', compact('data'))->with('status',$status);
+      $data = Session::get('data');
+      $join=Session::get('join');
+      $status = Session::get('status');
+      $daftar = Session::get('daftar');
+        return view('CourseCategory.Selected.CC_Advert.index', compact('data', 'daftar'))->with('status',$status);
     }
 
     /**

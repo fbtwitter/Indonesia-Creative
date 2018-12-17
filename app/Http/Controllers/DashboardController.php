@@ -3,21 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\info_user;
+use App\peserta_course;
+use App\course;
+use Session;
 use DB;
 
 class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
+
         if(isset($request)){
           $id=$request->session()->get('key');
           if($id!=null){
-            $data = DB::table('info_users')->where('id_info_user',$id)->get();
+            $data = info_user::find($id);
             $request->session()->put('data',$data);
             $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
             foreach ($hak as $h) {
@@ -34,16 +35,30 @@ class DashboardController extends Controller
                 $hak = "Undefined";
                 break;
             }
-
+            $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
+            $i=0;
+            foreach ($terdaftar as $t) {
+              $join[$i]= $t->ID_COURSE;
+              $i++;
+            }
+            if (isset($join)) {
+              $request->session()->put('join', $join);
+            }
+            else {
+              $request->Session()->forget('join');
+            }
             $request->session()->put('status',$hak);
-            return view('Dashboard.index', compact('data'))->with('status',$hak);
+            $daftar = course::all();
+            $request->session()->put('daftar',$daftar);
+            return view('dashboard.index', compact('data', 'daftar'))->with('status',$hak);
           }
 
           else
             echo "<script>window.location.href='/'</script>";
         }else
           echo "<script>window.location.href='/'</script>";
-      }
+    }
+
     /**
      * Show the form for creating a new resource.
      *

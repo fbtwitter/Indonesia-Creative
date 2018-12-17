@@ -100,7 +100,7 @@
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign In</h5>
                                         <form class="m-t" role="form" action="login" method="post">
-                                          @csrf
+                                            @csrf
                                             <div class="form-group">
                                                 <input type="email" name="email" class="form-control" placeholder="Email" required="">
                                             </div>
@@ -123,7 +123,7 @@
                                     <div class="ibox-content">
                                         <h5 style="color:black;margin-top: 10px;font-size: x-large;">Sign Up</h5>
                                         <form class="m-t" role="form" action="register" method="post">
-                                          @csrf
+                                            @csrf
                                             <div class="form-group">
                                                 <input type="name" name="name" class="form-control" placeholder="Insert Name" required="">
                                             </div>
@@ -156,10 +156,10 @@
     <header style="background-image: url( '{{ asset('front/assets/img/bg-header.jpg ') }}'); ">
         <div class="intro-content ">
             <img src="{{ asset( 'front/assets/img/profile.png') }} " class="img-responsive img-centered " alt=" ">
-            <div class="brand-name ">IC SURABAYA</div>
+            <div class="brand-name " style="color: #49dda3">SURABAYA</div>
             <hr class="colored ">
-            <div class="brand-name-subtext ">Industry Creative</div>
-            <div class="brand-name-subtext ">Surabaya</div>
+            <div class="brand-name-subtext ">Serve, Share, Service, and Stay Humble </div>
+            <div class="brand-name-subtext ">Learning is posibility</div>
         </div>
         <div class="scroll-down ">
             <a class="btn page-scroll " href="#about "><i class="fa fa-angle-down fa-fw "></i></a>
@@ -173,16 +173,16 @@
             <div class="row">
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-phone"></i> Call</h4>
-                    <p>555-213-4567</p>
+                    <p>0857-4221-4354</p>
                 </div>
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-map-marker"></i> Visit</h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
+                    <p>Electronic Engineering Polytechnic
+                        <br>Institute of Surabaya</p>
                 </div>
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-envelope"></i> Email</h4>
-                    <p><a href="mailto:mail@example.com">mail@example.com</a>
+                    <p><a href="mailto:mail@example.com">admin@ics.com</a>
                     </p>
                 </div>
             </div>
@@ -200,7 +200,7 @@
             </div>
             <div class="row copyright">
                 <div class="col-lg-12">
-                    <p class="small">&copy; 2015 Start Bootstrap Themes</p>
+                    <p class="small">&copy; IC Surabaya 2018</p>
                 </div>
             </div>
         </div>

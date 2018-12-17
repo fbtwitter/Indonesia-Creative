@@ -17,6 +17,8 @@ class AdminForumController extends Controller
         //
         $forums = forum::all()->toArray();
         return view('admin.forum', compact('forums'));
+        $forums = forum::all()->toArray();
+        return view('forum', compact('forums'));
     }
 
     /**
@@ -84,7 +86,6 @@ class AdminForumController extends Controller
     {
         //
     }
-
     public function delete($id_forum){
         forum::find($id_forum)->delete();
         return redirect(url('forum'));

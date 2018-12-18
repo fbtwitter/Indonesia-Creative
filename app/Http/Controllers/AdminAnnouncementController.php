@@ -3,25 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\peserta_course;
-use App\course;
-use Alert;
-use Session;
+use App\announcement;
+use DB;
 
-class OthersController extends Controller
+class AdminAnnouncementController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $data = Session::get('data');
-        $join=Session::get('join');
-        $status = Session::get('status');
-        $daftar = Session::get('daftar');
-        return view('CourseCategory.Others.index', compact('data', 'daftar', 'join'))->with('status',$status);
+        $announces = announcement::all()->toArray();
+        return view('admin.announce', compact('announces'));
     }
 
     /**
@@ -42,19 +37,27 @@ class OthersController extends Controller
      */
     public function store(Request $request)
     {
-      peserta_course::insert([
-        'ID_COURSE' => $request->idcourse,
-        'ID_INFO_USER' => Session::get('key')
-      ]);
-      $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
-      $i=0;
-      foreach ($terdaftar as $t) {
-        $join[$i]= $t->ID_COURSE;
-        $i++;
-      }
-      $request->session()->put('join', $join);
-      Alert::success('Sudah join dengan kelas');
-      return redirect()->route('Others.index');
+        $announces = new announcement(input::all());
+        $tanggal = input::get('TANGGAL');
+
+        $announces->TANGGAL = date('Y-m-d', strtotime($tanggal));
+
+        $announces->save();
+        /*$this->validate($request, [
+            'ID_ANNOUNCEMENT' => 'required',
+        ]);
+
+        $announcement = new Announcement([
+            'ID_ANNOUNCEMENT' => $request->get('ID_ANNOUNCEMENT'),
+            'ID_COURSE' => $request->get('ID_COURSE'),
+            //'TANGGAL' => \Carbon\Carbon::createFromFormat('d/m/Y', $request->get('TANGGAL'))
+            /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
+            "created_at" =>  \Carbon\Carbon::now() # \Datetime()*/
+
+
+        //]);
+        $announcement->save();
+        return redirect()->route('announce.index')->with('success', 'Data Added');
     }
 
     /**
@@ -88,7 +91,7 @@ class OthersController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        //
     }
 
     /**

@@ -12,34 +12,46 @@
 */
 
 /*BAGIAN MASTER*/
-Route::resource('/master', 'MasterController');
-Route::post('/regis', 'MasterController@register');
+Route::resource('/master', 'AdminMasterController');
+Route::post('/regis', 'AdminMasterController@register');
 /*BAGIAN COURSE*/
-Route::resource('/course', 'CourseController');
-Route::get('/update_courseview/{id_course}', 'CourseController@edit');
-Route::post('course_update/{id_course}', 'CourseController@update');
-Route::get('/deletecourse/{id_course}', 'CourseController@destroy');
+Route::resource('/course', 'AdminCourseController');
+Route::get('/update_courseview/{id_course}', 'AdminCourseController@edit');
+Route::post('course_update/{id_course}', 'AdminCourseController@update');
+Route::get('/deletecourse/{id_course}', 'AdminCourseController@destroy');
 /*BAGIAN SUB-COURSE*/
-//Route::resource('/subcourse', 'SubCourseController');
-Route::post('/tambahsub', 'SubCourseController@store');
-Route::get('/update_subcourseview/{id_sub_course}', 'SubCourseController@edit');
-Route::post('subcourse_update/{id_sub_course}', 'SubCourseController@update');
+Route::post('/tambahsub', 'AdminSubCourseController@store');
+Route::get('/update_subcourseview/{id_sub_course}', 'AdminSubCourseController@edit');
+Route::post('/subcourse_update/{id_sub_course}', 'AdminSubCourseController@update');
+Route::get('/deletesubcourse/{id_sub_course}', 'AdminSubCourseController@destroy');
 /*BAGIAN MEMBER*/
-Route::resource('/member', 'MemberController');
+Route::resource('/member', 'AdminMemberController');
+Route::get('/deletemember/{id_info_user}', 'AdminMemberController@destroy');
 /*BAGIAN LIBRARY*/
-Route::resource('/library', 'LibraryController');
-Route::get('/deletelib/{id_library}', 'LibraryController@delete');
+Route::resource('/library', 'AdminLibraryController');
+Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
+<<<<<<< HEAD
+Route::resource('/dashadmin', 'AdminDashadminController');
+=======
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
+>>>>>>> a343ff6ba8178d192c675ccc34c604dfea912107
 /*BAGIAN ANNOUNCEMENT*/
-Route::resource('/announce', 'AnnouncementController');
+Route::resource('/announce', 'AdminAnnouncementController');
 /*BAGIAN FORUM*/
-Route::resource('/forum', 'ForumController');
-Route::get('/deleteforum/{id_forum}', 'ForumController@delete');
+Route::resource('/forum', 'AdminForumController');
+Route::get('/deleteforum/{id_forum}', 'AdminForumController@delete');
 /*BAGIAN REWARD*/
-Route::resource('/reward', 'RewardController');
-Route::get('/deletereward/{id_reward}', 'RewardController@delete');
+Route::resource('/reward', 'AdminRewardController');
+Route::get('/deletereward/{id_reward}', 'AdminRewardController@delete');
+Route::get('/', function () {
+    return view('welcome');
+});
+/*BAGIAN PESERTA MONTHLY*/
+Route::resource('/monthlymeet', 'AdminMonthController');
+/*Route::resource('/reward', 'RewardController');
+Route::get('/deletereward/{id_reward}', 'RewardController@delete');*/
 Route::get('/','AccountController@index');
 
 Auth::routes();
@@ -57,7 +69,7 @@ Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
 Route::resource('/Dashboard', 'DashboardController');
-Route::resource('/CC_Advert', 'CC_AdvertController');
+Route::resource('/CC_Advertising', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');
 Route::resource('/Others', 'OthersController');

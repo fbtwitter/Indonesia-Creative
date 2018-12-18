@@ -6,7 +6,7 @@
                     <img alt="image" class="img-circle m-t-md" style="height: 70px; width: 70px" src="{{$data->FOTO_PROFIL}}"onerror="this.src='admin/img/default.jpg'" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$data->NAMA_DEPAN}} {{$data->NAMA_BELAKANG}}</strong>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$data->NAMA_DEPAN}}</strong>
                     </span> <span class="text-muted text-xs block">{{$status}}</span> </span> </a>
                 </div>
                 <div class="logo-element">
@@ -22,45 +22,22 @@
                     <li>
                         <a href="#" id="damian">Selected Course<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
-                            <li class="@if(url('/CC_Advert') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Advert')}}"> Advertising</a>
+                          @php
+                            $i=1;
+                          @endphp
+                          @foreach ($daftar as $d)
+                            @if(isset($join))
+                              @if(in_array($i, $join))
+                            <li class="@if(url('/CC_$d->NAMA_COURSE') == request()->url()) active @else '' @endif  treeview">
+                                <a href="{{ url('CC_'.$d->NAMA_COURSE)}}">{{$d->NAMA_COURSE}}</a>
                             </li>
-                            <li class="@if(url('/CC_Architecture') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Architecture')}}">Architecture</a>
-                            </li>
-                            <li class="@if(url('/CC_Crafts') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Crafts')}}">Crafts</a>
-                            </li>
-                            <li class="@if(url('/CC_Software') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Software')}}">Software</a>
-                            </li>
-                            <li class="@if(url('/CC_Design') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Design')}}">Design</a>
-                            </li>
-                            <li class="@if(url('/CC_Fashion') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Fashion')}}">Fashion</a>
-                            </li>
-                            <li class="@if(url('/CC_IGame') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_IGame')}}">Interactive Games</a>
-                            </li>
-                            <li class="@if(url('/CC_Music') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Music')}}">Music</a>
-                            </li>
-                            <li class="@if(url('/CC_Performance') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Performance')}}">Performance Art</a>
-                            </li>
-                            <li class="@if(url('/CC_Publishing') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Publishing')}}">Publishing & Printing</a>
-                            </li>
-                            <li class="@if(url('/CC_RnD') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_RnD')}}">R n D</a>
-                            </li>
-                            <li class="@if(url('/CC_Television') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Television')}}">Television & Radio</a>
-                            </li>
-                            <li class="@if(url('/CC_Video') == request()->url()) active @else '' @endif  treeview">
-                                <a href="{{ url('CC_Video')}}">Video, Film, Photography</a>
-                            </li>
+                              @endif
+                            @endif
+                            @php
+                              $i++
+                            @endphp
+                          @endforeach
+
                         </ul>
                     </li>
                     <li class="@if(url('/Others') == request()->url()) active @else '' @endif  treeview">

@@ -1,4 +1,3 @@
-@foreach ($data as $d)
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') Other Course
 @endsection
@@ -57,22 +56,26 @@
 
                     <div class="tabs-left">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#tab-1">Advertising</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-2">Architecture</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-3">Crafts</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-4">Software</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-5">Music</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-6">Fashion</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-7">Interactive Games</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-8">Music</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-9">Performance Art</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-10">Publishing & Printing</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-11">R n D</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-12">Television & Radio</a></li>
-                            <li class=""><a data-toggle="tab" href="#tab-13">Vidio, Film, Photography</a></li>
+                          @php
+                            $i=1
+                          @endphp
+                          @foreach ($daftar as $d)
+                              <li class="@if ($i==1)
+                                active
+                              @endif"><a data-toggle="tab" href="#tab-{{$i}}">{{$d->NAMA_COURSE}}</a></li>
+                            @php
+                              $i++
+                            @endphp
+                          @endforeach
                         </ul>
                         <div class="tab-content ">
-                            <div id="tab-1" class="tab-pane active">
+                          @php
+                            $i=1
+                          @endphp
+                          @foreach ($daftar as $d)
+                            <div id="tab-{{$i}}" class="tab-pane @if ($i==1)
+                              active
+                            @endif">
                                 <div class="panel-body" style="background-image:url('{{ asset('admin/img/course/bg-1.jpg') }}');">
                                     <div class="col-lg-7">
                                         <div class="ibox float-e-margins">
@@ -86,25 +89,24 @@
                                     <div class="col-lg-5">
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-content profile-content" style="background-color:transparent; color: white">
-                                                <h2><strong>Advertising Class</strong></h2>
+                                                <h2><strong>{{$d->NAMA_COURSE}} Class</strong></h2>
                                                 <p><i class="fa fa-clock-o"></i> Uploaded on October 27, 2011</p>
-                                                <h5>
-                                                    Science and Technology
-                                                </h5>
-                                                <p>
-                                                    What do you think the world will look like in 2019? Predicting future trends is usually done poorly by Analysts so company's
-                                                    seem to want to give consumer a glimpse of what they want the future
-                                                    to look like.
-                                                    <br/>
-                                                    <br/>
-                                                    <small>Microsoft has just released a video showcasing magical<br/> gadget after magical gadget.</small>
-                                                    <br/>
-                                                    <br/> Earlier this month "Microsoft Office Labs Vision 2019," was released
-                                                    and now we have "Productivity Future Vision (2011)". Both are inspiring
-                                                    and beautifully edited. </p>
+                                                <p>{{$d->DEFINISI_COURSE}}</p>
                                                 <div class="row m-t-md">
                                                     <div class="col-md-12">
-                                                        <button class="btn btn-primary btn-outline btn-block">Join Class!</button>
+                                                      <form class="" action="{{route('Others.store')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="idcourse" value="{{$i}}">
+                                                          @if (isset($join))
+                                                            @if (in_array($i,$join))
+                                                              <button class="btn btn-primary btn-outline btn-block" type="submit" disabled>Joined</button>
+                                                            @else
+                                                              <button class="btn btn-primary btn-outline btn-block" type="submit">Join Class!</button>
+                                                            @endif
+                                                            @else
+                                                              <button class="btn btn-primary btn-outline btn-block" type="submit">Join Class!</button>
+                                                            @endif
+                                                      </form>
                                                     </div>
 
                                                 </div>
@@ -113,166 +115,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="tab-2" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Donec quam felis</strong>
-
-                                    <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among
-                                        the stalks, and grow familiar with the countless indescribable forms of the insects
-                                        and flies, then I feel the presence of the Almighty, who formed us in his own image,
-                                        and the breath </p>
-
-                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss
-                                        of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense
-                                        of mere tranquil existence, that I neglect my talents. I should be incapable of drawing
-                                        a single stroke at the present moment; and yet.</p>
-                                </div>
-                            </div>
-                            <div id="tab-3" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-4" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-5" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Donec quam felis</strong>
-
-                                    <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among
-                                        the stalks, and grow familiar with the countless indescribable forms of the insects
-                                        and flies, then I feel the presence of the Almighty, who formed us in his own image,
-                                        and the breath </p>
-
-                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss
-                                        of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense
-                                        of mere tranquil existence, that I neglect my talents. I should be incapable of drawing
-                                        a single stroke at the present moment; and yet.</p>
-                                </div>
-                            </div>
-                            <div id="tab-6" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-7" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-8" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-9" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-10" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-11" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-12" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
-                            <div id="tab-13" class="tab-pane">
-                                <div class="panel-body">
-                                    <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
-
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings
-                                        of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
-                                        in this spot, which was created for the bliss of souls like mine.</p>
-
-                                    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
-                                        that I neglect my talents. I should be incapable of drawing a single stroke at the
-                                        present moment; and yet I feel that I never was a greater artist than now. When.</p>
-                                </div>
-                            </div>
+                            @php
+                              $i++
+                            @endphp
+                          @endforeach
                         </div>
                     </div>
                 </div>
@@ -538,10 +384,7 @@
 
 </div>
 @endsection
- @endforeach
 @section('scriptjs')
-<!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>

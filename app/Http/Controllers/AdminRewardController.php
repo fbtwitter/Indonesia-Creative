@@ -3,25 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\peserta_course;
-use App\course;
-use Alert;
-use Session;
+use App\reward;
 
-class OthersController extends Controller
+class AdminRewardController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $data = Session::get('data');
-        $join=Session::get('join');
-        $status = Session::get('status');
-        $daftar = Session::get('daftar');
-        return view('CourseCategory.Others.index', compact('data', 'daftar', 'join'))->with('status',$status);
+        $rewards = reward::all()->toArray();
+        return view('admin.reward', compact('rewards'));
     }
 
     /**
@@ -42,19 +36,7 @@ class OthersController extends Controller
      */
     public function store(Request $request)
     {
-      peserta_course::insert([
-        'ID_COURSE' => $request->idcourse,
-        'ID_INFO_USER' => Session::get('key')
-      ]);
-      $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
-      $i=0;
-      foreach ($terdaftar as $t) {
-        $join[$i]= $t->ID_COURSE;
-        $i++;
-      }
-      $request->session()->put('join', $join);
-      Alert::success('Sudah join dengan kelas');
-      return redirect()->route('Others.index');
+        //
     }
 
     /**
@@ -88,7 +70,7 @@ class OthersController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        //
     }
 
     /**
@@ -100,5 +82,10 @@ class OthersController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function delete($id_reward){
+        reward::find($id_reward)->delete();
+        return redirect(url('reward'));
     }
 }

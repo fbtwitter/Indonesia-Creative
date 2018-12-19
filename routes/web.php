@@ -31,12 +31,9 @@ Route::get('/deletemember/{id_info_user}', 'AdminMemberController@destroy');
 Route::resource('/library', 'AdminLibraryController');
 Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
-<<<<<<< HEAD
 Route::resource('/dashadmin', 'AdminDashadminController');
-=======
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
->>>>>>> a343ff6ba8178d192c675ccc34c604dfea912107
 /*BAGIAN ANNOUNCEMENT*/
 Route::resource('/announce', 'AdminAnnouncementController');
 /*BAGIAN FORUM*/

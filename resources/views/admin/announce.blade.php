@@ -225,16 +225,20 @@
                                         <th scope="col">No.</th>
                                         <th scope="col">ID Course</th>
                                         <th scope="col">Date</th>
-                                        <th scope="col"></th>
+                                        <th scope="col">Description</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  @php
+                                    $i=1;
+                                  @endphp
                                      @foreach ($announces as $row)
                                     <!-- TABEL ANNOUNCE -->
                                     <tr>
-                                      <th>{{$row['ID_ANNOUNCEMENT']}}</th>
+                                      <th>{{$i}}</th>
                                       <th>{{$row['ID_COURSE']}}</th>
                                       <th>{{$row['TANGGAL']}}</th>
+                                      <th>{{$row['DESKRIPSI']}}</th>
                                       <th>
                                           <center>
                                             <a href="#" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
@@ -242,6 +246,9 @@
                                           </center>
                                       </th>
                                     </tr>
+                                    @php
+                                      $i++;
+                                    @endphp
                                     @endforeach
                                 </tbody>
                             </table>
@@ -263,21 +270,25 @@
                     </div>
                     @endif
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" method="post" action="{{url('announce')}}">
+                    <form class="modal-content animate" method="post" action="{{url('announce.store')}}">
                         {{csrf_field()}}
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       </div>
 
                       <div class="container">
-                        <label for="idcourse"><b>ID Announcement</b></label>
-                        <input type="text" placeholder="Enter ID Announcement" name="ID_ANNUNCEMENT" required>
+                        <input type="hidden" name="ID_ANNUNCEMENT">
 
                         <label for="idcourse"><b>ID Course</b></label>
                         <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
 
                         <label for="tanggal"><b>Date</b></label>
                         <input type="date" placeholder="Enter Date" name="TANGGAL" required>
+                        <br>
+                        <br>
+                        <label for="deskripsi"><b>Description</b></label>
+                        <input type="textarea" placeholder="Enter Description" name="DESKRIPSI" required>
+
                         <br>
                         <div class="float-right">
                           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-outline-danger btn-sm">Cancel</button>

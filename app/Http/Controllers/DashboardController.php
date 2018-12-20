@@ -18,23 +18,7 @@ class DashboardController extends Controller
         if(isset($request)){
           $id=$request->session()->get('key');
           if($id!=null){
-            $data = info_user::find($id);
-            $request->session()->put('data',$data);
-            $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
-            foreach ($hak as $h) {
-                $hk = $h->hak_akses;
-              }
-            switch ($hk) {
-              case 3:
-                $hak = "Student";
-                break;
-              case 2:
-                $hak = "Master";
-                break;
-              default:
-                $hak = "Undefined";
-                break;
-            }
+          
             $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
             $i=0;
             foreach ($terdaftar as $t) {

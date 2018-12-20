@@ -8,5 +8,5 @@ class announcement extends Model
 {
     public $timestamps = false;
     protected $primaryKey = 'ID_ANNUNCEMENT';
-    protected $fillable = ['ID_ANNOUNCEMENT','ID_cOURSE', 'TANGGAL', 'DESKRIPSI'];
+    protected $fillable = ['ID_ANNOUNCEMENT','ID_COURSE', 'TANGGAL', 'DESKRIPSI'];
 }

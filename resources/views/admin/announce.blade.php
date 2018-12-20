@@ -270,7 +270,7 @@
                     </div>
                     @endif
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" method="post" action="{{url('announce.store')}}">
+                    <form class="modal-content animate" method="post" action="{{url('announce')}}">
                         {{csrf_field()}}
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>

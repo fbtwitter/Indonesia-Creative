@@ -42,6 +42,7 @@ class AdminSubCourseController extends Controller
           'ID_SUB_COURSE'    => 'required',
           'ID_COURSE'     => 'required',
           'ID_DAFTAR_MASTER' => 'required',
+          'SUB_COURSE' => 'required',
           'DEFINISI_SUB_COURSE'    => 'required'
       ]);
 
@@ -49,6 +50,7 @@ class AdminSubCourseController extends Controller
           'ID_SUB_COURSE' =>   $request->get('ID_SUB_COURSE'),
           'ID_COURSE' => $request->get('ID_COURSE'),
           'ID_DAFTAR_MASTER' => $request->get('ID_DAFTAR_MASTER'),
+          'SUB_COURSE' => $request->get('SUB_COURSE'),
           'DEFINISI_SUB_COURSE' => $request->get('DEFINISI_SUB_COURSE'),
           /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
           "created_at" =>  \Carbon\Carbon::now() # \Datetime()*/
@@ -97,16 +99,19 @@ class AdminSubCourseController extends Controller
         //$masterlama = daftar_master::find($id);
         $subbaru = $request->only(
             [
-                'DEFINISI_SUB_COURSE'
+                'DEFINISI_SUB_COURSE',
+                'SUB_COURSE',
             ]
         );
 
         Validator::make($subbaru, [
                 'DEFINISI_SUB_COURSE'=> 'required',
+                'SUB_COURSE'=> 'required',
         ])->validate();
 
         $sublama->update([
-                'DEFINISI_SUB_COURSE' => $request->DEFINISI_SUB_COURSE
+                'DEFINISI_SUB_COURSE' => $request->DEFINISI_SUB_COURSE,
+                'SUB_COURSE' => $request->SUB_COURSE,
         ]);
 
         /*$masterbaru = $request->only([

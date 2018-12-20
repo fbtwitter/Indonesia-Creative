@@ -121,7 +121,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{{url('dashboard')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <!-- /.menu-title -->
                     <li>
@@ -148,6 +148,9 @@
                     <li>
                         <a href="{{url('forum')}}"> <i class="menu-icon fa fa-book"></i>Forum </a>
                     </li>
+                    <li>
+                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -163,8 +166,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -173,13 +176,12 @@
                     <div class="header-left">
                       <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
                     </div>
                 </div>
@@ -234,6 +236,7 @@
                                         <th scope="col">ID Course</th>
                                         <th scope="col">ID Master</th>
                                         <th scope="col">Course Name</th>
+                                        <th scope="col">Definition</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -244,6 +247,7 @@
                                       <th>{{$sub['ID_SUB_COURSE']}}</th>
                                       <th>{{$sub['ID_COURSE']}}</th>
                                       <th>{{$sub['ID_DAFTAR_MASTER']}}</th>
+                                      <th>{{$sub['SUB_COURSE']}}</th>
                                       <th>{{$sub['DEFINISI_SUB_COURSE']}}</th>
                                       <th>
                                           <center>
@@ -275,8 +279,11 @@
                         <label for="id_daftar_master"><b>Master</b></label>
                         <input type="text" placeholder="Enter Master" name="ID_DAFTAR_MASTER" required>
 
-                        <label for="definisi_sub_course"><b>Sub Course</b></label>
-                        <input type="text" placeholder="Enter Sub Course" name="DEFINISI_SUB_COURSE" required>
+                        <label for="id_daftar_master"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Sub Course" name="SUB_COURSE" required>
+
+                        <label for="definisi_sub_course"><b>Definition</b></label>
+                        <input type="text" placeholder="Enter Definition" name="DEFINISI_SUB_COURSE" required>
                         <br>
                         <div class="float-right">
                           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-outline-danger btn-sm">Cancel</button>
@@ -354,8 +361,7 @@
                       </div>
 
                       <div class="container">
-                        <label for="id_course"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+
 
                         <label for="nama_courser"><b>Course Name</b></label>
                         <input type="text" placeholder="Enter Course Namer" name="NAMA_COURSE" required>

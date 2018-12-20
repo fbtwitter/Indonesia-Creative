@@ -28,7 +28,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active">
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
                     <!-- /.menu-title -->
                     <li>
@@ -69,8 +69,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -78,13 +78,13 @@
                 <div class="header-menu">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/ava.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
 
@@ -99,6 +99,76 @@
                 <div class="clearfix"></div>
                 <!-- Calender Chart Weather  -->
                 <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-1">
+                                       <i class="pe-7s-add-user"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$member}}</span></div>
+                                           <div class="stat-heading">Members</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-2">
+                                       <i class="pe-7s-users"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$master}}</span></div>
+                                           <div class="stat-heading">Masters</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-3">
+                                       <i class="pe-7s-menu"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$kategori}}</span></div>
+                                           <div class="stat-heading">Courses</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-4">
+                                       <i class="pe-7s-notebook"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$software}}</span></div>
+                                           <div class="stat-heading">Softwares</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                     <div class="col-md-12 col-lg-4">
                         <div class="card">
                             <div class="card-body">

@@ -41,13 +41,11 @@ class AdminCourseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'ID_COURSE'    => 'required',
             'NAMA_COURSE'    => 'required',
             'DEFINISI_COURSE'    => 'required'
         ]);
 
         $course = new course([
-            'ID_COURSE' =>   $request->get('ID_COURSE'),
             'NAMA_COURSE' => $request->get('NAMA_COURSE'),
             'DEFINISI_COURSE' => $request->get('DEFINISI_COURSE'),
             /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()

@@ -121,7 +121,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active">
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
                     <!-- /.menu-title -->
                     <li>
@@ -166,8 +166,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -176,13 +176,13 @@
                     <div class="header-left">
                       <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-
+                                            <th>ID</th>
                                             <th>Email</th>
                                             <th>Nama Depan</th>
                                             <th>Nama Belakang</th>
@@ -249,7 +249,7 @@
                                         @foreach ($master as $m)
                                         <!-- TABEL MASTER -->
                                         <tr>
-
+                                          <th>{{$m->id_info_user}}</th>
                                           <th>{{$m->email}}</th>
                                           <th>{{$m->nama_depan}}</th>
                                           <th>{{$m->nama_belakang}}</th>
@@ -261,8 +261,8 @@
                                           <th>
                                               <center>
 
-                                                <a href="" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
-                                                <a href="#" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
+                                                <a href="{{url('update_masterview', $m->id_info_user)}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
+                                                <a href="{{url('deletemasteradmin', $m->id_info_user)}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                               </center>
                                           </th>
                                         </tr>

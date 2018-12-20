@@ -8,5 +8,5 @@ class login extends Model
 {
   public $timestamps = false;
   protected $primaryKey = 'EMAIL';
-  protected $fillable = ['EMAIL', 'PASSWORD'];
+  protected $fillable = ['EMAIL', 'PASSWORD', 'HAK_AKSES'];
 }

@@ -14,6 +14,9 @@
 /*BAGIAN MASTER*/
 Route::resource('/master', 'AdminMasterController');
 Route::post('/regis', 'AdminMasterController@register');
+Route::get('/update_masterview/{id_info_user}', 'AdminMasterController@edit');
+Route::post('/master_update/{id_info_user}', 'AdminMasterController@update');
+Route::get('/deletemasteradmin/{id_info_user}', 'AdminMasterController@destroy');
 /*BAGIAN COURSE*/
 Route::resource('/course', 'AdminCourseController');
 Route::get('/update_courseview/{id_course}', 'AdminCourseController@edit');
@@ -31,12 +34,10 @@ Route::get('/deletemember/{id_info_user}', 'AdminMemberController@destroy');
 Route::resource('/library', 'AdminLibraryController');
 Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
-<<<<<<< HEAD
-Route::resource('/dashadmin', 'AdminDashadminController');
-=======
+Route::resource('/Dashadmin', 'AdminDashadminController');
+
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
->>>>>>> a343ff6ba8178d192c675ccc34c604dfea912107
 /*BAGIAN ANNOUNCEMENT*/
 Route::resource('/announce', 'AdminAnnouncementController');
 /*BAGIAN FORUM*/

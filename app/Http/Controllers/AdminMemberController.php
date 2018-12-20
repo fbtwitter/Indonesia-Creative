@@ -16,7 +16,7 @@ class AdminMemberController extends Controller
     {
         $member = DB::table('logins')
             ->join('info_users', 'logins.id_info_user', '=', 'info_users.id_info_user')
-            ->select('logins.email','info_users.id_daftar_master', 'info_users.nama_depan', 'info_users.nama_belakang', 'info_users.gender', 'info_users.domisili', 'info_users.nomor_telp', 'info_users.skill', 'info_users.introduction')
+            ->select('logins.email','info_users.id_info_user', 'info_users.id_daftar_master', 'info_users.nama_depan', 'info_users.nama_belakang', 'info_users.gender', 'info_users.domisili', 'info_users.nomor_telp', 'info_users.skill', 'info_users.introduction')
             ->where('logins.hak_akses', '=', '3')
             ->get();
         $iduser = info_user::all()->toArray();
@@ -120,6 +120,9 @@ class AdminMemberController extends Controller
      */
     public function destroy($id)
     {
-        return $id;
+      DB::table('info_users')->where('id_info_user', '=', $id)->delete();
+      DB::table('logins')->where('id_info_user', '=', $id)->delete();
+
+      return redirect(url('member'));
     }
 }

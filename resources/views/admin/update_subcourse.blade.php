@@ -23,104 +23,7 @@
 
 </head>
 <body>
-    <!-- Left Panel -->
 
-    <aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
-
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                   <li class="active">
-                        <a href="{{url('dashboard')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
-                    <!-- /.menu-title -->
-                    <li>
-                        <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
-                    </li>
-                    <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user"></i>Master List </a>
-                    </li>
-                    <li>
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
-                    </li>
-                    <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
-                    </li>
-                    <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
-                    </li>
-                    <li>
-                        <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
-                    </li>
-                    <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-book"></i>Reward</a>
-                    </li>
-                    <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-book"></i>Forum </a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </aside><!-- /#left-panel -->
-
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <header id="header" class="header">
-            <div class="top-left">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-                </div>
-            </div>
-            <div class="top-right">
-                <div class="header-menu">
-                    <div class="header-left">
-                      <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
-                        </a>
-
-                        <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header><!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col-sm-4">
-                        <div class="page-header float-left">
-                            <div class="page-title">
-                                <h1>Dashboard</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="page-header float-right">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    <li><a href="index.php">Dashboard</a></li>
-                                    <li><a href="member-list.php">Member List</a></li>
-                                    <li class="active">Update Sub Course</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="content">
             <div class="animated fadeIn">
@@ -139,7 +42,7 @@
                         				  <div class="form-group">
                             					<label class="col-md-2 control-label">ID Sub Course</label>
                             					<div class="col-md-10">
-                            					  <input name="ID_SUB_COURSE" type="text" id="ID_SUB_COURSE" class="form-control" value="{{$subs->ID_SUB_COURSE}} " disabled>
+                            					  <input name="ID_SUB_COURSE" type="text" id="ID_SUB_COURSE" class="form-control" value="{{$subs->ID_SUB_COURSE}}" disabled>
                             					</div>
                         				  </div>
                         				  <div class="form-group">
@@ -154,8 +57,14 @@
                                       <input name="ID_DAFTAR_MASTER" type="text" id="ID_DAFTAR_MASTER"  class="form-control" value="{{$subs->ID_DAFTAR_MASTER}}" disabled>
                                     </div>
                         				  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-2 control-label">Name</label>
+                                    <div class="col-md-10">
+                                      <input name="SUB_COURSE" type="text" id="SUB_COURSE"  class="form-control" value="{{$subs->SUB_COURSE}}" >
+                                    </div>
+                        				  </div>
                         				  <div class="form-group">
-                                    <label class="col-md-2 control-label">Sub Course</label>
+                                    <label class="col-md-2 control-label">Definition</label>
                                     <div class="col-md-10">
                                       <input name="DEFINISI_SUB_COURSE" type="text" id="DEFINISI_SUB_COURSE"  class="form-control" value="{{$subs->DEFINISI_SUB_COURSE}}">
                                     </div>

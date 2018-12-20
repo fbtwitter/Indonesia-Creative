@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\info_user;
+use App\login;
+use App\librarys;
+use App\course;
 
 class AdminDashadminController extends Controller
 {
@@ -14,7 +16,12 @@ class AdminDashadminController extends Controller
      */
     public function index()
     {
-         return view('admin.dashboard');
+          $software = librarys::count();
+          $kategori = course::count();
+          $member = login::where('HAK_AKSES','3')->count();
+          $master = login::where('HAK_AKSES','2')->count();
+          //return View::make('admin.dasboard')->with('count', $member);
+         return view('admin.dashboard', compact('software', 'kategori', 'member', 'master'));
     }
 
     /**

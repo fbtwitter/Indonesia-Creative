@@ -54,9 +54,6 @@ Route::get('/','AccountController@index');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test',function(){
-    return view('test');
-});
 Route::post('/login','AccountController@login');
 Route::get('logout', 'AccountController@logout');
 Route::post('register', 'AccountController@register');

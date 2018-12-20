@@ -50,7 +50,7 @@ class DashboardController extends Controller
             $request->session()->put('status',$hak);
             $daftar = course::all();
             $request->session()->put('daftar',$daftar);
-            return view('dashboard.index', compact('data', 'daftar'))->with('status',$hak);
+            return view('Dashboard.index', compact('data', 'daftar'))->with('status',$hak);
           }
 
           else

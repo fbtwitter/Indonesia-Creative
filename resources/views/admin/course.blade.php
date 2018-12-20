@@ -120,21 +120,17 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="{{url('dashboard')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
-                    <!-- /.menu-title -->
+                  <li>
+                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  </li>
                     <li>
                         <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user"></i>Master List </a>
+                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
-                    </li>
-                    <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
                     </li>
                     <li>
                         <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
@@ -143,10 +139,13 @@
                         <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
                     </li>
                     <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-book"></i>Reward</a>
+                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-book"></i>Forum </a>
+                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
+                    </li>
+                    <li>
+                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -244,7 +243,7 @@
                                       <th>{{$sub['ID_SUB_COURSE']}}</th>
                                       <th>{{$sub['ID_COURSE']}}</th>
                                       <th>{{$sub['ID_DAFTAR_MASTER']}}</th>
-                                      <th>{{$sub['DEFINISI_SUB_COURSE']}}</th>
+                                      <th style="font-size: 10px;">{{$sub['DEFINISI_SUB_COURSE']}}</th>
                                       <th>
                                           <center>
                                             <a href="{{url('update_subcourseview', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>

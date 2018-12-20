@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\announcement;
 use DB;
+use Validator;
 
 class AdminAnnouncementController extends Controller
 {
@@ -37,7 +38,6 @@ class AdminAnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-
         $announces = new announcement($request->input());
         $announces->save();
         return redirect()->route('announce.index')->with('success', 'Data Added');
@@ -62,7 +62,8 @@ class AdminAnnouncementController extends Controller
      */
     public function edit($id)
     {
-        //
+      $announces = announcement::find($id);
+      return view('admin.update_announce', compact('announces'));
     }
 
     /**
@@ -74,7 +75,25 @@ class AdminAnnouncementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $lama = announcement::find($id);
+      $baru = $request->only([
+          'ID_COURSE',
+          'TANGGAL',
+          'DESKRIPSI'
+      ]);
+
+      Validator::make($baru, [
+        'ID_COURSE' => 'required',
+        'TANGGAL' => 'required',
+        'DESKRIPSI' => 'required',
+      ])->validate();
+
+      $lama->update([
+          'ID_COURSE' => $request->ID_COURSE,
+          'TANGGAL' => $request->TANGGAL,
+          'DESKRIPSI' => $request->DESKRIPSI
+      ]);
+          return redirect(url('announce'));
     }
 
     /**
@@ -85,6 +104,7 @@ class AdminAnnouncementController extends Controller
      */
     public function destroy($id)
     {
-        //
+      announcement::find($id)->delete();
+      return redirect(url('announce'));
     }
 }

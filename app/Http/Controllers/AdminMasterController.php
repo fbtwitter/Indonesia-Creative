@@ -163,12 +163,12 @@ class AdminMasterController extends Controller
           );
           echo "<script>
                 alert('Register Succesfull!!');
-                window.location.href='/';
+                window.location.href='master';
                 </script>";
         }else{
           echo "<script>
                 alert('Register Failed!!');
-                window.location.href='/';
+                window.location.href='master';
                 </script>";
         }
       }

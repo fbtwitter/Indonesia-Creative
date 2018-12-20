@@ -35,14 +35,13 @@ Route::resource('/library', 'AdminLibraryController');
 Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
 Route::resource('/Dashadmin', 'AdminDashadminController');
-<<<<<<< HEAD
-
-=======
->>>>>>> 9b3bc759468584dbb8bbc74369095e8b8eb3e619
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
 /*BAGIAN ANNOUNCEMENT*/
 Route::resource('/announce', 'AdminAnnouncementController');
+Route::get('/update_announceview/{ID_ANNOUNCEMENT}', 'AdminAnnouncementController@edit');
+Route::post('/announce_update/{ID_ANNOUNCEMENT}', 'AdminAnnouncementController@update');
+Route::get('/deleteannounceadmin/{ID_ANNOUNCEMENT}', 'AdminAnnouncementController@destroy');
 /*BAGIAN FORUM*/
 Route::resource('/forum', 'AdminForumController');
 Route::get('/deleteforum/{id_forum}', 'AdminForumController@delete');

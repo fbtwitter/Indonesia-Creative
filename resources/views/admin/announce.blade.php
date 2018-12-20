@@ -241,8 +241,8 @@
                                       <th>{{$row['DESKRIPSI']}}</th>
                                       <th>
                                           <center>
-                                            <a href="#" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
+                                            <a href="{{url('update_announceview', $row['ID_ANNOUNCEMENT'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
+                                            <a href="{{url('deleteannounceadmin', $row['ID_ANNOUNCEMENT'])}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                           </center>
                                       </th>
                                     </tr>
@@ -270,7 +270,7 @@
                     </div>
                     @endif
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" method="post" action="{{url('announce.store')}}">
+                    <form class="modal-content animate" method="post" action="{{url('announce')}}">
                         {{csrf_field()}}
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>

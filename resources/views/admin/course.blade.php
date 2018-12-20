@@ -245,8 +245,12 @@
                                       <th>{{$sub['ID_SUB_COURSE']}}</th>
                                       <th>{{$sub['ID_COURSE']}}</th>
                                       <th>{{$sub['ID_DAFTAR_MASTER']}}</th>
+<<<<<<< HEAD
                                       <th>{{$sub['SUB_COURSE']}}</th>
                                       <th>{{$sub['DEFINISI_SUB_COURSE']}}</th>
+=======
+                                      <th style="font-size: 10px;">{{$sub['DEFINISI_SUB_COURSE']}}</th>
+>>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
                                       <th>
                                           <center>
                                             <a href="{{url('update_subcourseview', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>

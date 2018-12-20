@@ -21,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
     <style>
-    input[type=text], select {
+    input[type=text], input[type=date], input[type=textarea], select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -118,10 +118,14 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+<<<<<<< HEAD
                   <li class="active">
                       <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+=======
+                  <li>
+                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+>>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
                   </li>
-                    <!-- /.menu-title -->
                     <li>
                         <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
@@ -129,11 +133,18 @@
                         <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
                     </li>
 
                     <li>
                         <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+=======
+                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                    </li>
+                    <li class="active">
+                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+>>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
                     </li>
                     <li>
                         <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
@@ -278,7 +289,14 @@
                         <input type="hidden" name="ID_ANNUNCEMENT">
 
                         <label for="idcourse"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+                        {{-- <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required> --}}
+                        <div class="col-md-12">
+                          <select class="form-control" name="ID_COURSE">
+                            @foreach($course as $item)
+                            <option value="{{ $item->ID_COURSE }}">{{ $item->NAMA_COURSE }}</option>
+                            @endforeach
+                          </select>
+                      </div>
 
                         <label for="tanggal"><b>Date</b></label>
                         <input type="date" placeholder="Enter Date" name="TANGGAL" required>

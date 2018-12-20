@@ -123,7 +123,6 @@
                   <li class="active">
                       <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
-                    <!-- /.menu-title -->
                     <li>
                         <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>

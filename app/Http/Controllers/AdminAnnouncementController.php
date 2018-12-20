@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\announcement;
+use App\course;
 use DB;
 use Validator;
 
@@ -17,7 +18,8 @@ class AdminAnnouncementController extends Controller
     public function index()
     {
         $announces = announcement::all()->toArray();
-        return view('admin.announce', compact('announces'));
+        $course =course::all();
+        return view('admin.announce', compact('announces', 'course'));
     }
 
     /**

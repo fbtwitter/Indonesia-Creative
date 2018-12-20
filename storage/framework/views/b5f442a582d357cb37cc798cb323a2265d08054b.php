@@ -2,14 +2,10 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('scriptcss'); ?>
-
 <!-- Gritter -->
 <link href="<?php echo e(asset('admin/js/plugins/gritter/jquery.gritter.css')); ?>" rel="stylesheet">
 
 <link href="<?php echo e(asset('admin/css/plugins/iCheck/custom.css')); ?>" rel="stylesheet">
-
-<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.css')); ?>" rel="stylesheet">
-<link href="<?php echo e(asset('admin/css/plugins/fullcalendar/fullcalendar.print.css')); ?>" rel='stylesheet' media='print'>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('body-content'); ?>
@@ -388,8 +384,6 @@
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('scriptjs'); ?>
-<!-- Flot -->
-<script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.js')); ?>"></script>
 <script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js')); ?>"></script>
 <script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.spline.js')); ?>"></script>
 <script src="<?php echo e(asset('admin/js/plugins/flot/jquery.flot.resize.js')); ?>"></script>

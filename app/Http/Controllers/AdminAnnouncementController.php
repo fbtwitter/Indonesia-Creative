@@ -38,27 +38,8 @@ class AdminAnnouncementController extends Controller
     public function store(Request $request)
     {
 
-
-        //$birthday = Carbon::parse($request->birthday)->format('Y-m-d');
-
-        $this->validate($request, [
-            'ID_ANNOUNCEMENT' => 'required',
-            'ID_COURSE' => 'required',
-            'TANGGAL' => 'required'
-        ]);
-        $date = DateTime::createFromFormat('d-m-Y', $request->input('TANGGAL'));
-        $announcement = new Announcement([
-            'ID_ANNOUNCEMENT' => $request->get('ID_ANNOUNCEMENT'),
-            'ID_COURSE' => $request->get('ID_COURSE'),
-            'TANGGAL' => $date->format('Y-m-d')
-            //'TANGGAL' => Carbon::parse($request->TANGGAL)->format('yyyy-mm-dd'),
-            //'TANGGAL' => \Carbon\Carbon::createFromFormat('d/m/Y', $request->get('TANGGAL'))
-            /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
-            "created_at" =>  \Carbon\Carbon::now() # \Datetime()*/
-
-
-        ]);
-        $announcement->save();
+        $announces = new announcement($request->input());
+        $announces->save();
         return redirect()->route('announce.index')->with('success', 'Data Added');
     }
 

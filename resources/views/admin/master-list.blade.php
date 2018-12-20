@@ -238,7 +238,7 @@
                                             <th>Nama Depan</th>
                                             <th>Nama Belakang</th>
                                             <th>Gender</th>
-                                            <th>Domicili</th>
+                                            <th>Domisili</th>
                                             <th>Nomor Telefon</th>
                                             <th>Skill</th>
                                             <th>Introduction</th>

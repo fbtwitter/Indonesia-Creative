@@ -1,4 +1,3 @@
-
 @extends('ManagementFile/backend/layout')
 @section('title-dashboard') Setting
 @endsection
@@ -7,7 +6,6 @@
 <!-- Gritter -->
 <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
-
 @endsection
 
 @section('body-content')
@@ -56,7 +54,7 @@
                                             <button class="btn btn-primary btn-outline btn-block">
                                                     <div class="text-left">
                                                         <h4 class="no-margins" style=" font-weight:200">
-                                                            <strong>Informasi Pribadi</strong>
+                                                            <strong>Profile</strong>
                                                         </h4>
                                                     </div>
                                                     </button>
@@ -68,7 +66,7 @@
                                                 <button class="btn btn-primary btn-outline btn-block">
                                                         <div class="text-left">
                                                             <h4 class="no-margins" style=" font-weight:200">
-                                                                <strong>Kata Sandi</strong>
+                                                                <strong>Password</strong>
                                                             </h4>
                                                         </div>
                                                         </button>
@@ -79,7 +77,7 @@
                                                     <button class="btn btn-primary btn-outline btn-block">
                                                             <div class="text-left">
                                                                 <h4 class="no-margins" style=" font-weight:200">
-                                                                   <strong>Kursus</strong>
+                                                                   <strong>Course</strong>
                                                                 </h4>
                                                             </div>
                                                             </button>
@@ -121,7 +119,7 @@
                                                                     @endif>Perempuan</option>
                                                                 </select>
                                                     </div>
-                                                    <div class="form-group"><label>Domisili</label> <input type="text" name="DOMISILI" placeholder="Enter your address" value={{$data->DOMISILI}}
+                                                    <div class="form-group"><label>Domisili</label> <input type="text" name="DOMISILI" placeholder="Enter your address" value="{{$data->DOMISILI}}"
                                                             class="form-control"></div>
                                                     <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number" name="NOMOR_TELP" value="{{$data->NOMOR_TELP}}"
                                                             class="form-control"></div>
@@ -141,124 +139,118 @@
                                                 </div>
                                                 <div class="ibox-content no-padding border-left-right">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top:10px;">
-                                                        <span class="fileinput-exists"></span><input type="file" name="..."
-                                                        /></span>
-                                                        <span class="fileinput-filename"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="gantipass" class="tab-pane ">
-                        <div class="ibox float-e-margins ">
-                            <div class="ibox-content animated fadeIn ">
-                                <div class="list-group active ">
-                                    <div class="panel-body">
-                                        <h3>Ubah Kata Sandi</h3>
-                                        </p>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <form role="form" action="{{route('Setting.update', 2)}}" method="post">
-                                                  {{csrf_field()}}
-                                                  {{ method_field('PUT') }}
-                                                    <div class="form-group"><label>Old password</label> <input name="old" type="password" class="form-control"></div>
-                                                    <div class="form-group"><label>New password</label> <input name="new1" type="password" class="form-control"></div>
-                                                    <div class="form-group"><label>Confirm new password</label> <input name="new2" type="password" class="form-control"></div>
-                                                    <button class="btn btn-sm btn-primary pull-left m-t-n-xs
+                                                        <span class="fileinput-exists"></span><input
+                        type="file" name="..." /></span>
+                    <span class="fileinput-filename"></span>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="gantipass" class="tab-pane ">
+    <div class="ibox float-e-margins ">
+        <div class="ibox-content animated fadeIn ">
+            <div class="list-group active ">
+                <div class="panel-body">
+                    <h3>Ubah Kata Sandi</h3>
+                    </p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <form role="form" action="{{route('Setting.update', 2)}}" method="post">
+                                {{csrf_field()}} {{ method_field('PUT') }}
+                                <div class="form-group"><label>Current password</label> <input name="old" type="password" class="form-control"></div>
+                                <div class="form-group"><label>New password</label> <input name="new1" type="password" class="form-control"></div>
+                                <div class="form-group"><label>Confirm new password</label> <input name="new2" type="password" class="form-control"></div>
+                                <button class="btn btn-sm btn-primary pull-left m-t-n-xs
                                                             " type="submit "><strong>UPDATE PASSWORD</strong></button>
-                                                </form>
-                                            </div>
-                                        </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="kursus" class="tab-pane ">
+    <div class="ibox float-e-margins ">
+        <div class="ibox-content no-padding animated fadeIn ">
+            <div class="list-group active ">
+                <div class="panel-body ">
+                    <h3>Kursus</h3>
+
+                    <p>New to programming? Want to create awesome apps? This is the perfect course for you.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+            <div class="list-group ">
+                <div class="panel-body ">
+                    <div class="col-md-3 ">
+                        <h4>Nama Course</h4>
+                    </div>
+                    <div class="col-md-9 border-left ">
+                        <div class="ibox-content no-padding gray-bg">
+                            <div class="list-group">
+                                <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                    <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                        margin-right: 15px;
+                                                                        padding: 3px 10px 3px 10px;
+                                                                        font-size: unset;">Detail</h3><strong><button class="fa fa-trash fa-2x" style="color:red;"></button></strong></span>
+                                    </span>
+                                    <div class="text-left">
+                                        <h6 class="no-margins" style=" font-weight:200">
+                                            Saturday, 20/1/2019
+                                        </h6>
+                                        <h4 style="font-weight:600">Nama Sub Course</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group">
+                                <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                    <span class="pull-right text-right" style="margin-top: 5px;">
+                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                        margin-right: 15px;
+                                                                        padding: 3px 10px 3px 10px;
+                                                                        font-size: unset;">Detail</h3><strong><button class="fa fa-trash fa-2x" style="color:red;"></button></strong></span>
+                                    </span>
+                                    <div class="text-left">
+                                        <h6 class="no-margins" style=" font-weight:200">
+                                            Saturday, 20/1/2019
+                                        </h6>
+                                        <h4 style="font-weight:600">Nama Sub Course 2</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="kursus" class="tab-pane ">
-                        <div class="ibox float-e-margins ">
-                            <div class="ibox-content no-padding animated fadeIn ">
-                                <div class="list-group active ">
-                                    <div class="panel-body ">
-                                        <h3>Kursus</h3>
-
-                                        <p>New to programming? Want to create awesome apps? This is the perfect course for you.
-                                        </p>
-                                        <hr>
-                                    </div>
-                                </div>
-                                <div class="list-group ">
-                                    <div class="panel-body ">
-                                        <div class="col-md-3 ">
-                                            <h4>Nama Course</h4>
-                                        </div>
-                                        <div class="col-md-9 border-left ">
-                                            <div class="ibox-content no-padding gray-bg">
-                                                <div class="list-group">
-                                                    <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                        <span class="pull-right text-right" style="margin-top: 5px;">
+                </div>
+            </div>
+            <div class="list-group ">
+                <div class="panel-body ">
+                    <div class="col-md-3 ">
+                        <h4>Nama Course 2</h4>
+                    </div>
+                    <div class="col-md-9 border-left ">
+                        <div class="ibox-content no-padding gray-bg">
+                            <div class="list-group">
+                                <div class="panel-body" style="padding: 10px 15px 0px 15px;">
+                                    <span class="pull-right text-right" style="margin-top: 5px;">
                                                                     <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
                                                                         margin-right: 15px;
                                                                         padding: 3px 10px 3px 10px;
                                                                         font-size: unset;">Detail</h3><strong><button class="fa fa-trash fa-2x" style="color:red;"></button></strong></span>
-                                                        </span>
-                                                        <div class="text-left">
-                                                            <h6 class="no-margins" style=" font-weight:200">
-                                                                Saturday, 20/1/2019
-                                                            </h6>
-                                                            <h4 style="font-weight:600">Nama Sub Course</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="list-group">
-                                                    <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                        <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                        margin-right: 15px;
-                                                                        padding: 3px 10px 3px 10px;
-                                                                        font-size: unset;">Detail</h3><strong><button class="fa fa-trash fa-2x" style="color:red;"></button></strong></span>
-                                                        </span>
-                                                        <div class="text-left">
-                                                            <h6 class="no-margins" style=" font-weight:200">
-                                                                Saturday, 20/1/2019
-                                                            </h6>
-                                                            <h4 style="font-weight:600">Nama Sub Course 2</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group ">
-                                    <div class="panel-body ">
-                                        <div class="col-md-3 ">
-                                            <h4>Nama Course 2</h4>
-                                        </div>
-                                        <div class="col-md-9 border-left ">
-                                            <div class="ibox-content no-padding gray-bg">
-                                                <div class="list-group">
-                                                    <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                        <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                        margin-right: 15px;
-                                                                        padding: 3px 10px 3px 10px;
-                                                                        font-size: unset;">Detail</h3><strong><button class="fa fa-trash fa-2x" style="color:red;"></button></strong></span>
-                                                        </span>
-                                                        <div class="text-left">
-                                                            <h6 class="no-margins" style=" font-weight:200">
-                                                                Saturday, 20/1/2019
-                                                            </h6>
-                                                            <h4 style="font-weight:600">Nama Sub Course</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    </span>
+                                    <div class="text-left">
+                                        <h6 class="no-margins" style=" font-weight:200">
+                                            Saturday, 20/1/2019
+                                        </h6>
+                                        <h4 style="font-weight:600">Nama Sub Course</h4>
                                     </div>
                                 </div>
                             </div>
@@ -268,6 +260,11 @@
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
+</div>
     @include('ManagementFile/backend/footer')
 </div>
 
@@ -527,6 +524,7 @@
 
 </div>
 @endsection
+
 @section('scriptjs')
 <!-- Flot -->
 <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.js') }} "></script>

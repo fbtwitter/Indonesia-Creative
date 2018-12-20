@@ -3,14 +3,10 @@
 @endsection
 
 @section('scriptcss')
-
 <!-- Gritter -->
 <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
-
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-<link href="{{ asset('admin/css/plugins/fullcalendar/fullcalendar.print.css') }}" rel='stylesheet' media='print'>
 @endsection
 
 @section('body-content')
@@ -389,8 +385,6 @@
 </div>
 @endsection
 @section('scriptjs')
-<!-- Flot -->
-<script src="{{ asset('admin/js/plugins/flot/jquery.flot.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.spline.js') }}"></script>
 <script src="{{ asset('admin/js/plugins/flot/jquery.flot.resize.js') }}"></script>

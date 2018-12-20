@@ -35,7 +35,10 @@ Route::resource('/library', 'AdminLibraryController');
 Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
 Route::resource('/Dashadmin', 'AdminDashadminController');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b3bc759468584dbb8bbc74369095e8b8eb3e619
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
 /*BAGIAN ANNOUNCEMENT*/
@@ -58,9 +61,6 @@ Route::get('/','AccountController@index');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test',function(){
-    return view('test');
-});
 Route::post('/login','AccountController@login');
 Route::get('logout', 'AccountController@logout');
 Route::post('register', 'AccountController@register');

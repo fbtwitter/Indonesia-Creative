@@ -40,7 +40,7 @@ class AdminAnnouncementController extends Controller
     {
         $announces = new announcement($request->input());
         $announces->save();
-        return redirect()->route('announce.index')->with('success', 'Data Added');
+        return redirect()->route('adminannounce.index')->with('success', 'Data Added');
     }
 
     /**
@@ -93,7 +93,7 @@ class AdminAnnouncementController extends Controller
           'TANGGAL' => $request->TANGGAL,
           'DESKRIPSI' => $request->DESKRIPSI
       ]);
-          return redirect(url('announce'));
+          return redirect(url('adminannounce'));
     }
 
     /**
@@ -105,6 +105,6 @@ class AdminAnnouncementController extends Controller
     public function destroy($id)
     {
       announcement::find($id)->delete();
-      return redirect(url('announce'));
+      return redirect(url('adminannounce'));
     }
 }

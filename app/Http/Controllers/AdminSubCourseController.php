@@ -58,7 +58,7 @@ class AdminSubCourseController extends Controller
 
       ]);
       $subcourse->save();
-      return redirect()->route('course.index')->with('success', 'Data Added');
+      return redirect()->route('admincourse.index')->with('success', 'Data Added');
 
     }
 
@@ -128,7 +128,7 @@ class AdminSubCourseController extends Controller
             'ID_COURSE' => $request->ID_SUB_COURSE
         ]);*/
 
-        return redirect(url('course'));
+        return redirect(url('admincourse'));
     }
 
     /**
@@ -140,6 +140,6 @@ class AdminSubCourseController extends Controller
     public function destroy($id)
     {
       sub_course::find($id)->delete();
-      return redirect(url('course'));
+      return redirect(url('admincourse'));
     }
 }

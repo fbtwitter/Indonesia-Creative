@@ -120,36 +120,34 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
+                  <li class="active">
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  </li>
                     <!-- /.menu-title -->
                     <li>
-                        <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
+                        <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user"></i>Master List </a>
+                        <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                        <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
                     </li>
                     <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
+                        <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
                     </li>
                     <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+                        <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
-                        <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
+                        <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-book"></i>Reward</a>
-                    </li>
-                    <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-book"></i>Forum </a>
-                    </li>
-                    <li>
-                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+                        <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -252,7 +250,7 @@
                                       <th>
                                           <center>
                                             <a href="{{url('update_subcourseview', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
-                                            <a href="{{url('deletesubcourse', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
+                                            <a href="{{url('deletesubcourseadmin', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                           </center>
                                       </th>
                                     </tr>
@@ -263,7 +261,7 @@
                         </div>
                     </div>
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" method="post" action="tambahsub">
+                    <form class="modal-content animate" method="post" action="admintambahsub">
                         @csrf
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -354,7 +352,7 @@
                     </div>
                     @endif
                     <div id="id02" class="modal">
-                    <form class="modal-content animate" method="post" action="{{url('course')}}">
+                    <form class="modal-content animate" method="post" action="{{url('admincourse')}}">
                          {{csrf_field()}}
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\librarys;
-    
+
 class AdminLibraryController extends Controller
 {
     /**
@@ -38,21 +38,21 @@ class AdminLibraryController extends Controller
     {
         $this->validate($request, [
             'ID_LIBRARY' => 'required',
-            'ID_SUB_COURSE' => 'required', 
+            'ID_SUB_COURSE' => 'required',
             'SOFTWARE' => 'required'
         ]);
-        
+
         $library = new Library([
             'ID_LIBRARY' => $request->get('ID_LIBRARY'),
-            'ID_SUB_COURSE' => $request->get('ID_SUB_COURSE'), 
+            'ID_SUB_COURSE' => $request->get('ID_SUB_COURSE'),
             'SOFTWARE' => $request->get('SOFTWARE')
             /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
             "created_at" =>  \Carbon\Carbon::now() # \Datetime()*/
-            
-            
+
+
         ]);
         $library->save();
-        return redirect()->route('library.index')->with('success', 'Data Added');
+        return redirect()->route('adminlibrary.index')->with('success', 'Data Added');
     }
 
     /**
@@ -75,7 +75,7 @@ class AdminLibraryController extends Controller
     public function edit($id)
     {
         $library = library::find($id);
-        return view('admin.library', compact('library', 'id_library'));
+        return view('admin.adminlibrary', compact('library', 'id_library'));
     }
 
     /**
@@ -92,13 +92,13 @@ class AdminLibraryController extends Controller
             'ID_SUB_COURSE'     => 'required',
             'SOFTWARE'    => 'required'
         ]);
-        
+
         $librarys = library::find($id);
         $librarys->first_name = $request->get('ID_LIBRARY');
         $librarys->last_name = $request->get('ID_SUB_QUERY');
         $librarys->gender = $request->get('SOFTWARE');
         $librarys->save();
-        return redirect()->route('library.index')->with('success', 'Data Updated');
+        return redirect()->route('adminlibrary.index')->with('success', 'Data Updated');
     }
 
     /**
@@ -111,9 +111,9 @@ class AdminLibraryController extends Controller
     {
         //
     }
-    
+
     public function delete($id_library){
         librarys::find($id_library)->delete();
-        return redirect(url('library'));
+        return redirect(url('adminlibrary'));
     }
 }

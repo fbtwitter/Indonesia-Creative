@@ -75,7 +75,7 @@ class AdminMemberController extends Controller
 
         ]);
         $member_list->save();
-        return redirect()->route('member-list.index')->with('success', 'Data Added');
+        return redirect()->route('adminmember.index')->with('success', 'Data Added');
     }
 
     /**
@@ -123,6 +123,6 @@ class AdminMemberController extends Controller
       DB::table('info_users')->where('id_info_user', '=', $id)->delete();
       DB::table('logins')->where('id_info_user', '=', $id)->delete();
 
-      return redirect(url('member'));
+      return redirect(url('adminmember'));
     }
 }

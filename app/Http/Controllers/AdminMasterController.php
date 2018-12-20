@@ -106,7 +106,7 @@ class AdminMasterController extends Controller
           'SKILL' => $request->SKILL,
           'INTRODUCTION' => $request->INTRODUCTION
       ]);
-          return redirect(url('master'));
+          return redirect(url('adminmaster'));
     }
 
     /**
@@ -124,7 +124,7 @@ class AdminMasterController extends Controller
         DB::table('info_users')->where('id_info_user', '=', $id)->delete();
         DB::table('logins')->where('id_info_user', '=', $id)->delete();
 
-        return redirect(url('master'));
+        return redirect(url('adminmaster'));
     }
     public function register(Request $request){
       //Fungsi Registrasi user baru
@@ -163,12 +163,12 @@ class AdminMasterController extends Controller
           );
           echo "<script>
                 alert('Register Succesfull!!');
-                window.location.href='master';
+                window.location.href='adminmaster';
                 </script>";
         }else{
           echo "<script>
                 alert('Register Failed!!');
-                window.location.href='master';
+                window.location.href='adminmaster';
                 </script>";
         }
       }

@@ -156,7 +156,7 @@
                         				  <div class="form-group float-right">
                           					  <input type="submit" class="btn btn-outline-info" value="Save Change" name="btnUpdate" id="btnUpdate">
                           					  <span></span>
-                          					  <a href="{{url('announce')}}"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
+                          					  <a href="{{url('adminannounce')}}"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
                         				  </div>
                         			</form>
                             </div>

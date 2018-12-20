@@ -37,7 +37,7 @@
                               </div>
                             </div>
                             <div class="card-body">
-                              <form action="{{ url('subcourse_update', $subs['ID_SUB_COURSE']) }}" class="form-horizontal" method="post">
+                              <form action="{{ url('subcourse_updateadmin', $subs['ID_SUB_COURSE']) }}" class="form-horizontal" method="post">
                                   @csrf
                         				  <div class="form-group">
                             					<label class="col-md-2 control-label">ID Sub Course</label>
@@ -72,7 +72,7 @@
                         				  <div class="form-group float-right">
                           					  <input type="submit" class="btn btn-outline-info" value="Save Change" name="btnUpdate" id="btnUpdate">
                           					  <span></span>
-                          					  <a href="{{url('course')}}"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
+                          					  <a href="{{url('admincourse')}}"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
                         				  </div>
                         			</form>
                             </div>

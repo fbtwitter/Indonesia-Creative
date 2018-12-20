@@ -54,7 +54,7 @@ class AdminCourseController extends Controller
 
         ]);
         $course->save();
-        return redirect()->route('course.index')->with('success', 'Data Added');
+        return redirect()->route('admincourse.index')->with('success', 'Data Added');
     }
 
     /**
@@ -105,7 +105,7 @@ class AdminCourseController extends Controller
           'NAMA_COURSE' => $request->NAMA_COURSE,
           'DEFINISI_COURSE' => $request->DEFINISI_COURSE
       ]);
-          return redirect(url('course'));
+          return redirect(url('admincourse'));
     }
 
     /**
@@ -117,6 +117,6 @@ class AdminCourseController extends Controller
     public function destroy($id)
     {
         course::find($id)->delete();
-        return redirect(url('course'));
+        return redirect(url('admincourse'));
     }
 }

@@ -83,9 +83,9 @@ class AdminRewardController extends Controller
     {
         //
     }
-    
+
     public function delete($id_reward){
         reward::find($id_reward)->delete();
-        return redirect(url('reward'));
+        return redirect(url('adminreward'));
     }
 }

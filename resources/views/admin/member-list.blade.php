@@ -231,13 +231,12 @@
                                     <thead>
                                         <tr>
 
-                                            <th>ID Master</th>
                                             <th>Email</th>
                                             <th>Nama Depan</th>
                                             <th>Nama Belakang</th>
                                             <th>Gender</th>
-                                            <th>Domicili</th>
-                                            <th>Nomor Telefon</th>
+                                            <th>Domisili</th>
+                                            <th>Nomor Telepon</th>
                                             <th>Skill</th>
                                             <th>Introduction</th>
                                             <th></th>
@@ -247,7 +246,6 @@
                                         @foreach ($member as $mem)
                                         <!-- TABEL MASTER -->
                                         <tr>
-                                          <th>{{$mem->id_daftar_master}}</th>
                                           <th>{{$mem->email}}</th>
                                           <th>{{$mem->nama_depan}}</th>
                                           <th>{{$mem->nama_belakang}}</th>

@@ -120,11 +120,10 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active">
+                  <li>
                       <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
-                    <!-- /.menu-title -->
-                    <li>
+                    <li class="active">
                         <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
@@ -132,9 +131,6 @@
                     </li>
                     <li>
                         <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
-                    </li>
-                    <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
                     </li>
                     <li>
                         <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>

@@ -276,7 +276,14 @@
                         <input type="hidden" name="ID_ANNUNCEMENT">
 
                         <label for="idcourse"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+                        {{-- <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required> --}}
+                        <div class="col-md-12">
+                          <select class="form-control" name="ID_COURSE">
+                            @foreach($course as $item)
+                            <option value="{{ $item->ID_COURSE }}">{{ $item->NAMA_COURSE }}</option>
+                            @endforeach
+                          </select>
+                      </div>
 
                         <label for="tanggal"><b>Date</b></label>
                         <input type="date" placeholder="Enter Date" name="TANGGAL" required>

@@ -47,7 +47,7 @@ class AccountController extends Controller
             break;
           case 3:
             $hak = "Student";
-            echo "<script>window.location.href='/Dashadmin'</script>";
+            echo "<script>window.location.href='/Dashboard'</script>";
             break;
           case 2:
             $hak = "Master";

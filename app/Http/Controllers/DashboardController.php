@@ -18,7 +18,7 @@ class DashboardController extends Controller
         if(isset($request)){
           $id=$request->session()->get('key');
           if($id!=null){
-          
+
             $terdaftar = peserta_course::select('ID_COURSE')->where('ID_INFO_USER', Session::get('key'))->get();
             $i=0;
             foreach ($terdaftar as $t) {
@@ -31,10 +31,11 @@ class DashboardController extends Controller
             else {
               $request->Session()->forget('join');
             }
-            $request->session()->put('status',$hak);
+            $status = Session::get('status');
+            $data = Session::get('data');
             $daftar = course::all();
             $request->session()->put('daftar',$daftar);
-            return view('Dashboard.index', compact('data', 'daftar'))->with('status',$hak);
+            return view('Dashboard.index', compact('data', 'daftar', 'status'));
           }
 
           else

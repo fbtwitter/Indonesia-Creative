@@ -2,7 +2,7 @@
 <?php $__env->startSection('title', __('Page Not Found')); ?>
 
 <?php $__env->startSection('image'); ?>
-<div style="background-image: url('/svg/404.svg');" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center">
+<div style="background-image: url(<?php echo e(asset('/svg/404.svg')); ?>);" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center">
 </div>
 <?php $__env->stopSection(); ?>
 

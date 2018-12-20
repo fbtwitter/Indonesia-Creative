@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Routes\web;
 use Redirect;
 use DB;
+use App\info_user;
 use App\database;
 use Alert;
 
@@ -30,13 +31,35 @@ class AccountController extends Controller
         $d = DB::table('logins')->select('id_info_user')->where('email',$email)->get();
         foreach ($d as $post) {
             $id = $post->id_info_user;
-          }
+        }
         $request->session()->put('key', $id);
-        echo "<script>window.location.href='Dashboard'</script>";
-      }else{
-        Alert::success('Login Gagal', 'Fail');
-          return redirect()->route('Dashboard.index');
+
+        $data = info_user::find($id);
+        $request->session()->put('data',$data);
+        $hak = DB::table('logins')->select('hak_akses')->where('id_info_user',$id)->get();
+        foreach ($hak as $h) {
+            $hk = $h->hak_akses;
+          }
+        switch ($hk) {
+          case 1:
+            $hak = "Admin";
+            echo "<script>window.location.href='/Dashadmin'</script>";
+            break;
+          case 3:
+            $hak = "Student";
+            echo "<script>window.location.href='/Dashadmin'</script>";
+            break;
+          case 2:
+            $hak = "Master";
+            break;
+          default:
+            $hak = "Undefined";
+            break;
+        }
+        $request->session()->put('status', $hak);
+
       }
+
 
     }
 

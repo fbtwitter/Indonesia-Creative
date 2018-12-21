@@ -120,14 +120,10 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-<<<<<<< HEAD
                   <li class="active">
                       <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-=======
-                  <li>
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
->>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
                   </li>
+                    <!-- /.menu-title -->
                     <li>
                         <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
@@ -135,18 +131,11 @@
                         <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
                     </li>
 
                     <li>
                         <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
-=======
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
-                    </li>
-                    <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
->>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
                     </li>
                     <li>
                         <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
@@ -155,10 +144,13 @@
                         <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
+
                         <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
                         <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+
+
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -168,6 +160,8 @@
     <!-- Left Panel -->
 
     <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
 
         <!-- Header-->
         <header id="header" class="header">

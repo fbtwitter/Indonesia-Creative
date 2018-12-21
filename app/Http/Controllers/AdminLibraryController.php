@@ -14,7 +14,7 @@ class AdminLibraryController extends Controller
      */
     public function index()
     {
-        $librarys = librarys::all()->toArray();
+        $librarys = librarys::all();
         return view('admin.library', compact('librarys'));
     }
 

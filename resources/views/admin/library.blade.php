@@ -229,7 +229,7 @@
                                     <tr>
                                         <th scope="col">No.</th>
                                         <th scope="col">ID Sub Course</th>
-                                        <th scope="col">Software</th>
+                                        <th scope="col">Nama Software</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -239,7 +239,8 @@
                                     <tr>
                                       <th>{{$perpus['ID_LIBRARY']}}</th>
                                       <th>{{$perpus['ID_SUB_COURSE']}}</th>
-                                      <th>{{$perpus['SOFTWARE']}}</th>
+                                      <th>{{$perpus['JUDUL_SOFT']}}</th>
+
                                       <th></th>
                                       <th>
                                           <center>

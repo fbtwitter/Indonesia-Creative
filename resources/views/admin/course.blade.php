@@ -144,11 +144,15 @@
                         <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
+
                         <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
                         <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+
+
                     </li>
+                  
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -245,12 +249,12 @@
                                       <th>{{$sub['ID_SUB_COURSE']}}</th>
                                       <th>{{$sub['ID_COURSE']}}</th>
                                       <th>{{$sub['ID_DAFTAR_MASTER']}}</th>
-<<<<<<< HEAD
+
                                       <th>{{$sub['SUB_COURSE']}}</th>
                                       <th>{{$sub['DEFINISI_SUB_COURSE']}}</th>
-=======
-                                      <th style="font-size: 10px;">{{$sub['DEFINISI_SUB_COURSE']}}</th>
->>>>>>> ef15d444aa46ecece4bd09eda56aa7545d208ba2
+
+
+
                                       <th>
                                           <center>
                                             <a href="{{url('update_subcourseview', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
@@ -272,20 +276,36 @@
                       </div>
 
                       <div class="container">
-                        <label for="id_sub_course"><b>ID Sub Course</b></label>
-                        <input type="text" placeholder="Enter ID Sub Course" name="ID_SUB_COURSE" required>
 
-                        <label for="id_course"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+                        <label for="ID_COURSE"><b>ID Course</b></label>
+                        {{-- <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required> --}}
+                        <div class="col-md-12">
+                          <select class="form-control" name="ID_COURSE">
+                            @foreach($courses as $item)
+                            <option value="{{ $item->ID_COURSE }}">{{ $item->NAMA_COURSE }}</option>
+                            @endforeach
+                          </select>
+                      </div>
+                      <label for="ID_DAFTAR_MASTER"><b>ID MASTER</b></label>
+                      {{-- <input type="text" placeholder="Enter ID MASTER" name="ID_DAFTAR_MASTER" required> --}}
+                      <div class="col-md-12">
+                        <select class="form-control" name="ID_DAFTAR_MASTER">
+                          @foreach($master as $item2)
+                          <option value="{{ $item2->id_info_user }}">{{ $item2->nama_belakang }}</option>
+                          @endforeach
+                        </select>
+                    </div>
 
-                        <label for="id_daftar_master"><b>Master</b></label>
-                        <input type="text" placeholder="Enter Master" name="ID_DAFTAR_MASTER" required>
+                        <div class="col-md-12">
+                          <label for="id_daftar_master"><b>Name</b></label>
+                          <input type="text" placeholder="Enter Sub Course" name="SUB_COURSE" required>
+                        </div>
 
-                        <label for="id_daftar_master"><b>Name</b></label>
-                        <input type="text" placeholder="Enter Sub Course" name="SUB_COURSE" required>
+                        <div class="col-md-12">
+                          <label for="definisi_sub_course"><b>Definition</b></label>
+                          <input type="text" placeholder="Enter Definition" name="DEFINISI_SUB_COURSE" required>
+                        </div>
 
-                        <label for="definisi_sub_course"><b>Definition</b></label>
-                        <input type="text" placeholder="Enter Definition" name="DEFINISI_SUB_COURSE" required>
                         <br>
                         <div class="float-right">
                           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-outline-danger btn-sm">Cancel</button>

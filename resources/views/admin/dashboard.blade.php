@@ -97,6 +97,22 @@
                 <div class="clearfix"></div>
                 <!-- Calender Chart Weather  -->
                 <div class="row">
+                  <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="typo-headers">
+                        <div class="float-left">
+                          <h1 class="pb-2 display-4">Welcome!</h1>
+                          <h6 class="pb-2 display-5">Now you're logged in as Admin.</h6>
+                        </div>
+                        <!--<div class="float-right">
+                          <img src="{{ asset('front/assets/img/male.png') }}" style="width: 100px; length: 100px;">
+                          <img src="{{ asset('front/assets/img/female.png') }}" style="width: 100px; length: 100px;">
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
                   <div class="col-lg-3 col-md-6">
                        <div class="card">
                            <div class="card-body">
@@ -167,27 +183,175 @@
                            </div>
                        </div>
                    </div>
-                    <div class="col-md-12 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- <h4 class="box-title">Chandler</h4> -->
-                                <div class="calender-cont widget-calender">
-                                    <div id="calendar"></div>
-                                </div>
-                            </div>
-                        </div><!-- /.card -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card weather-box">
-                            <h4 class="weather-title box-title">Weather</h4>
-                            <div class="card-body">
-                                <div class="weather-widget">
-                                    <div id="weather-one" class="weather-one"></div>
-                                </div>
-                            </div>
-                        </div><!-- /.card -->
-                    </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-2">
+                                       <i class="pe-7s-film"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori1}}</span></div>
+                                           <div class="stat-heading">Category 1</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-4">
+                                       <i class="pe-7s-help2"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori2}}</span></div>
+                                           <div class="stat-heading">Category 2</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-1">
+                                       <i class="pe-7s-monitor"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori3}}</span></div>
+                                           <div class="stat-heading">Category 3</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-3">
+                                       <i class="pe-7s-leaf"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori4}}</span></div>
+                                           <div class="stat-heading">Category 4</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-8">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Lastest Added Members </h5>
+                   </div>
+                   <div class="card-body--">
+                     <div class="table-stats order-table ov-h">
+                       <table class="table ">
+                         <thead>
+
+                           <tr>
+                             <th class="serial">No.</th>
+                             <th>ID</th>
+                             <th>First Name</th>
+                             <th>Last Name</th>
+                             <th>Gender</th>
+                             <th>Domicile</th>
+                           </tr>
+
+                         </thead>
+                         <tbody>
+                           @php
+                             $i=1;
+                           @endphp
+                           @foreach($latest as $new)
+                           <tr>
+                             <td class="serial">{{$i}}</td>
+                             <td><span class="idmember">{{$new->id_info_user}}</span> </td>
+                             <td><span class="fname"></span>{{$new->nama_depan}} </td>
+                             <td><span class="lname"></span>{{$new->nama_belakang}}</td>
+                             <td><span class="gender"></span>{{$new->gender}}</td>
+                             <td><span class="domisili">{{$new->domisili}}</span></td>
+                             <!-- nampilin 5 user terbaru-->
+                           </tr>
+                           @php
+                             $i++;
+                           @endphp
+                             @endforeach
+                         </tbody>
+                       </table>
+                     </div> <!-- /.table-stats -->
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+
+               <div class="col-md-12 col-lg-4">
+                 <div class="card">
+                   <div class="card-body">
+                     <div class="calender-cont widget-calender">
+                       <div id="calendar"></div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
                 </div>
+                <div class="col-xl-6">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Announcements </h5>
+                   </div>
+                   <div class="card-body--">
+                     <div class="table-stats order-table ov-h">
+                       <table class="table ">
+                         <thead>
+                           <tr>
+                             <th class="serial">Date</th>
+                             <th>Description</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           @foreach($announce as $p)
+                           <tr>
+                             <td><span class="idmember">{{$p->tanggal}}</span> </td>
+                             <td><span class="fname"></span>{{$p->deskripsi}} </td>
+                             <!-- nampilin 5 Announcement terbaru-->
+                           </tr>
+                           @endforeach
+                         </tbody>
+                       </table>
+                     </div> <!-- /.table-stats -->
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+               
+                 <div class="col-xl-6">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Forum </h5>
+                   </div>
+                   <div class="card-body--">
+                     @foreach($forum as $f)
+                     <div class="container">
+                       <strong><p class="box-title">{{$f->nama_belakang}}</p></strong>
+                       <h6>{{$f->isi_forum}}</h6>
+                       <span class="time-right box-title">{{$f->date_time}}</span>
+                     </div>
+                     @endforeach
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+               </div>
                 <!-- /Calender Chart Weather -->
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">

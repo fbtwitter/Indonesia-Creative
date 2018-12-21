@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\course;
 use App\sub_course;
 use Validator;
+use DB;
 
 class AdminCourseController extends Controller
 {
@@ -17,9 +18,15 @@ class AdminCourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all()->toArray();
+        $courses = course::all();
         $subs = sub_course::all()->toArray();
-        return view('admin.course', compact('courses', 'subs'));
+
+        $master = DB::table('info_users')
+              ->join('logins', 'logins.id_info_user', '=', 'info_users.id_info_user')
+              ->select('info_users.id_info_user', 'info_users.nama_belakang')
+              ->where('logins.hak_akses', '=', '2')
+              ->get();
+        return view('admin.course', compact('courses', 'subs', 'master'));
     }
 
     /**
@@ -54,7 +61,8 @@ class AdminCourseController extends Controller
 
         ]);
         $course->save();
-        return redirect()->route('admincourse.index')->with('success', 'Data Added');
+        return back();
+        //return redirect()->route('admincourse.index')->with('success', 'Data Added');
     }
 
     /**

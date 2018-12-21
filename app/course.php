@@ -8,5 +8,5 @@ class course extends Model
 {
     public $timestamps = false;
     protected $primaryKey = 'ID_COURSE';
-    protected $fillable = ['NAMA_COURSE', 'DEFINISI_COURSE'];
+    protected $fillable = ['ID_COURSE','NAMA_COURSE', 'DEFINISI_COURSE'];
 }

@@ -1,5 +1,5 @@
 @extends('ManagementFile/backend/layout')
-@section('title-dashboard') Advertising Class
+@section('title-dashboard') Advertising Class | IC Surabaya
 @endsection
 
 
@@ -89,7 +89,7 @@
                         </div>
 
 
-                        <button class="btn btn-primary btn-block" style="margin-top:0px;margin-bottom:10px; padding: 5px 15px 10px 15px; text-align:center;"><strong>Rate this class!</strong></button>
+                        <button class="btn btn-primary btn-block" style="margin-top:0px;margin-bottom:10px; padding: 5px 15px 10px 15px; text-align:center;" data-toggle="modal" data-target="#ratekelas_1"><strong>Rate this class!</strong></button>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                                                                 <span class="pull-right text-right">
                                                                 <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
                                                                 padding: 0px 15px;
-                                                                margin-bottom: 6px"><small>Detail</small></span>
+                                                                margin-bottom: 6px" data-toggle="modal" data-target="#master_1"><small>Detail</small></span>
                                                                 <br/>
                                                                 <small style="margin-right:10px;"><strong>15</strong> Events</small>
                                                                 </span>
@@ -380,7 +380,12 @@
                                                 <div class="social-avatar">
                                                     <a href="" class="pull-left">
                                                                     <img alt="image" src="{{ asset('admin/img/a1.jpg') }}">
-                                                                </a>
+                                                    </a>
+                                                        <span class="pull-right text-right">
+                                                            <span class="btn btn-primary p-xxs" style="align-items: center;
+                                                                   padding: 0px 15px;
+                                                                   margin-bottom: 6px"><small>Nama Sub-Coursenya</small></span>
+                                                            </span>
                                                     <div class="media-body">
                                                         <a href="#">
                                                                         Andrew Williams
@@ -400,6 +405,11 @@
                                                     <a href="" class="pull-left">
                                                                             <img alt="image" src="{{ asset('admin/img/a4.jpg') }}">
                                                                         </a>
+                                                                        <span class="pull-right text-right">
+                                                                                <span class="btn btn-primary p-xxs" style="align-items: center;
+                                                                                       padding: 0px 15px;
+                                                                                       margin-bottom: 6px"><small>Nama Sub-Coursenya</small></span>
+                                                                                </span>
                                                     <div class="media-body">
                                                         <a href="#">
                                                                                 Steve Gets
@@ -419,6 +429,11 @@
                                                     <a href="" class="pull-left">
                                                                             <img alt="image" src="{{ asset('admin/img/a3.jpg') }}">
                                                                         </a>
+                                                                        <span class="pull-right text-right">
+                                                                                <span class="btn btn-primary p-xxs" style="align-items: center;
+                                                                                       padding: 0px 15px;
+                                                                                       margin-bottom: 6px"><small>Nama Sub-Coursenya</small></span>
+                                                                                </span>
                                                     <div class="media-body">
                                                         <a href="#">
                                                                                 Rosalia Steve
@@ -438,6 +453,11 @@
                                                     <a href="" class="pull-left">
                                                                             <img alt="image" src="{{ asset('admin/img/a2.jpg') }}">
                                                                         </a>
+                                                                        <span class="pull-right text-right">
+                                                                                <span class="btn btn-primary p-xxs" style="align-items: center;
+                                                                                       padding: 0px 15px;
+                                                                                       margin-bottom: 6px"><small>Nama Sub-Coursenya</small></span>
+                                                                                </span>
                                                     <div class="media-body">
                                                         <a href="#">
                                                                                 Phil
@@ -499,55 +519,49 @@
                                                             <div class="ibox float-e-margins animated fadeIn">
                                                                 <div class="social-avatar">
                                                                     <a href="" class="pull-left">
-                                                                                        <img alt="image" src="{{ asset('admin/img/a1.jpg') }}">
+                                                                                        <img alt="image" src="{{ asset('admin/img/library/sf_1.png') }}">
                                                                                     </a>
                                                                     <div class="media-body">
                                                                         <span class="pull-right text-right">
                                                                                     <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
                                                                                     padding: 0px 15px;
-                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                                    margin-bottom: 6px" href="https://www.adobe.com/sea/products/premiere.html"><small>Downloads</small></span>
                                                                         <br/>
                                                                         <small style="margin-right:10px;"><strong>273</strong> Times</small>
                                                                         </span>
                                                                         <a href="#">
-                                                                                            Andrew Williams
+                                                                                Adobe Premiere Pro
                                                                                         </a>
                                                                         <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
                                                                     </div>
                                                                 </div>
                                                                 <div class="social-body">
                                                                     <p>
-                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-                                                                        ipsum' will uncover many web sites still in their
-                                                                        infancy. Packages and web page editors now use Lorem
-                                                                        Ipsum as their default model text.
+                                                                            Adobe Premiere Pro is a timeline-based video editing app developed by Adobe Systems and published as part of the Adobe Creative Cloud licensing program. First launched in 2003, Adobe Premiere Pro is a successor of Adobe Premiere
                                                                     </p>
                                                                 </div>
                                                                 <hr>
                                                                 <div class="social-avatar">
                                                                     <a href="" class="pull-left">
-                                                                                            <img alt="image" src="{{ asset('admin/img/a4.jpg') }}">
+                                                                                            <img alt="image" src="{{ asset('admin/img/library/sf_2.png') }}">
                                                                                         </a>
                                                                     <div class="media-body">
                                                                         <span class="pull-right text-right">
                                                                                     <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
                                                                                     padding: 0px 15px;
-                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                                    margin-bottom: 6px" href="https://www.adobe.com/sea/products/aftereffects.html"><small>Downloads</small></span>
                                                                         <br/>
                                                                         <small style="margin-right:10px;"><strong>259</strong> Times</small>
                                                                         </span>
                                                                         <a href="#">
-                                                                                                Andrew Williams
+                                                                                                Adobe After Effects
                                                                                             </a>
                                                                         <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
                                                                     </div>
                                                                 </div>
                                                                 <div class="social-body">
                                                                     <p>
-                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-                                                                        ipsum' will uncover many web sites still in their
-                                                                        infancy. Packages and web page editors now use Lorem
-                                                                        Ipsum as their default model text.
+                                                                            Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Systems and used in the post-production process of film making and television production. Among other things, After Effects can be used for keying, tracking, compositing and animation.
                                                                     </p>
                                                                 </div>
                                                                 <hr>
@@ -558,55 +572,49 @@
                                                             <div class="ibox float-e-margins animated fadeIn">
                                                                 <div class="social-avatar">
                                                                     <a href="" class="pull-left">
-                                                                                        <img alt="image" src="{{ asset('admin/img/a2.jpg') }}">
+                                                                                        <img alt="image" src="{{ asset('admin/img/library/bk_1.jpg') }}">
                                                                                     </a>
                                                                     <div class="media-body">
                                                                         <span class="pull-right text-right">
                                                                                     <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
                                                                                     padding: 0px 15px;
-                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                                    margin-bottom: 6px" href="https://www.free-ebooks.net/ebook/The-Facebook-Advertising-Five-Step-Formula-to-get-More-Traffic"><small>Downloads</small></span>
                                                                         <br/>
                                                                         <small style="margin-right:10px;"><strong>15</strong> Events</small>
                                                                         </span>
                                                                         <a href="#">
-                                                                                            Alexander Witch
+                                                                                The Facebook Advertising Five Step Formula to get More Traffic
                                                                                         </a>
                                                                         <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
                                                                     </div>
                                                                 </div>
                                                                 <div class="social-body">
                                                                     <p>
-                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-                                                                        ipsum' will uncover many web sites still in their
-                                                                        infancy. Packages and web page editors now use Lorem
-                                                                        Ipsum as their default model text.
+                                                                            Do you want to be successful in advertising your online business and get more traffic? Do you want to know what the experts know about Facebook ads? Well, in this book, I want to teach you everything you need to know about advertising on Facebook.
                                                                     </p>
                                                                 </div>
                                                                 <hr>
                                                                 <div class="social-avatar">
                                                                     <a href="" class="pull-left">
-                                                                                            <img alt="image" src="{{ asset('admin/img/a3.jpg') }}">
+                                                                                            <img alt="image" src="{{ asset('admin/img/library/bk_2.jpg') }}">
                                                                                         </a>
                                                                     <div class="media-body">
                                                                         <span class="pull-right text-right">
                                                                                     <span class="btn btn-outline btn-primary p-xxs" style="align-items: center;
                                                                                     padding: 0px 15px;
-                                                                                    margin-bottom: 6px"><small>Detail</small></span>
+                                                                                    margin-bottom: 6px" href="https://www.free-ebooks.net/ebook/10-Ways-to-Write-More-Effective-Ads"><small>Downloads</small></span>
                                                                         <br/>
                                                                         <small style="margin-right:10px;"><strong>15</strong> Events</small>
                                                                         </span>
                                                                         <a href="#">
-                                                                                                Andrew Williams
+                                                                                10 Ways to Write More Effective Ads
                                                                                             </a>
                                                                         <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
                                                                     </div>
                                                                 </div>
                                                                 <div class="social-body">
                                                                     <p>
-                                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-                                                                        ipsum' will uncover many web sites still in their
-                                                                        infancy. Packages and web page editors now use Lorem
-                                                                        Ipsum as their default model text.
+                                                                            If you've been struggling to make sales, more than likely your ad copy is to blame. But don't worry because it's not your fault. Big companies pay advertising agencies to handle the hard work for them; and the people at those companies have made it their business to know the art of writing to sell. They have spent years learning the psychology of selling, as well as how to find the right words that will push the hot buttons to make the buying public buy the products or services that they're being paid to sell with effective ad copy. Now you too can write more effective ads for your own products, just like those highly-paid copywriters do. This free eBook provides you with the information that you need to be able to write to sell!
                                                                     </p>
                                                                 </div>
                                                                 <hr>
@@ -631,6 +639,56 @@
     </div>
 
     {{-- Calling modal --}}
+    {{-- Rate Kelas --}}
+    <div class="modal inmodal fade" id="ratekelas_1" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 15px 15px; background:#1ab394; color:white;">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Rate This Class</h4>
+                    </div>
+                    <div class="modal-body" style="padding: 0px 0px 10px 0px;">
+                        <div class="panel-body" style="padding:2px;">
+                                <div class="social-avatar">
+                                        <a href="" class="pull-left">
+                                                        <img alt="image" src="{{ asset('admin/img/a1.jpg') }}">
+                                                    </a>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                            Andrew Williams
+                                                        </a>
+                                            <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding:10px 10px 10px 10px">
+                            <h2 class="text-center" style="margin-top:0px;"><strong>Rate Point</strong></h2> 
+                            <form role="form" action="" method="post">
+                                    <div class="row">
+                                            <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                    <input type="text" name="NAMA_DEPAN" placeholder="Enter your Rate" value=""
+                                                    class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                    <input type="text" name="NAMA_DEPAN" placeholder="Out of 5" value=""
+                                                    class="form-control"></div>
+                                            </div>
+                                        </div>    
+                                    
+                                        
+                                  
+                                        <button class="btn btn-sm btn-primary btn-block" type="submit "><strong>Send Rate</strong></button>
+                                    </div>
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{-- End of Rate Kelas --}}
     {{-- Annonuncement modal --}}
     <div class="modal inmodal fade" id="annon1" tabindex="-1" role="dialog"  aria-hidden="true">
             <div class="modal-dialog modal-sm">
@@ -750,7 +808,57 @@
 </div>
 </div>
 {{-- end modal --}}
-{{-- end event banner --}}
+{{-- end course banner --}}
+
+{{-- Master Modal --}}
+{{-- 1 --}}
+<div class="modal inmodal" id="master_1" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Master Profile</h4>
+            <small>Sensei Sensei Sensei Sensei hoorayy <('')</small>
+        </div>
+        <div class="modal-body" style="padding: 10px 30px 0px 30px;">    
+        <div class="row">
+            <div class="col-sm-9">
+                    <div class="form-group"><label>Nama Depan</label> <input type="text" name="NAMA_DEPAN" placeholder="Enter your first name" value="{{$data->NAMA_DEPAN}}"
+                        class="form-control"></div>
+                <div class="form-group"><label>Nama Belakang</label> <input type="text" name="NAMA_BELAKANG" placeholder="Enter your last name" value="{{$data->NAMA_BELAKANG}}"
+                        class="form-control"></div>
+            </div>
+            <div class="col-sm-3 ">
+                    <h4>Profile Picure</h4>
+                    <div class="ibox-content no-padding border-left-right">
+                        <img alt="image" class="img-responsive  b-r" src="{{$data->FOTO_PROFIL}}" onerror="this.src='admin/img/default.jpg'">
+                    </div>
+                </div>
+            </div>
+            <br/>
+        <div class="form-group no-margins no-padding">
+                <label>Jenis Kelamin</label>
+                <select class="form-control m-b" name="gender">
+                            <option value="L" @if ($data->GENDER=='L')
+                              checked="checked"
+                            @endif>Laki-Laki</option>
+                            <option value="P" @if ($data->GENDER=='P')
+                              checked="checked"
+                            @endif>Perempuan</option>
+                        </select>
+            </div>
+            <div class="form-group"><label>Domisili</label> <input type="text" name="DOMISILI" placeholder="Enter your address" value="{{$data->DOMISILI}}"
+                    class="form-control"></div>
+            <div class="form-group"><label>No. Telpon</label> <input type="tel" placeholder="Enter your phone number" name="NOMOR_TELP" value="{{$data->NOMOR_TELP}}"
+                    class="form-control"></div>
+            <div class="form-group"><label>Introduction</label> <textarea type="text" placeholder="Tell us about you" name="INTRODUCTION" value="{{$data->INTRODUCTION}}"
+                    class="form-control"></textarea></div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+{{-- End of Master Modal --}}
 
 @endsection
 @section('scriptjs')

@@ -25,6 +25,7 @@ class AdminCourseController extends Controller
               ->join('logins', 'logins.id_info_user', '=', 'info_users.id_info_user')
               ->select('info_users.id_info_user', 'info_users.nama_belakang')
               ->where('logins.hak_akses', '=', '2')
+              ->orderBy('date_time', 'desc')
               ->get();
         return view('admin.course', compact('courses', 'subs', 'master'));
     }

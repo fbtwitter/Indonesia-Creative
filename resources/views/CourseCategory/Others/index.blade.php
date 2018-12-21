@@ -1,5 +1,5 @@
 @extends('ManagementFile/backend/layout')
-@section('title-dashboard') Other Course
+@section('title-dashboard') Other Course | IC Surabaya
 @endsection
 
 @section('scriptcss')

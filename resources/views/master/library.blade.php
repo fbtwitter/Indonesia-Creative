@@ -1,4 +1,4 @@
-<!doctype html>
+DashMaster<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -118,9 +118,9 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="{{route('Dashboard.index')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
+                  <li class="active">
+                      <a href="{{route('DashMaster')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  </li>
                     <!-- /.menu-title -->
                     <li>
                         <a href="{{ route('Sub_Course.index')}}"> <i class="menu-icon fa fa-tasks"></i>Sub Course List </a>
@@ -128,7 +128,7 @@
                     <li>
                         <a href="{{ route('member.index')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
-                    
+
                     <li>
                         <a href="{{route('course-list.index')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
                     </li>
@@ -160,7 +160,7 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('Dashboard.index')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
+                    <a class="navbar-brand" href="{{ route('DashMaster')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
                     <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
@@ -220,7 +220,7 @@
                           <div class="float-right ">
                             <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="btn btn-outline-dark"><i class="menu-icon fa fa-plus"></i></button>
                           </div>
-                          
+
                         </div>
                         <div class="card-body">
                             <table class="table table-striped">
@@ -244,7 +244,7 @@
                                       <th>
                                           <center>
                                             <a href="{{ route('LibraryMaster.edit',$perpus->ID_LIBRARY)}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
-                                            <a href="{{url('deletelib', $perpus->ID_LIBRARY )}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>                                      
+                                            <a href="{{url('deletelib', $perpus->ID_LIBRARY )}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                           </center>
                                       </th>
                                     </tr>
@@ -254,7 +254,7 @@
                         </div>
                         </div>
                     </div>
-                        
+
                 <div id="id02" class="modal">
                   <form class="modal-content animate"  action="{{ route('LibraryMaster.store')}}" method="post">
                   @csrf
@@ -265,13 +265,13 @@
                     </div>
 
                     <div class="container">
-                      
+
                       <label for="idcourse"><b>ID Sub Course</b></label>
                       <input type="text" name="idsubcourse" id="idsubcourse"  required>
 
                       <label for="judulsoftware"><b>Judul Software</b></label>
                       <input type="text" name="judulsoftware" id="judulsoftware"  required>
-                      
+
                       <label for="software"><b>Software</b></label>
                       <input type="file" name="software" id="software"  required>
 
@@ -332,6 +332,6 @@
         }
     }
     </script>
-    
+
 </body>
 </html>

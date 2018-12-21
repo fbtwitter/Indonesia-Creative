@@ -19,7 +19,7 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
-    
+
     <style>
     input[type=text], select {
         width: 100%;
@@ -122,7 +122,7 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('Dashboard.index')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
+                    <a class="navbar-brand" href="{{ route('DashMaster')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
                     <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
@@ -151,15 +151,15 @@
             <div class="animated fadeIn">
                 <div class="clearfix"></div>
                 <div class="row">
-                    
+
                     @foreach($subs as $data)
                     <div class="col-md-12">
                         <div class="card">
-                       
+
                         <form class="modal-content animate" action="{{ route('Sub_Course.update',$data->ID_SUB_COURSE)}}" method="post">
                         @csrf
                         {{method_field('put')}}
-                
+
                 <div class="card-header">
                     <div class="float-left">
                         <strong class="card-title">Update Sub-Course</strong>
@@ -174,7 +174,7 @@
 
                     <label for="idcourse"><b>ID Course</b></label>
                     <input type="text" name="idcourse" id="idcourse" value="{{ $data->ID_COURSE}}" disabled>
-                    
+
                     <label for="idmaster"><b>ID Master</b></label>
                     <input type="text" name="idmaster" id="idmaster" value="{{ $data->ID_DAFTAR_MASTER}}" required>
 
@@ -234,7 +234,7 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
     <script src="assets/js/init/fullcalendar-init.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>

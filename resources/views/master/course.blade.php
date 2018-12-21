@@ -119,7 +119,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{{route('Dashboard.index')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="{{url('/DashMaster')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <!-- /.menu-title -->
                     <li>

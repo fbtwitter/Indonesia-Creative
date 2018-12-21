@@ -28,16 +28,16 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{{route('Dashboard.index')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="{{ url('DashMaster') }}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <!-- /.menu-title -->
                     <li>
                         <a href="{{ route('Sub_Course.index')}}"> <i class="menu-icon fa fa-tasks"></i>Sub Course List </a>
                     </li>
                     <li>
-                        <a href="{{ route('member.index')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
+                        <a href="#"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
-                    
+
                     <li>
                         <a href="{{route('course-list.index')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
                     </li>
@@ -125,7 +125,7 @@
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-2">
                                     <i class="pe-7s-users"></i>
-                                </div> 
+                                </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
                                         <div class="stat-text"><span class="count"><!-- Tampilno jumlah master teko database mu --></span></div>

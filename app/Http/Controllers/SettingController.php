@@ -104,6 +104,15 @@ class SettingController extends Controller
         }
 
        }
+       if($tab==3){
+
+           $photo = $request->photo;
+           info_user::findOrFail($id)->update(['FOTO_PROFIL' => $photo]);
+
+
+
+
+       }
       Alert::success('Data berhasil diperbaharui','OK');
       return redirect()->route('Setting.index');
     }

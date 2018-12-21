@@ -19,7 +19,7 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
-    
+
     <style>
     input[type=text], select {
         width: 100%;
@@ -118,9 +118,9 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="{{route('Dashboard.index')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
+                  <li class="active">
+                      <a href="{{route('/DashMaster')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  </li>
                     <!-- /.menu-title -->
                     <li>
                         <a href="{{ route('Sub_Course.index')}}"> <i class="menu-icon fa fa-tasks"></i>Sub Course List </a>
@@ -128,7 +128,7 @@
                     <li>
                         <a href="{{ route('member.index')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
-                    
+
                     <li>
                         <a href="{{route('course-list.index')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
                     </li>
@@ -152,7 +152,7 @@
         </nav>
     </aside>
     <!-- /#left-panel -->
-    
+
     <!-- Right Panel -->
 
     <div id="right-panel" class="right-panel">
@@ -161,7 +161,7 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('Dashboard.index')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
+                    <a class="navbar-brand" href="{{ route('DashMaster')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
                     <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
@@ -192,7 +192,7 @@
             <div class="content">
             <div class="animated fadeIn">
                 <div class="clearfix"></div>
-                
+
                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                     <thead>
                         <tr>
@@ -232,12 +232,12 @@
                     </tbody>
 
                 </table>
-                
+
                 </div>
                 <!-- clear fix-->
             </div>
             </div>
-            
+
         </div>
         <!-- .animated -->
         </div>
@@ -276,7 +276,7 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
     <script src="assets/js/init/fullcalendar-init.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
@@ -325,7 +325,7 @@
         }
     }
     </script>
-    
-    
+
+
 </body>
 </html>

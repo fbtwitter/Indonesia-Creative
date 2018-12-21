@@ -134,13 +134,17 @@
                                             <div class="col-sm-4 ">
                                                 <h4>Profile Picure</h4>
                                                 <div class="ibox-content no-padding border-left-right">
-                                                    <img alt="image" class="img-responsive  b-r" src="{{$data->FOTO_PROFIL}}" onerror="this.src='admin/img/default.jpg'">
+                                                    <img alt="image" class="img-responsive  b-r" src="data:image/jpeg;base64,'.base64_encode( {{$data->FOTO_PROFIL}} ).'" onerror="this.src='admin/img/default.jpg'">
                                                 </div>
                                                 <div class="ibox-content no-padding border-left-right">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top:10px;">
-                                                        <span class="fileinput-exists"></span><input
-                        type="file" name="..." /></span>
-                    <span class="fileinput-filename"></span>
+                                                        <span class="fileinput-exists"></span>
+                                                        {!! Form::open(['url' => route('Setting.update', 3), 'method' => 'post', 'files' => true] ) !!}
+                                                        {{-- <form class="photo_profil" action="{{route('Setting.update', 3)}}" method="post"> --}}
+                                                          {{csrf_field()}} {{ method_field('PUT') }}
+                                                          <input  type="file" onchange="this.form.submit()" name="photo" /></span>
+                                                        {!! Form::close()!!}
+                                                        <span class="fileinput-filename"></span>
     </div>
 </div>
 </div>

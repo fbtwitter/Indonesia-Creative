@@ -33,6 +33,8 @@ Route::get('MonthlyDelete/{id_monthly}','MonthlyMeetingController@destroy');
 Route::resource('MemberListMaster','Master_MemberController');
 Route::get('MonthlyMember/{idMonhtly}','Master_MemberController@show');
 /* Library Master */
+Route::resource('/member', 'MemberController');
+Route::resource('DashMaster', 'Master_DashboardController');
 Route::resource('LibraryMaster','Master_LibraryController');
 //delete
 Route::get('LibraryMasterDelete/{idLib}','Master_LibaryController@');

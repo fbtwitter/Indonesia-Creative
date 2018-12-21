@@ -28,7 +28,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{{route('Dashboard.index')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="{{route('DashMaster')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <!-- /.menu-title -->
                     <li>
@@ -66,7 +66,7 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('Dashboard.index')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
+                    <a class="navbar-brand" href="{{ route('DashMaster')}}"><img src="{{  asset('front/assets/img/logo.png')  }}" alt="Logo" width="auto"></a>
                     <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
@@ -77,7 +77,7 @@
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="user-avatar rounded-circle" src="images/ava.png" alt="User Avatar">
                         </a>
-            
+
                         <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
@@ -142,12 +142,12 @@
               </div>
             </div>
           </form>
-           
+
         </div>
             <!-- .animated -->
     </div>
     <!-- /.content -->
-    
+
     <div class="clearfix"></div>
         <!-- Footer -->
         <footer class="site-footer">

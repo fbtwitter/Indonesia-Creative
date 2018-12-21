@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\forum;
+use Carbon\Carbon;
+use DB;
 
 class AdminForumController extends Controller
 {
@@ -19,6 +21,8 @@ class AdminForumController extends Controller
         return view('admin.forum', compact('forums'));
         $forums = forum::all()->toArray();
         return view('forum', compact('forums'));
+
+
     }
 
     /**
@@ -39,7 +43,18 @@ class AdminForumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'ISI_FORUM' => 'required',
+        ]);
+
+        $chats = new forum([
+          'ID_INFO_USER' => 14,
+          'ISI_FORUM' => $request->get('ISI_FORUM'),
+          'DATE_TIME' => Carbon::now(),
+        ]);
+
+        $chats->save();
+        return back();
     }
 
     /**
@@ -90,5 +105,14 @@ class AdminForumController extends Controller
         forum::find($id_forum)->delete();
         return redirect(url('adminforum'));
     }
+
+    public function chat(){
+      $forumchat = DB::table('info_users')
+          ->join('forums', 'info_users.id_info_user', '=', 'forums.id_info_user')
+          ->select('forums.date_time', 'forums.isi_forum', 'info_users.nama_belakang')
+          ->get();
+      return view('admin.forumadmin', compact('forumchat'));
+    }
+
 }
 ?>

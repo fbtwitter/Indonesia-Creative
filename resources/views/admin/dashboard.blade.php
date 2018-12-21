@@ -54,6 +54,9 @@
                         <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
+                        <a href="{{url('forumchatadmin')}}"> <i class="menu-icon fa fa-commenting"></i>Chat </a>
+                    </li>
+                    <li>
                         <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
                     </li>
                 </ul>
@@ -334,7 +337,7 @@
                    </div>
                  </div> <!-- /.card -->
                </div>
-               
+
                  <div class="col-xl-6">
                  <div class="card">
                    <div class="card-body">

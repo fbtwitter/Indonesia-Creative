@@ -46,6 +46,8 @@ Route::get('/deleteannounceadmin/{ID_ANNOUNCEMENT}', 'AdminAnnouncementControlle
 Route::resource('/adminforum', 'AdminForumController');
 Route::get('/deleteforumadmin/{id_forum}', 'AdminForumController@delete');
 Route::resource('/forum', 'AdminForumController');
+Route::get('/forumchatadmin', 'AdminForumController@chat');
+Route::post('/admintambahforum', 'AdminForumController@store');
 Route::resource('/Forum', 'ForumController');
 Route::get('/deleteforum/{id_forum}', 'AdminForumController@delete');
 /*BAGIAN REWARD*/

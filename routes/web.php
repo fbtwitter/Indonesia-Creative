@@ -12,8 +12,31 @@
 */
 
 /*BAGIAN MASTER*/
-Route::resource('/master', 'AdminMasterController');
+Route::resource('/master', 'MasterController');
+Route::post('/regis', 'MasterController@register');
+Route::resource('/admmaster', 'AdminMasterController');
 Route::post('/regis', 'AdminMasterController@register');
+/* Master */
+//Sub Course Master
+Route::resource('/Sub_Course','SubCourseController');
+/* Course List */
+Route::resource('course-list','CourseMasterController');
+
+/*SubCourse*/
+//edit Sub Course
+Route::post('UpdateSub/{id_sub}','SubCourseController@update');
+Route::get('DeleteSubCourse/{id_sub}','SubCourseController@destroy');
+/*Monthly Meeting Master */
+Route::resource('Monthly','MonthlyMeetingController');
+Route::post('MonthlyUpdate/{id_monthly}','MonthlyMeetingController@update')->name('MonthlyUpdate');
+Route::get('MonthlyDelete/{id_monthly}','MonthlyMeetingController@destroy');
+/* Member of Monthly meeting */
+Route::resource('MemberListMaster','Master_MemberController');
+Route::get('MonthlyMember/{idMonhtly}','Master_MemberController@show');
+/* Library Master */
+Route::resource('LibraryMaster','Master_LibraryController');
+//delete
+Route::get('LibraryMasterDelete/{idLib}','Master_LibaryController@');
 /*BAGIAN COURSE*/
 Route::resource('/course', 'AdminCourseController');
 Route::get('/update_courseview/{id_course}', 'AdminCourseController@edit');
@@ -31,7 +54,7 @@ Route::get('/deletemember/{id_info_user}', 'AdminMemberController@destroy');
 Route::resource('/library', 'AdminLibraryController');
 Route::get('/deletelib/{id_library}', 'AdminLibraryController@delete');
 /*BAGIAN DASHBOARD*/
-Route::resource('/Dashadmin', 'AdminDashadminController');
+Route::resource('/dashadmin', 'AdminDashadminController');
 Route::resource('/Dashboard', 'DashboardController');
 Route::resource('Setting', 'SettingController');
 /*BAGIAN ANNOUNCEMENT*/

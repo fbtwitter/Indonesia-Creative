@@ -45,6 +45,9 @@ Route::get('/deleteannounceadmin/{ID_ANNOUNCEMENT}', 'AdminAnnouncementControlle
 /*BAGIAN FORUM*/
 Route::resource('/adminforum', 'AdminForumController');
 Route::get('/deleteforumadmin/{id_forum}', 'AdminForumController@delete');
+Route::resource('/forum', 'AdminForumController');
+Route::resource('/Forum', 'ForumController');
+Route::get('/deleteforum/{id_forum}', 'AdminForumController@delete');
 /*BAGIAN REWARD*/
 Route::resource('/adminreward', 'AdminRewardController');
 Route::get('/deleterewardadmin/{id_reward}', 'AdminRewardController@delete');
@@ -69,7 +72,6 @@ Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
-Route::resource('/Dashboard', 'DashboardController');
 Route::resource('/CC_Advertising', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');

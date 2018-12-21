@@ -22,136 +22,29 @@
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                 <div class="form-group">
-                    <ol class="breadcrumb" style="margin: 20px 0px 0px 70px;">
+                    <ol class="breadcrumb active" style="margin: 20px 0px 0px 70px;">
                         <li>
                             <a href="{{ url('Dashboard')}}">Home</a>
                         </li>
                     </ol>
                 </div>
             </div>
-            <ul class="nav navbar-top-links navbar-right">
+            {{-- <ul class="nav navbar-top-links navbar-right">
                 <li>
                     <span class="m-r-sm text-muted welcome-message">Welcome {{$data->NAMA_DEPAN}}</span>
                 </li>
                 <li>
-                    <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
+                    <a class="right-sidebar-toggle fa"><i class="fa fa-tasks"></i></a>
                 </li>
-            </ul>
+            </ul> --}}
         </nav>
     </div>
-    {{-- Navbar --}} {{--
-    <div class="row  border-bottom white-bg dashboard-header">
-
-        <div class="col-md-3">
-            <h2>Welcome {{$d->NAMA_DEPAN}}!</h2>
-            <small>Student Ranking Based On Point of Monthly Meeting.</small>
-            <ul class="list-group clear-list m-t">
-                <li class="list-group-item fist-item">
-                    <span class="pull-right">
-                            420
-                        </span>
-                    <span class="label label-success">1</span> Albert Einstein
-                </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            370
-                        </span>
-                    <span class="label label-info">2</span> Nelson Mandela
-                </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            330
-                        </span>
-                    <span class="label label-primary">3</span> Christoper Colombus
-                </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            250
-                        </span>
-                    <span class="label label-default">4</span> Steve Jog
-                </li>
-                <li class="list-group-item">
-                    <span class="pull-right">
-                            200
-                        </span>
-                    <span class="label label-primary">5</span> Bill Gets
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <div class="ibox float-e-margins">
-                <div class="slick_demo_1">
-                    <div>
-                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-4.jpg') }}">
-                            <div class="carousel-caption">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-5.jpg') }}">
-                            <div class="carousel-caption">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                            <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
-                            <div class="carousel-caption">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-left ">
-                <div class="col-xs-4 ">
-                    <div class=" m-l-md ">
-                        <span class="h4 font-bold m-t block ">14</span>
-                        <small class="text-muted m-b block ">Total Class</small>
-                    </div>
-                </div>
-                <div class="col-xs-4 ">
-                    <span class="h4 font-bold m-t block "> 15,234</span>
-                    <small class="text-muted m-b block ">Student Here</small>
-                </div>
-                <div class="col-xs-4 ">
-                    <span class="h4 font-bold m-t block ">1,653</span>
-                    <small class="text-muted m-b block ">Master Here</small>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-md-3 ">
-            <div class="statistic-box ">
-                <h4>
-                    Project Beta progress
-                </h4>
-                <p>
-                    You have two project with not compleated task.
-                </p>
-                <div class="row text-center ">
-                    <div class="col-lg-6 ">
-                        <canvas id="doughnutChart2 " width="80 " height="80 " style="margin: 18px auto 0 "></canvas>
-                        <h5>Kolter</h5>
-                    </div>
-                    <div class="col-lg-6 ">
-                        <canvas id="doughnutChart " width="80 " height="80 " style="margin: 18px auto 0 "></canvas>
-                        <h5>Maxtor</h5>
-                    </div>
-                </div>
-                <div class="m-t ">
-                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
-                </div>
-            </div>
-        </div>
-    </div> --}} {{-- Side right--}}
+    {{-- end of navbar --}}
     <div class="sidebar-panel">
-        <div>
-            <h4>Announcement <span class="badge badge-info pull-right">16</span></h4>
+            <h2 style="font-weight:300; font-size:24px">Welcome <span class="m-r-sm text-center" style="font-weight:600; font-size:24px">{{$data->NAMA_DEPAN}}</span></h2>
+            <hr class="hr-line-solid">
+        <div rows="10" style="resize:none;">
+            <h4>Announcement <span class="btn badge badge-info pull-right" data-toggle="modal" data-target="#moreannounce">16</span></h4>
             <div class="feed-element">
                 <a href="#" class="pull-left">
                     <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
@@ -164,35 +57,26 @@
             </div>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a2.jpg') }}">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
-                    TIt is a long established fact that.
+                    There are many variations of passages of Lorem Ipsum available.
                     <br>
-                    <small class="text-muted">Yesterday 2:45 pm</small>
+                    <small class="text-muted">Today 4:21 pm</small>
                 </div>
             </div>
             <div class="feed-element">
                 <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a3.jpg') }}">
+                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
-                    Many desktop publishing packages.
+                    There are many variations of passages of Lorem Ipsum available.
                     <br>
-                    <small class="text-muted">Yesterday 1:10 pm</small>
-                </div>
-            </div>
-            <div class="feed-element">
-                <a href="#" class="pull-left">
-                    <img alt="image" class="img-circle" src="{{ asset('admin/img/a4.jpg') }}">
-                </a>
-                <div class="media-body">
-                    The generated Lorem Ipsum is therefore always free.
-                    <br>
-                    <small class="text-muted">Monday 8:37 pm</small>
+                    <small class="text-muted">Today 4:21 pm</small>
                 </div>
             </div>
         </div>
+        <hr>
         <div class="m-t-md">
             <h4>Best Student</h4>
             <ul class="list-group clear-list m-t">
@@ -254,25 +138,25 @@
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
-                                    <div class="carousel-caption" style="top:75%">
-                                        <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
+                                    <div class="carousel-caption" style="top:70%">
+                                        <button type="button" class="btn btn-info btn-outline" data-toggle="modal" data-target="#onbanner1" style="padding-left: 100px;padding-right: 100px;">Detail Event</button>
                                     </div>
                                 </div>
                                 <div class="item ">
                                     <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-7.jpg') }}">
-                                    <div class="carousel-caption" style="top:75%">
+                                    <div class="carousel-caption" style="top:70%">
                                         <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-8.jpg') }}">
-                                    <div class="carousel-caption" style="top:75%">
+                                    <div class="carousel-caption" style="top:70%">
                                         <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-9.jpg') }}">
-                                    <div class="carousel-caption" style="top:75%">
+                                    <div class="carousel-caption" style="top:70%">
                                         <div class="btn btn-info btn-outline" style="padding-left: 100px;padding-right: 100px;">Detail Event</div>
                                     </div>
                                 </div>
@@ -286,39 +170,8 @@
                         </div>
                     </div>
                 </div>
-                {{--
-                <div class="ibox float-e-margins">
-                    <div class="slick_demo_1">
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-4.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-5.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="container ibox-content" style="width:100%;height:auto;padding:0px;margin:0px;">
-                                <img alt="image" class="banner text-center" src="{{ asset('admin/img/banner/bg-6.jpg') }}">
-                                <div class="carousel-caption">
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
-
-
         <div class="row">
 
             <div class="col-lg-4">
@@ -526,261 +379,57 @@
     @include('ManagementFile/backend/footer')
 </div>
 
-{{-- Content Right SideBar --}}
-<div id="right-sidebar" class="animated">
-    <div class="sidebar-container">
-
-        <ul class="nav nav-tabs navs-2">
-            <li class="active"><a data-toggle="tab" href="#bar-1">
-                    Announcements
-                        </a></li>
-            <li class=""><a data-toggle="tab" href="#bar-2">
-                    Joined Course
-                </a></li>
-        </ul>
-
-        <div class="tab-content">
-            {{-- Tab 1 --}}
-            <div id="bar-1" class="tab-pane active">
-
-                <div class="sidebar-title">
-                    <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
-                    <small><i class="fa fa-tim"></i> You have 10 new message.</small>
-                </div>
-
-                <div>
-
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
+    {{-- Calling modal --}}
+    {{-- announcement modal --}}
+    <div class="modal inmodal fade" id="moreannounce" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Modal title</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                                remaining essentially unchanged.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="media-body">
+    {{-- end of modal --}}
 
-                                There are many variations of passages of Lorem Ipsum available.
-                                <br>
-                                <small class="text-muted">Today 4:21 pm</small>
-                            </div>
-                        </a>
+    {{-- event banner modal --}}
+    {{-- Modal Content --}}
+        {{-- 1 --}}
+        <div class="modal inmodal" id="onbanner1" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated fadeIn">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <i class="fa fa-clock-o modal-icon"></i>
+                        <h4 class="modal-title">Modal title</h4>
+                        <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
                     </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
-                            </div>
-                            <div class="media-body">
-                                The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                <br>
-                                <small class="text-muted">Yesterday 2:45 pm</small>
-                            </div>
-                        </a>
+                    <div class="modal-body">
+                        <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged.</p>
                     </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                <br>
-                                <small class="text-muted">Yesterday 1:10 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                            </div>
-
-                            <div class="media-body">
-                                Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                <br>
-                                <small class="text-muted">Monday 8:37 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
-                            </div>
-                            <div class="media-body">
-
-                                All the Lorem Ipsum generators on the Internet tend to repeat.
-                                <br>
-                                <small class="text-muted">Today 4:21 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
-                            </div>
-                            <div class="media-body">
-                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                <br>
-                                <small class="text-muted">Yesterday 2:45 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                <div class="m-t-xs">
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                    <i class="fa fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <div class="media-body">
-                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
-                                <br>
-                                <small class="text-muted">Yesterday 1:10 pm</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-message">
-                        <a href="#">
-                            <div class="pull-left text-center">
-                                <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                            </div>
-                            <div class="media-body">
-                                Uncover many web sites still in their infancy. Various versions have.
-                                <br>
-                                <small class="text-muted">Monday 8:37 pm</small>
-                            </div>
-                        </a>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
-
-            {{-- Tab 2 --}}
-            <div id="bar-2" class="tab-pane">
-
-                <div class="sidebar-title">
-                    <h3> <i class="fa fa-cube"></i>Monthly Meeting</h3>
-                    <small><i class="fa fa-tim"></i> You have 14 joined meeting. 10 not completed.</small>
-                </div>
-
-                <ul class="sidebar-list">
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Business valuation</h4>
-                            It is a long established fact that a reader will be distracted.
-
-                            <div class="small">Completion with: 22%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                            </div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Contract with Company </h4>
-                            Many desktop publishing packages and web page editors.
-
-                            <div class="small">Completion with: 48%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 48%;" class="progress-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Meeting</h4>
-                            By the readable content of a page when looking at its layout.
-
-                            <div class="small">Completion with: 14%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                                <span class="label label-primary pull-right">NEW</span>
-                                <h4>The generated</h4>
-                                There are many variations of passages of Lorem Ipsum available.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Business valuation</h4>
-                            It is a long established fact that a reader will be distracted.
-
-                            <div class="small">Completion with: 22%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                            </div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Contract with Company </h4>
-                            Many desktop publishing packages and web page editors.
-
-                            <div class="small">Completion with: 48%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 48%;" class="progress-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="small pull-right m-t-xs">9 hours ago</div>
-                            <h4>Meeting</h4>
-                            By the readable content of a page when looking at its layout.
-
-                            <div class="small">Completion with: 14%</div>
-                            <div class="progress progress-mini">
-                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                                <span class="label label-primary pull-right">NEW</span>
-                                <h4>The generated</h4>
-                                <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
-                                There are many variations of passages of Lorem Ipsum available.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
         </div>
+    {{-- end modal --}}
+    {{-- end event banner --}}
 
-    </div>
 
-</div>
 @endsection
 @section('scriptjs')
 <!-- Flot -->

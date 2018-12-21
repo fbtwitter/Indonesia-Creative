@@ -22,7 +22,7 @@
             <ul class="nav navbar-top-links navbar-right">
 
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome Reza Fauzi Augusdi</span>
+                    <span class="m-r-sm text-muted welcome-message">Welcome <?php echo e($data->NAMA_DEPAN); ?></span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>

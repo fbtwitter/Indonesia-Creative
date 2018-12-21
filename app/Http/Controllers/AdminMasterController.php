@@ -149,7 +149,7 @@ class AdminMasterController extends Controller
                 'nama_belakang' => $namab,
             ]
           );
-          $posts = DB::select('select id_info_user from Info_users order by id_info_user desc limit 1');
+          $posts = DB::select('select id_info_user from info_users order by id_info_user desc limit 1');
           foreach ($posts as $post) {
               $id = $post->id_info_user;
             }

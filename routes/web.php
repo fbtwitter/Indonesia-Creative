@@ -38,6 +38,7 @@ Route::resource('Setting', 'SettingController');
 Route::resource('/announce', 'AdminAnnouncementController');
 /*BAGIAN FORUM*/
 Route::resource('/forum', 'AdminForumController');
+Route::resource('/Forum', 'ForumController');
 Route::get('/deleteforum/{id_forum}', 'AdminForumController@delete');
 /*BAGIAN REWARD*/
 Route::resource('/reward', 'AdminRewardController');
@@ -62,7 +63,6 @@ Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
-Route::resource('/Dashboard', 'DashboardController');
 Route::resource('/CC_Advertising', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');

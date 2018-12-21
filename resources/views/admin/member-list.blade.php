@@ -120,32 +120,34 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li>
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  <li class="active">
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
-                    <li class="active">
-                        <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
+                    <!-- /.menu-title -->
+                    <li>
+                        <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
+                        <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                        <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
                     </li>
                     <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+                        <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
                     </li>
                     <li>
-                        <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
+                        <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
+                        <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
-                    </li>
-                    <li>
-                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+                        <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -162,8 +164,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -172,13 +174,13 @@
                     <div class="header-left">
                       <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
                     </div>
                 </div>
@@ -254,7 +256,7 @@
                                           <th>
                                               <center>
 
-                                                <a href="{{url('deletemember')}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
+                                                <a href="{{url('deletememberadmin', $mem->id_info_user)}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                               </center>
                                           </th>
                                         </tr>

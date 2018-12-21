@@ -38,25 +38,45 @@ class AdminSubCourseController extends Controller
      */
     public function store(Request $request)
     {
-      $this->validate($request, [
-          'ID_SUB_COURSE'    => 'required',
+      $course = $request->input('ID_COURSE');
+      $iduser = $request->Input('ID_DAFTAR_MASTER');
+      $sub = $request->Input('SUB_COURSE');
+      $desk = $request->input('DEFINISI_SUB_COURSE');
+
+      DB::table('sub_courses')->insert([
+            'ID_COURSE' => $course,
+            'ID_DAFTAR_MASTER' => $iduser,
+            'SUB_COURSE' => $sub,
+            'DEFINISI_SUB_COURSE' => $desk
+      ]);
+
+      DB::table('daftar_masters')->insert([
+            'ID_COURSE' => $course,
+            'ID_INFO_USER' => $iduser
+      ]);
+
+      /*$subs = new sub_course($request->input());
+      $subs->save();
+      return redirect()->route('admincourse.index')->with('success', 'Data Added');*/
+      /*$this->validate($request, [
           'ID_COURSE'     => 'required',
           'ID_DAFTAR_MASTER' => 'required',
+          'SUB_COURSE' => 'required',
           'DEFINISI_SUB_COURSE'    => 'required'
       ]);
 
       $subcourse = new sub_course([
-          'ID_SUB_COURSE' =>   $request->get('ID_SUB_COURSE'),
           'ID_COURSE' => $request->get('ID_COURSE'),
           'ID_DAFTAR_MASTER' => $request->get('ID_DAFTAR_MASTER'),
+          'SUB_COURSE' => $request->get('SUB_COURSE'),
           'DEFINISI_SUB_COURSE' => $request->get('DEFINISI_SUB_COURSE'),
           /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
           "created_at" =>  \Carbon\Carbon::now() # \Datetime()*/
 
 
-      ]);
-      $subcourse->save();
-      return redirect()->route('course.index')->with('success', 'Data Added');
+    //  ]);
+      //$subcourse->save();
+      return redirect()->route('admincourse.index')->with('success', 'Data Added');
 
     }
 
@@ -97,16 +117,19 @@ class AdminSubCourseController extends Controller
         //$masterlama = daftar_master::find($id);
         $subbaru = $request->only(
             [
-                'DEFINISI_SUB_COURSE'
+                'DEFINISI_SUB_COURSE',
+                'SUB_COURSE',
             ]
         );
 
         Validator::make($subbaru, [
                 'DEFINISI_SUB_COURSE'=> 'required',
+                'SUB_COURSE'=> 'required',
         ])->validate();
 
         $sublama->update([
-                'DEFINISI_SUB_COURSE' => $request->DEFINISI_SUB_COURSE
+                'DEFINISI_SUB_COURSE' => $request->DEFINISI_SUB_COURSE,
+                'SUB_COURSE' => $request->SUB_COURSE,
         ]);
 
         /*$masterbaru = $request->only([
@@ -123,7 +146,7 @@ class AdminSubCourseController extends Controller
             'ID_COURSE' => $request->ID_SUB_COURSE
         ]);*/
 
-        return redirect(url('course'));
+        return redirect(url('admincourse'));
     }
 
     /**
@@ -135,6 +158,6 @@ class AdminSubCourseController extends Controller
     public function destroy($id)
     {
       sub_course::find($id)->delete();
-      return redirect(url('course'));
+      return redirect(url('admincourse'));
     }
 }

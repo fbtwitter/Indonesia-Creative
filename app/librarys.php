@@ -8,5 +8,5 @@ class librarys extends Model
 {
     public $timestamps = false;
     protected $primaryKey = 'ID_LIBRARY';
-    protected $fillable = ['ID_LIBRARY', 'ID_SUB_COURSE', 'SOFTWARE'];
+    protected $fillable = ['ID_LIBRARY', 'ID_SUB_COURSE', 'JUDUL_SOF', 'SOFTWARE'];
 }

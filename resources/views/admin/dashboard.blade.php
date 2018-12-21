@@ -28,35 +28,33 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                   <li class="active">
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
                     <!-- /.menu-title -->
                     <li>
-                        <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
+                        <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
+                        <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                        <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
                     </li>
                     <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
+                        <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
                     </li>
                     <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+                        <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
-                        <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
+                        <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
                     <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
-                    </li>
-                    <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
-                    </li>
-                    <li>
-                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+                        <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -69,8 +67,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -78,13 +76,13 @@
                 <div class="header-menu">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/ava.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
 
@@ -99,27 +97,261 @@
                 <div class="clearfix"></div>
                 <!-- Calender Chart Weather  -->
                 <div class="row">
-                    <div class="col-md-12 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- <h4 class="box-title">Chandler</h4> -->
-                                <div class="calender-cont widget-calender">
-                                    <div id="calendar"></div>
-                                </div>
-                            </div>
-                        </div><!-- /.card -->
+                  <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="typo-headers">
+                        <div class="float-left">
+                          <h1 class="pb-2 display-4">Welcome!</h1>
+                          <h6 class="pb-2 display-5">Now you're logged in as Admin.</h6>
+                        </div>
+                        <!--<div class="float-right">
+                          <img src="{{ asset('front/assets/img/male.png') }}" style="width: 100px; length: 100px;">
+                          <img src="{{ asset('front/assets/img/female.png') }}" style="width: 100px; length: 100px;">
+                        </div>-->
+                      </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card weather-box">
-                            <h4 class="weather-title box-title">Weather</h4>
-                            <div class="card-body">
-                                <div class="weather-widget">
-                                    <div id="weather-one" class="weather-one"></div>
-                                </div>
-                            </div>
-                        </div><!-- /.card -->
-                    </div>
+                  </div>
                 </div>
+                  <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-1">
+                                       <i class="pe-7s-add-user"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$member}}</span></div>
+                                           <div class="stat-heading">Members</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-2">
+                                       <i class="pe-7s-users"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$master}}</span></div>
+                                           <div class="stat-heading">Masters</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-3">
+                                       <i class="pe-7s-menu"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$kategori}}</span></div>
+                                           <div class="stat-heading">Courses</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-4">
+                                       <i class="pe-7s-notebook"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$software}}</span></div>
+                                           <div class="stat-heading">Softwares</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-2">
+                                       <i class="pe-7s-film"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori1}}</span></div>
+                                           <div class="stat-heading">Category 1</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-4">
+                                       <i class="pe-7s-help2"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori2}}</span></div>
+                                           <div class="stat-heading">Category 2</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-1">
+                                       <i class="pe-7s-monitor"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori3}}</span></div>
+                                           <div class="stat-heading">Category 3</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6">
+                       <div class="card">
+                           <div class="card-body">
+                               <div class="stat-widget-five">
+                                   <div class="stat-icon dib flat-color-3">
+                                       <i class="pe-7s-leaf"></i>
+                                   </div>
+                                   <div class="stat-content">
+                                       <div class="text-left dib">
+                                           <div class="stat-text"><span class="count">{{$sumkategori4}}</span></div>
+                                           <div class="stat-heading">Category 4</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-8">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Lastest Added Members </h5>
+                   </div>
+                   <div class="card-body--">
+                     <div class="table-stats order-table ov-h">
+                       <table class="table ">
+                         <thead>
+
+                           <tr>
+                             <th class="serial">No.</th>
+                             <th>ID</th>
+                             <th>First Name</th>
+                             <th>Last Name</th>
+                             <th>Gender</th>
+                             <th>Domicile</th>
+                           </tr>
+
+                         </thead>
+                         <tbody>
+                           @php
+                             $i=1;
+                           @endphp
+                           @foreach($latest as $new)
+                           <tr>
+                             <td class="serial">{{$i}}</td>
+                             <td><span class="idmember">{{$new->id_info_user}}</span> </td>
+                             <td><span class="fname"></span>{{$new->nama_depan}} </td>
+                             <td><span class="lname"></span>{{$new->nama_belakang}}</td>
+                             <td><span class="gender"></span>{{$new->gender}}</td>
+                             <td><span class="domisili">{{$new->domisili}}</span></td>
+                             <!-- nampilin 5 user terbaru-->
+                           </tr>
+                           @php
+                             $i++;
+                           @endphp
+                             @endforeach
+                         </tbody>
+                       </table>
+                     </div> <!-- /.table-stats -->
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+
+               <div class="col-md-12 col-lg-4">
+                 <div class="card">
+                   <div class="card-body">
+                     <div class="calender-cont widget-calender">
+                       <div id="calendar"></div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+                </div>
+                <div class="col-xl-6">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Announcements </h5>
+                   </div>
+                   <div class="card-body--">
+                     <div class="table-stats order-table ov-h">
+                       <table class="table ">
+                         <thead>
+                           <tr>
+                             <th class="serial">Date</th>
+                             <th>Description</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           @foreach($announce as $p)
+                           <tr>
+                             <td><span class="idmember">{{$p->tanggal}}</span> </td>
+                             <td><span class="fname"></span>{{$p->deskripsi}} </td>
+                             <!-- nampilin 5 Announcement terbaru-->
+                           </tr>
+                           @endforeach
+                         </tbody>
+                       </table>
+                     </div> <!-- /.table-stats -->
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+               
+                 <div class="col-xl-6">
+                 <div class="card">
+                   <div class="card-body">
+                     <h5 class="box-title">Forum </h5>
+                   </div>
+                   <div class="card-body--">
+                     @foreach($forum as $f)
+                     <div class="container">
+                       <strong><p class="box-title">{{$f->nama_belakang}}</p></strong>
+                       <h6>{{$f->isi_forum}}</h6>
+                       <span class="time-right box-title">{{$f->date_time}}</span>
+                     </div>
+                     @endforeach
+                   </div>
+                 </div> <!-- /.card -->
+               </div>
+               </div>
                 <!-- /Calender Chart Weather -->
                 <!-- Modal - Calendar - Add New Event -->
                 <div class="modal fade none-border" id="event-modal">

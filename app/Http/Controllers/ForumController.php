@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\announcement;
+use App\peserta_course;
 use App\course;
-use DB;
-use Validator;
+use Session;
 
-class AdminAnnouncementController extends Controller
+class ForumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,11 @@ class AdminAnnouncementController extends Controller
      */
     public function index()
     {
-        $announces = announcement::all()->toArray();
-        $course =course::all();
-        return view('admin.announce', compact('announces', 'course'));
+        $data   = Session::get('data');
+        $join   = Session::get('join');
+        $status = Session::get('status');
+        $daftar = Session::get('daftar');
+        return view('Forum.index', compact('data', 'daftar'))->with('status',$status);
     }
 
     /**
@@ -40,9 +41,7 @@ class AdminAnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        $announces = new announcement($request->input());
-        $announces->save();
-        return redirect()->route('adminannounce.index')->with('success', 'Data Added');
+        //
     }
 
     /**
@@ -64,8 +63,7 @@ class AdminAnnouncementController extends Controller
      */
     public function edit($id)
     {
-      $announces = announcement::find($id);
-      return view('admin.update_announce', compact('announces'));
+        //
     }
 
     /**
@@ -77,25 +75,7 @@ class AdminAnnouncementController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $lama = announcement::find($id);
-      $baru = $request->only([
-          'ID_COURSE',
-          'TANGGAL',
-          'DESKRIPSI'
-      ]);
-
-      Validator::make($baru, [
-        'ID_COURSE' => 'required',
-        'TANGGAL' => 'required',
-        'DESKRIPSI' => 'required',
-      ])->validate();
-
-      $lama->update([
-          'ID_COURSE' => $request->ID_COURSE,
-          'TANGGAL' => $request->TANGGAL,
-          'DESKRIPSI' => $request->DESKRIPSI
-      ]);
-          return redirect(url('adminannounce'));
+        //
     }
 
     /**
@@ -106,7 +86,6 @@ class AdminAnnouncementController extends Controller
      */
     public function destroy($id)
     {
-      announcement::find($id)->delete();
-      return redirect(url('adminannounce'));
+        //
     }
 }

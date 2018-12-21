@@ -82,6 +82,6 @@ class AdminMonthController extends Controller
     public function destroy($id)
     {
       peserta_monthlymeeting::find($id)->delete();
-      return redirect(url('monthlymeet'));
+      return redirect(url('adminmonthlymeet'));
     }
 }

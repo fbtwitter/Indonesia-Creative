@@ -4,9 +4,8 @@
 
 
 @section('scriptcss')
-<!-- Gritter -->
-<link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 <link href="{{ asset('admin/css/plugins/iCheck/custom.css') }}" rel="stylesheet">
+<link href="{{ asset('admin/css/plugins/jasny/jasny-bootstrap.min.css') }}" rel="stylesheet">
 @endsection
 
 @section('body-content')
@@ -16,7 +15,7 @@
 <div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
         {{-- Navbar --}}
-        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                 <ol class="breadcrumb" style="background-color: transparent;margin: 20px 0px 0px 70px;">
@@ -35,12 +34,12 @@
                 </ol>
             </div>
             <ul class="nav navbar-top-links navbar-right">
-                <li>
+                {{-- <li>
                     <span class="m-r-sm text-muted welcome-message">Welcome {{$data->NAMA_DEPAN}} {{$data->NAMA_BELAKANG}}</span>
                 </li>
                 <li>
                     <a class="right-sidebar-toggle"><i class="fa fa-tasks"></i></a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
     </div>
@@ -290,82 +289,27 @@
                                                                     </button>
                                                     <div class="ibox-content no-padding gray-bg">
                                                         <div class="list-group">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                            <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                                margin-right: 15px;
-                                                                                padding: 3px 10px 3px 10px;
-                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/1/2019
-                                                                    </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
+                                                                <div class="panel-body white-bg" style="padding: 10px 15px 0px 15px;">
+                                                                        <div class="text-center">
+                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-warning btn-block" style="margin-top:-5px;
                                                                                     margin-right: 15px;
                                                                                     padding: 3px 10px 3px 10px;
-                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/2/2019
-                                                                    </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 3</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                                        margin-right: 15px;
-                                                                                        padding: 3px 10px 3px 10px;
-                                                                                        font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/12/2018
-                                                                    </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div class="ibox" style="margin-bottom: 0px;">
-                                                    <button class="btn btn-primary btn-outline btn-block collapse-link">
-                                                                    <span class="pull-right text-right">
-                                                                    <small><strong>0/5</strong></small>
-                                                                    </span>
-                                                                    <div class="text-left">
-                                                                        <h4 class="no-margins" style=" font-weight:200">
-                                                                            Master : Saridono Bob
-                                                                        </h4>
-                                                                        <h2 style="margin-top: 10px; font-weight:600">Photo Editing in Lightroom</h2>
+                                                                                    font-size: unset; font-weight:600;" data-toggle="modal" data-target="#annon1">Announcement</h3>
+                                                                        </div>
                                                                     </div>
-                                                                    </button>
-                                                    <div class="ibox-content no-padding gray-bg">
-                                                        <div class="list-group">
+                                                                    <hr class="hr-line-solid no-margins no-padding">
                                                             <div class="panel-body" style="padding: 10px 15px 0px 15px;">
                                                                 <span class="pull-right text-right" style="margin-top: 5px;">
                                                                             <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
                                                                                 margin-right: 15px;
                                                                                 padding: 3px 10px 3px 10px;
-                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                                font-size: unset;" data-toggle="modal" data-target="#detailcs1">Detail Event</h3><strong><i class="fa fa-check-circle  fa-2x"></i></strong></span>
                                                                 </span>
                                                                 <div class="text-left">
                                                                     <h6 class="no-margins" style=" font-weight:200">
                                                                         Saturday, 20/1/2019
                                                                     </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
                                                                 </div>
                                                             </div>
                                                             <hr class="hr-line-solid no-margins no-padding">
@@ -374,13 +318,13 @@
                                                                                 <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
                                                                                     margin-right: 15px;
                                                                                     padding: 3px 10px 3px 10px;
-                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
+                                                                                    font-size: unset;" data-toggle="modal" data-target="#detailcs2">Detail Event</h3><strong><i class="fa fa-check-circle  fa-2x"></i></strong></span>
                                                                 </span>
                                                                 <div class="text-left">
                                                                     <h6 class="no-margins" style=" font-weight:200">
                                                                         Saturday, 20/2/2019
                                                                     </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 3</h4>
+                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
                                                                 </div>
                                                             </div>
                                                             <hr class="hr-line-solid no-margins no-padding">
@@ -395,71 +339,7 @@
                                                                     <h6 class="no-margins" style=" font-weight:200">
                                                                         Saturday, 20/12/2018
                                                                     </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div class="ibox" style="margin-bottom: 0px;">
-                                                    <button class="btn btn-primary btn-outline btn-block collapse-link">
-                                                                    <span class="pull-right text-right">
-                                                                    <small><strong>0/5</strong></small>
-                                                                    </span>
-                                                                    <div class="text-left">
-                                                                        <h4 class="no-margins" style=" font-weight:200">
-                                                                            Master : Petter Jackson
-                                                                        </h4>
-                                                                        <h2 style="margin-top: 10px; font-weight:600">Make Money With Photography</h2>
-                                                                    </div>
-                                                                    </button>
-                                                    <div class="ibox-content no-padding gray-bg">
-                                                        <div class="list-group">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                            <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                                margin-right: 15px;
-                                                                                padding: 3px 10px 3px 10px;
-                                                                                font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/1/2019
-                                                                    </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 2</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                                <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                                    margin-right: 15px;
-                                                                                    padding: 3px 10px 3px 10px;
-                                                                                    font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/2/2019
-                                                                    </h6>
                                                                     <h4 style="font-weight:600">Monthly Meeting : 3</h4>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="hr-line-solid no-margins no-padding">
-                                                            <div class="panel-body" style="padding: 10px 15px 0px 15px;">
-                                                                <span class="pull-right text-right" style="margin-top: 5px;">
-                                                                                    <span style="margin-top:0px; margin-bottom: 1px;"><h3 class="btn btn-primary btn-outline b-r-xl" style="    margin-top: -5px;
-                                                                                        margin-right: 15px;
-                                                                                        padding: 3px 10px 3px 10px;
-                                                                                        font-size: unset;">Detail Event</h3><strong><i class="fa fa-check-circle fa-2x"></i></strong></span>
-                                                                </span>
-                                                                <div class="text-left">
-                                                                    <h6 class="no-margins" style=" font-weight:200">
-                                                                        Saturday, 20/12/2018
-                                                                    </h6>
-                                                                    <h4 style="font-weight:600">Monthly Meeting : 1</h4>
                                                                 </div>
                                                             </div>
                                                             <hr class="hr-line-solid no-margins no-padding">
@@ -750,261 +630,128 @@
     @include('ManagementFile/backend/footer')
     </div>
 
-    {{-- Content Right SideBar --}}
-    <div id="right-sidebar" class="animated">
-        <div class="sidebar-container">
-
-            <ul class="nav nav-tabs navs-2">
-                <li class="active"><a data-toggle="tab" href="#bar-1">
-                Announcements
-                    </a></li>
-                <li class=""><a data-toggle="tab" href="#bar-2">
-                Joined Course
-            </a></li>
-            </ul>
-
-            <div class="tab-content">
-                {{-- Tab 1 --}}
-                <div id="bar-1" class="tab-pane active">
-
-                    <div class="sidebar-title">
-                        <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
-                        <small><i class="fa fa-tim"></i> You have 10 new message.</small>
+    {{-- Calling modal --}}
+    {{-- Annonuncement modal --}}
+    <div class="modal inmodal fade" id="annon1" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 15px 15px; background:orange; color:white;">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Announcement</h4>
                     </div>
-
-                    <div>
-
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
-
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
+                    <div class="modal-body" style="padding: 0px 0px 10px 0px;">
+                        <div class="panel-body" style="padding:2px;">
+                                <div class="social-avatar">
+                                        <a href="" class="pull-left">
+                                                        <img alt="image" src="{{ asset('admin/img/a1.jpg') }}">
+                                                    </a>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                            Andrew Williams
+                                                        </a>
+                                            <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="media-body">
-
-                                    There are many variations of passages of Lorem Ipsum available.
-                                    <br>
-                                    <small class="text-muted">Today 4:21 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
-                                </div>
-                                <div class="media-body">
-                                    The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                    <br>
-                                    <small class="text-muted">Yesterday 2:45 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
+                                    <div class="social-body">
+                                        <p>
+                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                            ipsum' will uncover many web sites still in their infancy. Packages
+                                            and web page editors now use Lorem Ipsum as their default model text.
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="media-body">
-                                    Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                    <br>
-                                    <small class="text-muted">Yesterday 1:10 pm</small>
-                                </div>
-                            </a>
+                                    <hr style="margin-top: -5px; margin-bottom: 0;">
                         </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                </div>
-
-                                <div class="media-body">
-                                    Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                    <br>
-                                    <small class="text-muted">Monday 8:37 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
-                                </div>
-                                <div class="media-body">
-
-                                    All the Lorem Ipsum generators on the Internet tend to repeat.
-                                    <br>
-                                    <small class="text-muted">Today 4:21 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
-                                </div>
-                                <div class="media-body">
-                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                    <br>
-                                    <small class="text-muted">Yesterday 2:45 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
-                                    <br>
-                                    <small class="text-muted">Yesterday 1:10 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                </div>
-                                <div class="media-body">
-                                    Uncover many web sites still in their infancy. Various versions have.
-                                    <br>
-                                    <small class="text-muted">Monday 8:37 pm</small>
-                                </div>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-block" data-dismiss="modal" style="background:orange; color:white">Thank you! :D</button>
                     </div>
                 </div>
-
-                {{-- Tab 2 --}}
-                <div id="bar-2" class="tab-pane">
-
-                    <div class="sidebar-title">
-                        <h3> <i class="fa fa-cube"></i>Monthly Meeting</h3>
-                        <small><i class="fa fa-tim"></i> You have 14 joined meeting. 10 not completed.</small>
-                    </div>
-
-                    <ul class="sidebar-list">
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Business valuation</h4>
-                                It is a long established fact that a reader will be distracted.
-
-                                <div class="small">Completion with: 22%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                </div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Contract with Company </h4>
-                                Many desktop publishing packages and web page editors.
-
-                                <div class="small">Completion with: 48%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Meeting</h4>
-                                By the readable content of a page when looking at its layout.
-
-                                <div class="small">Completion with: 14%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <span class="label label-primary pull-right">NEW</span>
-                            <h4>The generated</h4>
-                            There are many variations of passages of Lorem Ipsum available.
-                            <div class="small">Completion with: 22%</div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Business valuation</h4>
-                                It is a long established fact that a reader will be distracted.
-
-                                <div class="small">Completion with: 22%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                </div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Contract with Company </h4>
-                                Many desktop publishing packages and web page editors.
-
-                                <div class="small">Completion with: 48%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Meeting</h4>
-                                By the readable content of a page when looking at its layout.
-
-                                <div class="small">Completion with: 14%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <span class="label label-primary pull-right">NEW</span>
-                            <h4>The generated</h4>
-                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
-                            There are many variations of passages of Lorem Ipsum available.
-                            <div class="small">Completion with: 22%</div>
-                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                        </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
             </div>
-
         </div>
+{{-- end of modal --}}
 
+{{-- detail course modal --}}
+{{-- Modal Content --}}
+{{-- 1 --}}
+<div class="modal inmodal" id="detailcs1" tabindex="-1" role="dialog"  aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content animated fadeIn">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title">Monthly Meeting 1</h4>
+    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+</div>
+<div class="modal-body" style="padding: 10px 30px 0px 30px;">
+        <span class="pull-right text-right">
+                <span class="" style="align-items: center;padding: 0px 15px;margin-bottom: 6px">
+                    <small>10-November-2018</small>
+                </span>
+                <br/>
+        </span>
+        <div class="profile-image" style="width:60px">
+        <img src="{{ asset('admin/img/a4.jpg') }}" class="img-circle circle-border" style="width:60px; height:60px;" alt="profile">
     </div>
+    <div class="profile-info" style="margin-left:70px; margin-top:10px">
+            <div class="no-margins no-ad">
+                <h2 class="no-margins" style="font-size:16px">
+                    Alex Smith
+                </h2>
+                <h4>Founder of Groupeq</h4>
+            </div>
+    </div>
+</div>
+<div class="modal-body">
+    <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged.</p>
+</div>
+<div class="modal-body" style="background:aliceblue" style="padding: 10px 30px 30px 30px;">
+    <h5 style="margin-bottom:20px">Items Need to carry :</h5>
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-1"><i class="fa fa-microchip fa-2x"></i></div>
+            <div class="col-lg-3"><i class="fa fa-bandcamp fa-2x"></i></div>
+            <div class="col-lg-3"><i class="fa fa-podcast fa-2x"></i></div>
+            <div class="col-lg-2"><i class="fa fa-shower fa-2x"></i></div>
+        </div>
+    </div>
+    <div class="modal-body" style="padding: 10px 30px 10px 30px;">
+            <div class="fileinput fileinput-new input-group has-success" data-provides="fileinput">
+                    {{-- <label class="col-sm-2 control-label">Upload</label> --}}
+                    <div class="form-control" data-trigger="fileinput"><label class="col-sm-2 control-label" style="margin-right:15px">Upload</label><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-defa ult fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+    </div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-white" data-dismiss="modal">I'm Busy</button>
+    <button type="button" class="btn btn-primary">Attend!</button>
+</div>
+</div>
+</div>
+</div>
+{{-- 2 --}}
+<div class="modal inmodal" id="detailcs2" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <i class="fa fa-clock-o modal-icon"></i>
+                        <h4 class="modal-title">Modal title</h4>
+                            <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+            </div>
+        <div class="modal-body">
+                
+        </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+</div>
+</div>
+</div>
+</div>
+{{-- end modal --}}
+{{-- end event banner --}}
+
 @endsection
 @section('scriptjs')
     <!-- Flot -->
@@ -1014,7 +761,10 @@
     <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.resize.js') }} "></script>
     <script src="{{ asset( 'admin/js/plugins/flot/jquery.flot.pie.js') }} "></script>
 
-    <!-- Peity -->
+    <!-- Jasny -->
+    <script src="{{ asset('admin/js/plugins/jasny/jasny-bootstrap.min.js') }}"></script>
+     
+    {{-- <!-- Peity -->
     <script src="{{ asset( 'admin/js/plugins/peity/jquery.peity.min.js') }} "></script>
     <script src="{{ asset( 'admin/js/demo/peity-demo.js') }} "></script>
 
@@ -1028,5 +778,6 @@
     <script src="{{ asset( 'admin/js/demo/sparkline-demo.js') }} "></script>
 
     <!-- ChartJS-->
-    <script src="{{ asset( 'admin/js/plugins/chartJs/Chart.min.js') }} "></script>
+    <script src="{{ asset( 'admin/js/plugins/chartJs/Chart.min.js') }} "></script> --}}
+    
 @endsection

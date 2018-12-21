@@ -51,9 +51,9 @@
             <li class="@if(url('/Setting') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Setting')}}"><i class="fa fa-cog fa-1x"></i> <span class="nav-label">Setting</span>  </a>
             </li>
-            <li class="@if(url('/Event') == request()->url()) active @else '' @endif  treeview">
+            {{-- <li class="@if(url('/Event') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('Event')}}"><i class="fa fa-globe fa-1x"></i> <span class="nav-label">Event</span><span class="label label-info pull-right">NEW</span></a>
-            </li>
+            </li> --}}
             <li class="@if(url('/logout') == request()->url()) active @else '' @endif  treeview">
                 <a href="{{ url('logout')}}"><i class="fa fa-sign-out fa-1x"></i> <span class="nav-label">Logout</span>  </a>
             </li>

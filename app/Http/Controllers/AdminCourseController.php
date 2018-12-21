@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\course;
 use App\sub_course;
 use Validator;
+use DB;
 
 class AdminCourseController extends Controller
 {
@@ -17,9 +18,15 @@ class AdminCourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all()->toArray();
+        $courses = course::all();
         $subs = sub_course::all()->toArray();
-        return view('admin.course', compact('courses', 'subs'));
+
+        $master = DB::table('info_users')
+              ->join('logins', 'logins.id_info_user', '=', 'info_users.id_info_user')
+              ->select('info_users.id_info_user', 'info_users.nama_belakang')
+              ->where('logins.hak_akses', '=', '2')
+              ->get();
+        return view('admin.course', compact('courses', 'subs', 'master'));
     }
 
     /**
@@ -41,13 +48,11 @@ class AdminCourseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'ID_COURSE'    => 'required',
             'NAMA_COURSE'    => 'required',
             'DEFINISI_COURSE'    => 'required'
         ]);
 
         $course = new course([
-            'ID_COURSE' =>   $request->get('ID_COURSE'),
             'NAMA_COURSE' => $request->get('NAMA_COURSE'),
             'DEFINISI_COURSE' => $request->get('DEFINISI_COURSE'),
             /*"updated_at" => \Carbon\Carbon::now(),  # \Datetime()
@@ -56,7 +61,8 @@ class AdminCourseController extends Controller
 
         ]);
         $course->save();
-        return redirect()->route('course.index')->with('success', 'Data Added');
+        return back();
+        //return redirect()->route('admincourse.index')->with('success', 'Data Added');
     }
 
     /**
@@ -107,7 +113,7 @@ class AdminCourseController extends Controller
           'NAMA_COURSE' => $request->NAMA_COURSE,
           'DEFINISI_COURSE' => $request->DEFINISI_COURSE
       ]);
-          return redirect(url('course'));
+          return redirect(url('admincourse'));
     }
 
     /**
@@ -119,6 +125,6 @@ class AdminCourseController extends Controller
     public function destroy($id)
     {
         course::find($id)->delete();
-        return redirect(url('course'));
+        return redirect(url('admincourse'));
     }
 }

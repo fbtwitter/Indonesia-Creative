@@ -120,33 +120,39 @@
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li>
-                      <a href="{{url('dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                  <li class="active">
+                      <a href="{{url('Dashadmin')}}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                   </li>
+                    <!-- /.menu-title -->
                     <li>
-                        <a href="{{url('member')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
-                    </li>
-                    <li>
-                        <a href="{{url('master')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
-                    </li>
-                    <li class="active">
-                        <a href="{{url('course')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                        <a href="{{url('adminmember')}}"> <i class="menu-icon fa fa-users"></i>Member List </a>
                     </li>
                     <li>
-                        <a href="{{url('announce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
+                        <a href="{{url('adminmaster')}}"> <i class="menu-icon fa fa-user-secret"></i>Master List </a>
                     </li>
                     <li>
-                        <a href="{{url('library')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
+                        <a href="{{url('admincourse')}}"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('adminannounce')}}"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
                     </li>
                     <li>
-                        <a href="{{url('reward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
+                        <a href="{{url('adminlibrary')}}"> <i class="menu-icon fa fa-book"></i>Library </a>
                     </li>
                     <li>
-                        <a href="{{url('forum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
+                        <a href="{{url('adminreward')}}"> <i class="menu-icon fa fa-star"></i>Reward</a>
                     </li>
                     <li>
-                        <a href="{{url('monthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+
+                        <a href="{{url('adminforum')}}"> <i class="menu-icon fa fa-comments"></i>Forum </a>
                     </li>
+                    <li>
+                        <a href="{{url('adminmonthlymeet')}}"> <i class="menu-icon fa fa-user"></i>Monthly Meeting </a>
+
+
+                    </li>
+                  
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -162,8 +168,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="{{ asset('front/assets/img/logo.png') }}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -172,13 +178,12 @@
                     <div class="header-left">
                       <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('front/assets/img/Park_Chan-yeol.jpg') }}" alt="">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power-off"></i>Logout</a>
                         </div>
                     </div>
                 </div>
@@ -233,6 +238,7 @@
                                         <th scope="col">ID Course</th>
                                         <th scope="col">ID Master</th>
                                         <th scope="col">Course Name</th>
+                                        <th scope="col">Definition</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -243,11 +249,16 @@
                                       <th>{{$sub['ID_SUB_COURSE']}}</th>
                                       <th>{{$sub['ID_COURSE']}}</th>
                                       <th>{{$sub['ID_DAFTAR_MASTER']}}</th>
-                                      <th style="font-size: 10px;">{{$sub['DEFINISI_SUB_COURSE']}}</th>
+
+                                      <th>{{$sub['SUB_COURSE']}}</th>
+                                      <th>{{$sub['DEFINISI_SUB_COURSE']}}</th>
+
+
+
                                       <th>
                                           <center>
                                             <a href="{{url('update_subcourseview', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-primary btn-sm" role="button"><span class="ti-pencil-alt"></span></a>
-                                            <a href="{{url('deletesubcourse', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
+                                            <a href="{{url('deletesubcourseadmin', $sub['ID_SUB_COURSE'])}}" class="btn btn-outline-danger btn-sm" role="button"><span class="ti-trash"></span></a>
                                           </center>
                                       </th>
                                     </tr>
@@ -258,24 +269,43 @@
                         </div>
                     </div>
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" method="post" action="tambahsub">
+                    <form class="modal-content animate" method="post" action="admintambahsub">
                         @csrf
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       </div>
 
                       <div class="container">
-                        <label for="id_sub_course"><b>ID Sub Course</b></label>
-                        <input type="text" placeholder="Enter ID Sub Course" name="ID_SUB_COURSE" required>
 
-                        <label for="id_course"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+                        <label for="ID_COURSE"><b>ID Course</b></label>
+                        {{-- <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required> --}}
+                        <div class="col-md-12">
+                          <select class="form-control" name="ID_COURSE">
+                            @foreach($courses as $item)
+                            <option value="{{ $item->ID_COURSE }}">{{ $item->NAMA_COURSE }}</option>
+                            @endforeach
+                          </select>
+                      </div>
+                      <label for="ID_DAFTAR_MASTER"><b>ID MASTER</b></label>
+                      {{-- <input type="text" placeholder="Enter ID MASTER" name="ID_DAFTAR_MASTER" required> --}}
+                      <div class="col-md-12">
+                        <select class="form-control" name="ID_DAFTAR_MASTER">
+                          @foreach($master as $item2)
+                          <option value="{{ $item2->id_info_user }}">{{ $item2->nama_belakang }}</option>
+                          @endforeach
+                        </select>
+                    </div>
 
-                        <label for="id_daftar_master"><b>Master</b></label>
-                        <input type="text" placeholder="Enter Master" name="ID_DAFTAR_MASTER" required>
+                        <div class="col-md-12">
+                          <label for="id_daftar_master"><b>Name</b></label>
+                          <input type="text" placeholder="Enter Sub Course" name="SUB_COURSE" required>
+                        </div>
 
-                        <label for="definisi_sub_course"><b>Sub Course</b></label>
-                        <input type="text" placeholder="Enter Sub Course" name="DEFINISI_SUB_COURSE" required>
+                        <div class="col-md-12">
+                          <label for="definisi_sub_course"><b>Definition</b></label>
+                          <input type="text" placeholder="Enter Definition" name="DEFINISI_SUB_COURSE" required>
+                        </div>
+
                         <br>
                         <div class="float-right">
                           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-outline-danger btn-sm">Cancel</button>
@@ -346,15 +376,14 @@
                     </div>
                     @endif
                     <div id="id02" class="modal">
-                    <form class="modal-content animate" method="post" action="{{url('course')}}">
+                    <form class="modal-content animate" method="post" action="{{url('admincourse')}}">
                          {{csrf_field()}}
                       <div class="imgcontainer">
                         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                       </div>
 
                       <div class="container">
-                        <label for="id_course"><b>ID Course</b></label>
-                        <input type="text" placeholder="Enter ID Course" name="ID_COURSE" required>
+
 
                         <label for="nama_courser"><b>Course Name</b></label>
                         <input type="text" placeholder="Enter Course Namer" name="NAMA_COURSE" required>

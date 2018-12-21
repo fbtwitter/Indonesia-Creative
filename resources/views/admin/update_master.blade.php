@@ -23,97 +23,6 @@
 
 </head>
 <body>
-    <!-- Left Panel -->
-
-    <aside id="left-panel" class="left-panel">
-        <nav class="navbar navbar-expand-sm navbar-default">
-
-            <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.php"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
-                    <li>
-                        <a href="member-list.php"> <i class="menu-icon fa fa-users"></i>Member List </a>
-                    </li>
-                    <li>
-                        <a href="master-list.php"> <i class="menu-icon fa fa-user"></i>Master List </a>
-                    </li>
-                    <li>
-                        <a href="course.php"> <i class="menu-icon fa fa-tasks"></i>Courses </a>
-                    </li>
-                    <li>
-                        <a href="event.php"> <i class="menu-icon fa fa-calendar-o"></i>Events </a>
-                    </li>
-                    <li>
-                        <a href="announce.php"> <i class="menu-icon fa fa-bullhorn"></i>Announcements </a>
-                    </li>
-                    <li>
-                        <a href="library.php"> <i class="menu-icon fa fa-book"></i>Library </a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </aside><!-- /#left-panel -->
-
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <header id="header" class="header">
-            <div class="top-left">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="" alt="Logo"></a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-                </div>
-            </div>
-            <div class="top-right">
-                <div class="header-menu">
-                    <div class="header-left">
-                      <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/lucas.png" alt="User Avatar">
-                        </a>
-
-                        <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header><!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col-sm-4">
-                        <div class="page-header float-left">
-                            <div class="page-title">
-                                <h1>Dashboard</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="page-header float-right">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    <li><a href="index.php">Dashboard</a></li>
-                                    <li><a href="member-list.php">Member List</a></li>
-                                    <li class="active">Update Member</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="content">
             <div class="animated fadeIn">
@@ -127,47 +36,60 @@
                               </div>
                             </div>
                             <div class="card-body">
-                              <form action="member-list.php" class="form-horizontal" method="post">
-                        				  <div class="form-group">
-                            					<label class="col-md-2 control-label">First Name</label>
+                              <form action="{{url('master_update', $masters['ID_INFO_USER']) }}" class="form-horizontal" method="post">
+                                  @csrf
+                                  <div class="form-group">
+                            					<label class="col-md-2 control-label">ID</label>
                             					<div class="col-md-10">
-                            					  <input name="fname" type="text" id="fname" class="form-control" value="">
+                            					  <input name="ID_INFO_USER" type="text" id="ID_INFO_USER" class="form-control" value="{{$masters->ID_INFO_USER}}" disabled>
                             					</div>
+                        				  </div>
+                        				  <div class="form-group">
+                                    <label class="col-md-2 control-label">First Name</label>
+                                    <div class="col-md-10">
+                                      <input name="NAMA_DEPAN" type="text" id="NAMA_DEPAN"  class="form-control" value="{{$masters->NAMA_DEPAN}}">
+                                    </div>
                         				  </div>
                         				  <div class="form-group">
                                     <label class="col-md-2 control-label">Last Name</label>
                                     <div class="col-md-10">
-                                      <input name="lname" type="text" id="lname"  class="form-control" value="">
+                                      <input name="NAMA_BELAKANG" type="text" id="NAMA_BELAKANG"  class="form-control" value="{{$masters->NAMA_BELAKANG}}">
                                     </div>
                         				  </div>
                         				  <div class="form-group">
                                     <label class="col-md-2 control-label">Gender</label>
                                     <div class="col-md-10">
-                                      <input name="gender" type="text" id="gender"  class="form-control" value="">
+                                      <input name="GENDER" type="text" id="GENDER"  class="form-control" value="{{$masters->GENDER}}">
                                     </div>
                         				  </div>
                         				  <div class="form-group">
-                                    <label class="col-md-2 control-label">Email</label>
+                                    <label class="col-md-2 control-label">Domicile</label>
                                     <div class="col-md-10">
-                                      <input name="temail" type="text" id="temail"  class="form-control" value="">
-                                    </div>
-                        				  </div>
-                        				  <div class="form-group">
-                                    <label class="col-md-2 control-label">Phone</label>
-                                    <div class="col-md-10">
-                                      <input name="tphone" type="text" id="tphone" class="form-control" value="">
+                                      <input name="DOMISILI" type="text" id="DOMISILI" class="form-control" value="{{$masters->DOMISILI}}">
                                     </div>
                         				  </div>
                                   <div class="form-group">
-                                    <label class="col-md-2 control-label">Domicile</label>
+                                    <label class="col-md-2 control-label">Telphone</label>
                                     <div class="col-md-10">
-                                      <input name="tdomisili" type="text" id="tdomisili"  class="form-control" value="">
+                                      <input name="NOMOR_TELP" type="text" id="NOMOR_TELP"  class="form-control" value="{{$masters->NOMOR_TELP}}">
                                     </div>
                         				  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-2 control-label">Skill</label>
+                                    <div class="col-md-10">
+                                      <input name="SKILL" type="text" id="SKILL"  class="form-control" value="{{$masters->SKILL}}">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-2 control-label">Introduction</label>
+                                    <div class="col-md-10">
+                                      <input name="INTRODUCTION" type="text" id="INTRODUCTION"  class="form-control" value="{{$masters->INTRODUCTION}}">
+                                    </div>
+                                  </div>
                         				  <div class="form-group float-right">
                           					  <input type="submit" class="btn btn-outline-info" value="Save Change" name="btnUpdate" id="btnUpdate">
                           					  <span></span>
-                          					  <a href="member-list.php"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
+                          					  <a href="{{url('adminmaster')}}"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
                         				  </div>
                         			</form>
                             </div>

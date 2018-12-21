@@ -1,6 +1,6 @@
 @extends('ManagementFile/backend/layout')
 @include('sweet::alert')
-@section('title-dashboard') IC Surabaya
+@section('title-dashboard') Dashboard | IC Surabaya
 @endsection
 
 @section('scriptcss')
@@ -50,6 +50,9 @@
                     <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
+                        <a href="#">
+                                Andrew Williams
+                            </a><br/>
                     There are many variations of passages of Lorem Ipsum available.
                     <br>
                     <small class="text-muted">Today 4:21 pm</small>
@@ -60,6 +63,9 @@
                     <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
+                        <a href="#">
+                                Reza Augusdi
+                            </a><br/>
                     There are many variations of passages of Lorem Ipsum available.
                     <br>
                     <small class="text-muted">Today 4:21 pm</small>
@@ -70,6 +76,9 @@
                     <img alt="image" class="img-circle" src="{{ asset('admin/img/a1.jpg') }}">
                 </a>
                 <div class="media-body">
+                        <a href="#">
+                                Agung W
+                            </a><br/>
                     There are many variations of passages of Lorem Ipsum available.
                     <br>
                     <small class="text-muted">Today 4:21 pm</small>
@@ -112,18 +121,13 @@
                 </li>
             </ul>
         </div>
+        <hr>
         <div class="m-t-md">
-            <h4>Discussion</h4>
+            <h4>Discussion<a class="btn badge badge-info pull-right" href="{{ url('/Forum')}}">Go To</a></h4>
             <div>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge badge-primary">16</span> General topic
-                    </li>
-                    <li class="list-group-item ">
-                        <span class="badge badge-info">12</span> The generated Lorem
-                    </li>
-                    <li class="list-group-item">
-                        <span class="badge badge-warning">7</span> There are many variations
+                        <span class="badge badge-primary">16</span> Hey Help Me!
                     </li>
                 </ul>
             </div>
@@ -382,24 +386,46 @@
     {{-- Calling modal --}}
     {{-- announcement modal --}}
     <div class="modal inmodal fade" id="moreannounce" tabindex="-1" role="dialog"  aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title">Modal title</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                remaining essentially unchanged.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 15px 15px;">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Announcement</h4>
+                    </div>
+                    <div class="modal-body" style="padding: 0px 0px 10px 0px;">
+                        <div class="panel-body" style="padding:2px;">
+                                <div class="social-avatar">
+                                        <a href="" class="pull-left">
+                                                        <img alt="image" src="{{ asset('admin/img/a1.jpg') }}">
+                                                    </a>
+                                                    <span class="pull-right text-right">
+                                                            <span class="btn btn-primary p-xxs" style="align-items: center;
+                                                                   padding: 0px 15px;
+                                                                   margin-bottom: 6px"><small>Nama Sub-Coursenya</small></span>
+                                                            </span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                            Andrew Williams
+                                                        </a>
+                                            <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="social-body">
+                                        <p>
+                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                                            ipsum' will uncover many web sites still in their infancy. Packages
+                                            and web page editors now use Lorem Ipsum as their default model text.
+                                        </p>
+                                    </div>
+                                    <hr style="margin-top: -5px; margin-bottom: 0;">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-block" data-dismiss="modal" style="">Thank you! :D</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     {{-- end of modal --}}
 
     {{-- event banner modal --}}
@@ -410,19 +436,28 @@
                 <div class="modal-content animated fadeIn">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <i class="fa fa-clock-o modal-icon"></i>
-                        <h4 class="modal-title">Modal title</h4>
-                        <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+                        <h4 class="modal-title">Data for Development Festival</h4>
+                        <small>Global Partnership for sustainable development data</small>
                     </div>
-                    <div class="modal-body">
-                        <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged.</p>
+                    <div class="modal-body" style="background:#f4f7f8">
+                            <img alt="image" class="img-responsive" src="{{ asset('admin/img/banner/bg-6.jpg') }}"> 
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                    <div class="modal-body" style="background:#f4f7f8">
+                            <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged.</p>
+                        </div>
+                        <div class="modal-body" style="background:#ebebed">
+                                <div class="row text-center">
+                                    <div class="col-sm-6" style="border-right: 1px solid;">
+                                        <h3>Date : <strong>10 Desember 2018</strong></h3> 
+                                        <h3>Time : <strong>09.00 - 13.00</strong></h3>
+                                    </div>
+                                    <div class="col-sm-6">
+                                            <h2 style="margin-top: 8%;">Ticket : <strong>Free Charge</strong></h2> 
+                                        </div>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
@@ -458,61 +493,5 @@
 <!-- slick carousel-->
 <script src="{{ asset( 'admin/js/plugins/slick/slick.min.js') }} "></script>
 
-<!-- Additional style only for demo purpose -->
-<style>
-    .slick_demo_2 .ibox-content {
-        margin: 0 10px;
-    }
-</style>
 
-<script>
-    $(document).ready(function(){
-
-
-            $('.slick_demo_1').slick({
-                dots: false
-            });
-
-            $('.slick_demo_2').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-
-            $('.slick_demo_3').slick({
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                adaptiveHeight: true
-            });
-        });
-
-</script>
 @endsection

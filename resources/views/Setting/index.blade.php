@@ -138,12 +138,10 @@
                                                 </div>
                                                 <div class="ibox-content no-padding border-left-right">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top:10px;">
-                                                        <span class="fileinput-exists"></span><input
-                        type="file" name="..." /></span>
-                    <span class="fileinput-filename"></span>
-    </div>
-</div>
-</div>
+                                                        <span class="fileinput-exists"></span><input type="file" name="..." /></span><span class="fileinput-filename"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
 </div>
 </div>
 </div>

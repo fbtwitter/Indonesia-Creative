@@ -47,9 +47,9 @@ class AccountController extends Controller
             break;
           case 2:
             $hak = "Master";
-            //echo "<script>window.location.href='/DashMaster'</script>";
+            echo "<script>window.location.href='/DashMaster'</script>";
             //return ('DashMaster');//
-             return view('master.dashboardMaster');
+             //return view('master.dashboardMaster');
             //url('DashMaster');
             break;
           default:
@@ -83,7 +83,7 @@ class AccountController extends Controller
               'nama_depan' => $nama,
             ]
           );
-          $posts = DB::select('select id_info_user from Info_users order by id_info_user desc limit 1');
+          $posts = DB::select('select id_info_user from info_users order by id_info_user desc limit 1');
           foreach ($posts as $post) {
               $id = $post->id_info_user;
             }
@@ -149,7 +149,7 @@ class AccountController extends Controller
             'nama_depan' => null,
           ]
         );
-        $posts = DB::select('select id_info_user from Info_user order by id_info_user desc limit 1');
+        $posts = DB::select('select id_info_user from info_user order by id_info_user desc limit 1');
         foreach ($posts as $post) {
             $id = $post->id_info_user;
           }

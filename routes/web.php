@@ -100,7 +100,7 @@ Route::post('profile','AccountController@update');
 Route::get('one','AccountController@loginadmin');
 Route::post('one','AccountController@adm');
 
-Route::resource('/CC_Advertising', 'CC_AdvertController');
+Route::resource('/CC_Periklanan', 'CC_AdvertController');
 Route::resource('/CC_Architecture', 'CC_ArchitectureController');
 Route::resource('/CC_Crafts', 'CC_CraftsController');
 Route::resource('/Others', 'OthersController');

@@ -138,7 +138,6 @@
                                                 </div>
                                                 <div class="ibox-content no-padding border-left-right">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-top:10px;">
-<<<<<<< HEAD
                                                         <span class="fileinput-exists"></span>
                                                         {!! Form::open(['url' => route('Setting.update', 3), 'method' => 'post', 'files' => true] ) !!}
                                                         {{-- <form class="photo_profil" action="{{route('Setting.update', 3)}}" method="post"> --}}
@@ -149,12 +148,6 @@
     </div>
 </div>
 </div>
-=======
-                                                        <span class="fileinput-exists"></span><input type="file" name="..." /></span><span class="fileinput-filename"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
->>>>>>> d33af96ae7c9741a2779025e9aac73e361e81282
 </div>
 </div>
 </div>
